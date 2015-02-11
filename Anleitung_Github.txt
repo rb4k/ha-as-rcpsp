@@ -5,7 +5,7 @@ $ git clone https://github.com/rb4k/ha-as-rcpsp.git # Verzeichnis wird kopiert
 
 Arbeiten in der Datei
 $ git pull
-$ git checkout -b <branch namen> # Namen für Branch definieren
+$ git checkout -b <branch namen> # Namen oder Datum für Branch definieren
 $ git branch
 $ git status
 
