@@ -7,3 +7,4 @@ Vorgehensweise Github Committing with the Command Line
 $ git status
 $ git add .
 $ git commit -m "Commit Namen" # Commit wird durchgeführt im aktuellen Branch
+$ git push
