@@ -5,11 +5,11 @@ $ git branch
 $ git status
 
 
-Onlineabruf der Datei (test)
-$ git commit -am "<msg>"
+Onlineabruf der Datei
 $ git pull
+$ git checkout <Branch Namen>
 
-Arbeiten in der Datei
+Arbeiten in der Tex-Datei und ab und an:
 $ git add .
 $ git commit -am "<msg>"
 
