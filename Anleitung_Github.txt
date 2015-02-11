@@ -5,7 +5,7 @@ $ git branch
 $ git status
 
 
-Onlineabruf der Datei
+Onlineabruf der Datei (test)
 $ git commit -am "<msg>"
 $ git pull
 
