@@ -9,12 +9,19 @@ Onlineabruf der Datei
 $ git pull
 $ git checkout <Branch Namen>
 
+
 Arbeiten in der Tex-Datei und ab und an:
 $ git add .
 $ git commit -am "<msg>"
 $ git push origin <Branch Namen>
+<<<<<<< HEAD
 
 Wechseln zwischen Branch / Vorgehensweise Github Commiting with the Command Line
+=======
+
+
+Vorgehensweise zur Integration in den Master-Branch / Commiting with the Command Line
+>>>>>>> robert
 $ git add .
 $ git commit -am "Commit Namen" # Commit wird durchgeführt im aktuellen Branch
 $ git checkout master
