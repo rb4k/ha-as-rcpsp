@@ -1,21 +1,39 @@
 Vorgehensweise Github Clone
 $ cd <dir>  # In das gewünschte Verzeichnis gehen. Dabei wird automatisch im Nachfolgenden der Ordner "ha-as-rcpsp" erstellt. Daher keinen Ordner erstellen!!!
 $ git clone https://github.com/rb4k/ha-as-rcpsp.git # Verzeichnis wird kopiert
+$ git branch
+$ git status
 
 
+<<<<<<< HEAD
 Arbeiten in der Datei
 $ git pull
 $ git checkout -b <branch namen> # Namen für Branch definieren
 $ git branch
 $ git status
 
+=======
+Onlineabruf der Datei
+$ git pull
+$ git checkout <Branch Namen>
+
+Arbeiten in der Tex-Datei und ab und an:
+$ git add .
+$ git commit -am "<msg>"
+>>>>>>> master
 
 Wechseln zwischen Branch / Vorgehensweise Github Committing with the Command Line
 $ git add .
-$ git commit -m "Commit Namen" # Commit wird durchgeführt im aktuellen Branch
+$ git commit -am "Commit Namen" # Commit wird durchgeführt im aktuellen Branch
 $ git checkout master
+<<<<<<< HEAD
 $ git merge <Name für Branch> # Wofür das nochmal???
 $ git push
 
 
 Weiterarbeiten
+=======
+$ git merge <Branch Namen> # Welches Branch muss mit Master gemergt werden?
+$ git push # Zum Branch hinzufügen
+
+>>>>>>> master
