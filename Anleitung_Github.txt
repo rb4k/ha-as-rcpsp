@@ -15,6 +15,6 @@ $ git commit -am "<msg>"
 
 Wechseln zwischen Branch / Vorgehensweise Github Committing with the Command Line
 $ git add .
-$ git commit -m "Commit Namen" # Commit wird durchgeführt im aktuellen Branch
+$ git commit -am "Commit Namen" # Commit wird durchgeführt im aktuellen Branch
 $ git push # Zum Branch hinzufügen
 
