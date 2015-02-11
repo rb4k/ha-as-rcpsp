@@ -13,9 +13,6 @@ $ git status
 Wechseln zwischen Branch / Vorgehensweise Github Committing with the Command Line
 $ git add .
 $ git commit -m "Commit Namen" # Commit wird durchgeführt im aktuellen Branch
-$ git checkout <gewünschter Branch> # master ist der offizielle Branch!!!
-$ git merge <???> # Wofür war das nochmal???
-$ git push
+$ git merge <branch namen>
+$ git push # Zum Branch hinzufügen
 
-
-Weiterarbeiten
