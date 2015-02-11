@@ -1,0 +1,92 @@
+﻿@article{SalPovNov08,
+ author = {Salema, Maria Isabel Gomes and Povoa, Ana Paula Barbosa and Novais, Augusto Q.},
+ year = {2008},
+ title = {A strategic and tactical model for closed-loop supply chains},
+ url = {\url{Online First DOI 10.1007/s00291-008-0160-5}},
+ journal = {OR Spectrum}
+}
+
+
+@article{RieZimGla07,
+ author = {Rieck, Julia and Zimmermann, J\"urgen and Glagow, Matthias},
+ year = {2007},
+ title = {Tourenplanung mittelst\"andischer Speditionsunternehmen in St\"uckgutkooperationen: Modellierung und heuristische L\"osungsverfahren},
+ pages = {365--388},
+ volume = {17},
+ number = {4},
+ journal = {Zeitschrift f\"ur Planung \& Unternehmenssteuerung}
+}
+
+
+@article{ThaBosPet08,
+ author = {Thanh, Phuong Nga and Bostel, Nathalie and P\'eton, Olivier},
+ year = {2008},
+ title = {A dynamic model for facility location in the design of complex supply chains},
+ pages = {678-693},
+ volume = {113},
+ number = {2},
+ journal = {International Journal of Production Economics}
+}
+
+
+@article{SchFlieBoy08,
+ author = {Scholl, Armin and Fliedner, Malte and Boysen, Nils},
+ year = {2009},
+ title = {ABSALOM: Balancing assembly lines with assignment restrictions},
+ url = {\url{Online First DOI 10.1016/j.ejor.2009.01.049}},
+ journal = {European Journal of Operational Research}
+}
+
+
+@article{OstSal04,
+ author = {Ostfeld, A. and Salomons, E.},
+ year = {2004},
+ title = {Optimal layout of early warning detection stations for water distribution systems security},
+ pages = {377-385},
+ volume = {130},
+ number = {5},
+ journal = {Journal of Water Resources Planning and Management-Asce}
+}
+
+
+@article{BihKobObs09,
+ author = {Bihlmaier, R. and Koberstein, A. and Obst, R.},
+ year = {2009},
+ title = {Modeling and optimizing of strategic and tactical production planning in the automotive industry under uncertainty},
+ pages = {311-336},
+ volume = {31},
+ number = {2},
+ journal = {OR Spectrum}
+}
+
+
+@article{BerFleiHar05,
+ author = {Berry, J. W. and Fleischer, L. and Hart, W. E. and Phillips, C. A. and Watson, J. P.},
+ year = {2005},
+ title = {Sensor placement in municipal water networks},
+ pages = {237-243},
+ volume = {131},
+ number = {3},
+ journal = {Journal of Water Resources Planning and Management-Asce}
+}
+
+
+@article{Det01,
+ author = {Dethloff, Jan},
+ year = {2001},
+ title = {Vehicle routing and reverse logistics: the vehicle routing problem with simultaneous delivery and pick-up},
+ pages = {79--96},
+ volume = {23},
+ number = {1},
+ journal = {Operations Research Spektrum}
+}
+
+
+@book{Bun08,
+ author = {Bundschuh, Markus},
+ year = {2008},
+ title = {Modellgest\"utzte strategische Planung von Produktionssystemen in der Automobilindustrie. Ein flexibler Planungsansatz f\"ur die Fahrzeughauptmodule Motor, Fahrwerk  und Antriebsstrang},
+ address = {Hamburg},
+ edition = {2},
+ publisher = {Verlag Dr. Kovac}
+}

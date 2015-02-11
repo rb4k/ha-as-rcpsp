@@ -1,0 +1,9 @@
+Vorgehensweise Github Clone
+$ cd <dir>  # In das gewünschte Verzeichnis gehen. Dabei wird automatisch im Nachfolgenden der Ordner "ha-as-rcpsp" erstellt. Daher keinen Ordner erstellen!!!
+$ git clone https://github.com/rb4k/ha-as-rcpsp.git # Verzeichnis wird kopiert
+
+
+Vorgehensweise Github Committing with the Command Line
+$ git status
+$ git add .
+$ git commit -m "Commit Namen" # Commit wird durchgeführt im aktuellen Branch

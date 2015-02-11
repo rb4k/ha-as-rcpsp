@@ -1,0 +1,331 @@
+\documentclass[a4paper,12pt,parskip,bibtotoc,liststotoc]{article}
+    %Festlegung der Dokumentenklasse, zahlreiche Vereinbarungen über Layout, Gliederungsstrukturen,
+    %bsp. article -> section, subsection..., book -> chapter, section...
+    %parskip = Abstand zwischen Absätzen, Veränderung durch \setlength
+\usepackage[latin1]{inputenc}   %Eingabezeichencodierung, die direkte Tastatureingabe von Umlauten ist möglich
+\usepackage[ngerman]{babel}     %Neu deutsche Rechtschreibung, Umlaute können geschrieben werden
+\usepackage{setspace}           %für Zeilenabstand
+\usepackage[notindex,nottoc]{tocbibind}   %Inhaltsverzeichnisse erstellen
+
+%zusätzliche benötigte Pakete
+\usepackage{graphicx}           %Graphik
+\usepackage{amsmath,amssymb}    %Mathematik
+\usepackage{natbib}             %Zitate
+\usepackage{marvosym}           %enthält Symbole wie das Eurozeichen
+\usepackage{eurosym}
+%\setcounter{secnumdepth}{3}
+%\setcounter{tocdepth}{3}
+
+\usepackage{mdwlist}   %Verringerung Abstand zwischen items -> \begin{itemize*} \end{itemize*}
+\usepackage[labelsep=space,justification=centering]{caption}
+
+%\usepackage{hyperref}  %erlaubt Links innerhalb des pdf-Dokuments zu erzeugen
+
+\setlength{\parindent}{0pt}     %Verhinderung des horizontalen Einrückens zu Beginn eines Absatzes
+
+%Seitenlayout
+\topmargin -0.9cm       %Vertikaler Abstand der Kopfzeile von der Bezugslinie
+\textheight 25cm        %Abstand der Grundlinie der Kopfzeile zum Haupttext
+\textwidth 16.5cm       %Breite des Haupttexts
+\footskip 1cm           %Abstand der Grundlinien der letzten Textzeile und der Fußzeile
+\voffset -0.5cm         %Vertikale Bezugspunktposition
+\hoffset -1.2cm         %Horizontale Bezugspunktposition
+
+\onehalfspacing         %anderthalbzeiliger Abstand
+
+\newcommand{\url}{\;}   %URL im Literaturverzeichnis
+
+%eigene Befehlsdefinitionen
+\newcommand{\be}{\begin{equation}}     %Mathematische Umgebung
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bean}{\begin{eqnarray*}}  %ohne Nummerierung
+\newcommand{\eean}{\end{eqnarray*}}    %ohne Nummerierung
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    Anfang des Textes
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\pagenumbering{roman}  %römische Seitennummerierung
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    Titelseite
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}  %keine Seitenzahl auf Titelseite
+Leibniz Universität Hannover\\
+Wirtschaftswissenschaftliche Fakultät\\
+Institut für Produktionswirtschaft\\
+Prof. Dr. Stefan Helber\\
+Name des Betreuers
+
+\vspace{4cm}
+
+\begin{center}
+Hausarbeit \\
+im Rahmen des Seminars zu Produktionswirtschaft im SS 2011 \\
+(Veranstaltungs-Nr. 71117/171117)
+
+\vspace{2.5cm}
+
+Thema Nr. ..\\[1mm]    %hier Themennummer eintragen
+{\Large Titel }
+\end{center}
+
+\vspace{7.5cm}
+
+Vorname Name \\
+Straße Hausnummer \\
+PLZ Ort \\
+Matr.-Nr. 1234567 \\[3mm]
+Abgabedatum: 18.05.2011
+
+
+\newpage
+
+%Inhaltsverzeichnis erstellen
+\tableofcontents
+
+\newpage  %neue Seite
+
+%Abbildungsverzeichnis erstellen
+\listoffigures
+
+%Tabellenverzeichnis erstellen
+\listoftables
+
+%Abkürzungsverzeichnis
+\section*{Abkürzungsverzeichnis}
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+\begin{table}[h!]
+    \vspace*{-3mm}
+    \hspace*{2mm}
+  \renewcommand{\arraystretch}{1,5}
+    \begin{tabular}{ll}  %hier die Spaltenausrichtung und Anzahl eintragen
+     LP	        & Linear Programming\\
+     MIP		& Mixed Integer Programming\\
+     OR		    & Operations Research\\
+     RCPSP      & Resource-Constrained Project Scheduling Problem\\
+     TSP        & Traveling Salesman Problem\\
+     WYSIWYG    & What You See Is What You Get\\
+     WYSIWYM    & What You See Is What You Mean\\
+	\end{tabular}
+\end{table}
+
+%Symbolverzeichnis
+\section*{Symbolverzeichnis}
+\addcontentsline{toc}{section}{Symbolverzeichnis}
+\begin{table}[h!]
+    \vspace*{-3mm}
+    \hspace*{2mm}
+  \renewcommand{\arraystretch}{1,5}
+    \begin{tabular}{ll}  %hier die Spaltenausrichtung und Anzahl eintragen
+     $\alpha$	& alpha\\     %hier $-Operatoren verwenden, da mathematischer Ausdruck im Text
+	\end{tabular}
+\end{table}
+
+\newpage
+
+\pagenumbering{arabic}   %ab hier arabische Seitenzahlen beginnend mit 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   1  Einleitung
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Einleitung}
+
+An den deutschen Flughäfen sind die Abfertigungskapazitäten nahezu ausgeschöpft. Die Flughäfen müssen mit den vorhandenen Ressourcen optimal arbeiten, um weitere Frequenzerhöhungen in der Abfertigung zu realisieren. Für die Flughafenbetreiber ist es aufgrund der vielen baulichen Restriktionen, und der damit verbundenen Bürokratie, kaum noch möglich Kapazitäten in Form z. B. neuer Landebahnen zu erweitern. Die Flughafenerweiterung des Frankfurter Flughafens um eine Landebahn hat alleine für das Genehmigungsverfahren einen Zeitraum von sechs Jahren in Anspruch genommen. Mit der Genehmigung waren jedoch Einschnitte im Nachtflugverkehr verbunden, also weite\-re Ressourceneinbußen.\footnote{Vgl.}\\
+Zur optimalen Nutzung der vorhandenen Ressourcen müssten die Turnaround-Prozesse mög\-lichst optimal durchlaufen werden. Dabei ist es wichtig Störfälle, die durch z. B. Verspätungen auftreten können, möglichst zu kompensieren. Diese Kompensierung kann durch eine ver\-kürzte Abfertigungszeit realisiert werden. Die Abfertigungszeiten sind sehr knapp kalkuliert. Für eine Standardabfertigung für innereuropäische Flüge sind meist 45 Minuten einkalkuliert.\footnote{Vgl.} Angenommen das Flugzeug kommt mit einer Verspätung von drei Minuten an, fehlen für den Abfertigungsprozess zur Einhaltung der ge\-planten Abflugzeit 10 \% des ursprünglichen Zeitkontingents. Zur Vermeidung von Verzögerungen im Abfertigungsablauf gilt es die zu durchlaufenden Einzelprozesse optimal zu organisieren. Es besteht an manchen Stellen die Möglichkeit Teilprozesse parallel ablaufen zu lassen oder in ihrer Reihenfolge zu verschieben. Erhöhter Ressourceneinsatz zur Verkürzung der Durchlaufzeit dieser Einzelprozesse ist an vielen Stellen nicht möglich, da z. B. eine Betankung nicht schneller durchgeführt werden kann.\\
+Zum Handling dieser Prozesse gilt es ein optimal angepasstes Modell zu nutzen, dass all diese Eventualitäten berücksichtigt und entsprechende Ablaufmodellierungen zumindest vorschlägt, wenn nicht gar direkt ausgibt. Zur Bewältigung des Störungsmanagements könnte sich eine Erweiterung des Resource-Constrained Project Scheduling Problem (RCPSP) eignen.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    hier Titel des nächsten Kapitels eingeben
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{hier Titel des nächsten Kapitels eingeben}
+
+Hier steht kein Text, wenn ein Unterpunkt folgt!\\\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    hier Titel des Unterkapitels eingeben
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{hier Titel des Unterkapitels eingeben}
+Unter folgendem Link finden Sie eine gute Übersicht von Befehlen in \LaTeX:\\
+\url{http://de.wikipedia.org/wiki/Hilfe:TeX}\\
+Das Material zum RRZN-Kurs "`Einführung in \LaTeX"' finden Sie unter:\\
+\url{http://www.rrzn.uni-hannover.de/latexgk.html}\\
+Das RRZN-Handbuch {"`\LaTeX - Einführung in das Textsatzsystem"'} ist sehr empfehlenswert als
+Nachschlagewerk.\\
+Durch "`googeln"' nach "`latex \emph{Stichwort}"' findet man i. d. R. schnell, wonach man sucht.
+%Paket "hyperref" notwendig
+
+Eine Fußnote kann man ganz leicht einfügen, z. B. so.\footnote{Vgl. \cite{BerFleiHar05}, S. 15-16.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    hier Titel des Unterkapitels eingeben
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{hier Titel des Unterkapitels eingeben}
+
+Hier steht Text, wenn kein Unterpunkt folgt \cite{DudSta05}. \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    hier Titel des Unterunterkapitels eingeben
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{hier Titel des Unterunterkapitels eingeben}
+
+Hier steht Text.
+
+%%neue Abbildung einfügen
+%In Abbildung \ref{LUH} sehen Sie das Logo der LUH. Die Nummerierung der Abbildungen
+%wurde entsprechend aktualisiert.
+%\begin{figure}[h]
+%  \begin{center}
+%  \includegraphics[width=3.5cm]{luh_logo_rgb}
+%  \caption{LUH-Logo}
+%  \label{LUH}
+%  \end{center}
+%\end{figure}
+
+%Beispiel für eine Abbildung
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=80mm]{Typen.pdf}
+    \caption{hier Name eintragen}  \label{Typen}
+    {\footnotesize \textbf{Quelle:} \cite{BihKobObs09}, S. 15.}
+  \end{center}
+\end{figure}
+
+
+Man kann eine Abbildung auch zitieren, z. B. siehe Abbildung \ref{Typen}.
+Das funktioniert analog mit Tabellen, z. B. siehe Tabelle \ref{Tabelle1}.
+
+%Beispiel für eine Tabelle
+\begin{table}[h!]
+  \begin{center}
+    \caption{Überschrift der Tabelle}  \label{Tabelle1}
+    \vspace*{3mm}
+    \begin{tabular}{|r|rr|}   %hier die Spaltenausrichtung, -breite, -begrenzung und -anzahl eintragen
+      Name & Matrikelnummer & Unterschrift  \\ \hline
+           &                &              \\
+    \end{tabular} \\[3mm]
+    {\footnotesize \textbf{Quelle:} \cite{Bun08}, S. 14.}   %footnotesize liefert Schrift in Größe 10pt
+  \end{center}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    hier Titel des Unterunterkapitels eingeben
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{hier Titel des Unterunterkapitels eingeben}
+
+\newpage
+Mathematische Umgebungen: \\
+Es gibt zwei mathematische Umgebungen, die im Text, z. B. die Variable $x_{12}$ wird größer, oder
+die abgesetzte Umgebung:
+
+\[\sum_{k=0}^\infty q^{k} = \frac{1}{1-q} \quad \text{für} \quad \left| q \right| < 1\]
+
+Diese kann man auch nummerieren mit
+\begin{equation}
+   M = \iiint\limits_{K} \rho dV = \int_{0}^{R} \int_{0}^{2\pi} \int_{0}^{\pi} \dfrac{r}{R} r^2
+   \, \mathrm{sin} \theta\, d \theta \, d \varphi\, d r
+   \label{Integral}
+\end{equation}
+Auch Formeln kann man ganz einfach zitieren, z. B. siehe Gleichung \eqref{Integral}.
+
+Bei mehreren Gleichungen hintereinander nimmt man
+\begin{eqnarray}
+  \dfrac{23}{45}+ 24x_4+13x_5 &  =  & x+y \nonumber \\  %ohne Nummer
+  x              &=& 25+12x_2+35x_{34}
+\end{eqnarray}
+
+
+\begin{eqnarray}
+DB_j^r & = & \delta \cdot P - (\alpha \cdot k_{\text{roh}} + DL_{cost,j} + \beta_j \cdot k_{ind,j}^L + k_{ind,j}) \\
+DB_1^{st} &=& 1 \cdot \text{\textdollar{25}} - (1 \cdot \text{\textdollar{7}} + \text{\textdollar{3{,}84}} + 1 \cdot \text{\textdollar{0{,}66}} + \text{\textdollar{4{,}50}} = \text{\textdollar{9{,}00}}\nonumber
+% - \label{deckungsbeitrag}  
+\end{eqnarray}
+
+
+%Modellformulierung
+\begin{multline}
+Y_{k,t-1}+Q_{k,t}-Y_{kt}=d_{kt} \hfill \forall\, k,t \label{Eq:LagBil}
+\end{multline}\vspace{-3.0ex}
+\begin{multline}
+\sum_{k\in \mathcal{K}}(tp_k \cdot Q_{kt}+ts_k\cdot
+\gamma_{kt})\leq cp_{t} + O_{t}\hfill  \forall\, t
+\label{Eq:KapBed}
+\end{multline}
+
+%Verwendung des neu definierten Befehls (s. o.)
+\be
+\frac{1}{2}\nonumber
+\ee
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    hier Titel des Unterkapitels eingeben
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{hier Titel des Unterkapitels eingeben}
+
+% {itemize*} bzw. {enumerate*} verringert den vertikalen Abstand; jedoch dann immer, um Konsistenz zu bewahren
+Dann gibt es noch Aufzählungen, mit Stichpunkten
+\begin{itemize}
+	\item erste Zeile
+	\item zweite Zeile
+\end{itemize}
+oder mit Zahlen
+\begin{enumerate}
+	\item erste Zeile
+	      \begin{enumerate}
+	       \item zweite Unterzeile
+	      \end{enumerate}
+	\item zweite Zeile
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    Schluss
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Schlussbemerkungen}
+Zusammenfassung, kritische Würdigung, Ausblick\\\\
+% Textteil: Ende
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Zum Schluss braucht man noch ein Literaturverzeichnis mit dem man im Text ganz einfach
+zitieren kann, vgl. \cite{Det01}, \cite{OstSal04}, \cite{RieZimGla07}, \cite{SalPovNov08},
+\cite{SchFlieBoy08} und \cite{ThaBosPet08}.
+
+\newpage
+\bibliographystyle{Prod_Seminar}    %legt die zu verwendende BIBTEX-Stildatei fest
+\bibliography{Literatur}    %an der Stelle zu verwenden, an der das Literaturverzeichnis gesetzt werden soll;
+                            %Literatur ist der Dateiname der BIB-Datei mit den Literatur-Informationen
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    ggf. Anhang
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{appendix}
+\section{aussagekräftige Überschrift für Inhalt des Anhangs}
+Eine aussagekräftige Überschrift ist für den Anhang zu wählen, die den entsprechenden
+Inhalt beschreibt.
+Der Anhang kann bspw. umfangreiche Abbildungen, Tabellen oder den Quelltext einer Implementierung
+beinhalten. Der Anhang ist nicht dafür gedacht, Inhalte der Arbeit auszulagern, um
+sich so der Begrenzung von 15 Seiten zu entziehen. Die Arbeit muss auch ohne den
+Anhang verständlich sein, d. h. alle wesentlichen Aussagen sind in den 15 Seiten der
+Seminararbeit darzustellen.
+\end{appendix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   ENDE DES DOKUMENTS
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
