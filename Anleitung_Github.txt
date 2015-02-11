@@ -3,17 +3,19 @@ $ cd <dir>  # In das gewünschte Verzeichnis gehen. Dabei wird automatisch im Na
 $ git clone https://github.com/rb4k/ha-as-rcpsp.git # Verzeichnis wird kopiert
 
 
-Wechseln zwischen Branch
-$ git checkout master
+Arbeiten in der Datei
+$ git pull
 $ git checkout -b <branch namen> # Namen für Branch definieren
-
-
-
-
-Vorgehensweise Github Committing with the Command Line
+$ git branch
 $ git status
+
+
+Wechseln zwischen Branch / Vorgehensweise Github Committing with the Command Line
 $ git add .
 $ git commit -m "Commit Namen" # Commit wird durchgeführt im aktuellen Branch
-$ git checkout master
-$ git merge <Name für Branch>
+$ git checkout <gewünschter Branch> # master ist der offizielle Branch!!!
+$ git merge <???> # Wofür war das nochmal???
 $ git push
+
+
+Weiterarbeiten
