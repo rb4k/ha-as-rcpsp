@@ -5,7 +5,6 @@ $ git branch
 $ git status
 
 
-Bekomme es nicht hin… arg…
 
 Onlineabruf der Datei
 $ git pull

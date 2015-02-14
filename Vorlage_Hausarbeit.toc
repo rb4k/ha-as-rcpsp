@@ -4,10 +4,10 @@
 \contentsline {section}{Abk\"urzungsverzeichnis}{iv}
 \contentsline {section}{Symbolverzeichnis}{v}
 \contentsline {section}{\numberline {1}Einleitung}{1}
-\contentsline {section}{\numberline {2}Das ressourcenbeschr\"ankte Projektplanungsproblem}{1}
-\contentsline {section}{\numberline {3}L\"osung des RCPSP mittels Ruby on Rail und LP-Relaxation?!?}{1}
-\contentsline {section}{\numberline {4}Schlussbemerkungen}{1}
-\contentsline {section}{Literatur}{2}
-\contentsline {section}{\numberline {A}Anhang}{3}
-\contentsline {subsection}{\numberline {A.1}GAMS-Implementierung des Beispiels}{3}
-\contentsline {subsection}{\numberline {A.2}Ruby on Rails Programmcode}{3}
+\contentsline {section}{\numberline {2}Mathematische Modellformulierung des ressourcenbeschr\"ankten Projektplanungsproblems}{2}
+\contentsline {section}{\numberline {3}L\"osung des RCPSP mittels Ruby on Rail und LP-Relaxation?!?}{4}
+\contentsline {section}{\numberline {4}Schlussbemerkungen}{4}
+\contentsline {section}{Literatur}{5}
+\contentsline {section}{\numberline {A}Anhang}{6}
+\contentsline {subsection}{\numberline {A.1}GAMS-Implementierung des Beispiels}{6}
+\contentsline {subsection}{\numberline {A.2}Ruby on Rails Programmcode}{6}
