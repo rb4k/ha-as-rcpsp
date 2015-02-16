@@ -5,8 +5,9 @@
 \contentsline {section}{Symbolverzeichnis}{v}
 \contentsline {section}{\numberline {1}Einleitung}{1}
 \contentsline {section}{\numberline {2}Mathematische Modellformulierung des ressourcenbeschr\IeC {\"a}nkten Projektplanungsproblems}{2}
-\contentsline {section}{\numberline {3}L\IeC {\"o}sung des RCPSP mittels Ruby on Rail und LP-Relaxation?!?}{4}
-\contentsline {section}{\numberline {4}Schlussbemerkungen}{4}
+\contentsline {section}{\numberline {3}Implementierung des RCPSP mittels Ruby on Rail}{4}
+\contentsline {section}{\numberline {4}Kritische W\IeC {\"u}rdigung des Anwendungssystems}{4}
+\contentsline {section}{\numberline {5}Fazit}{4}
 \contentsline {section}{Literatur}{5}
 \contentsline {section}{\numberline {A}Anhang}{6}
 \contentsline {subsection}{\numberline {A.1}GAMS-Implementierung des Beispiels}{6}
