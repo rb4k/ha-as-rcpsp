@@ -1,24 +1,24 @@
 \documentclass[a4paper,12pt,parskip,bibtotoc,liststotoc]{article}
-    %Festlegung der Dokumentenklasse, zahlreiche Vereinbarungen �ber Layout, Gliederungsstrukturen,
+    %Festlegung der Dokumentenklasse, zahlreiche Vereinbarungen über Layout, Gliederungsstrukturen,
     %bsp. article -> section, subsection..., book -> chapter, section...
-    %parskip = Abstand zwischen Absätzen, Ver�nderung durch \setlength
-\usepackage[latin1]{inputenc}   %Eingabezeichencodierung, die direkte Tastatureingabe von Umlauten ist m�glich
-\usepackage[ngerman]{babel}     %Neu deutsche Rechtschreibung, Umlaute k�nnen geschrieben werden
-\usepackage{setspace}           %f�r Zeilenabstand
+    %parskip = Abstand zwischen Absätzen, Veränderung durch \setlength
+\usepackage[utf8]{inputenc}   %Eingabezeichencodierung, die direkte Tastatureingabe von Umlauten ist möglich
+\usepackage[ngerman]{babel}     %Neu deutsche Rechtschreibung, Umlaute können geschrieben werden
+\usepackage{setspace}           %für Zeilenabstand
 \usepackage[notindex,nottoc]{tocbibind}   %Inhaltsverzeichnisse erstellen
 
-%zus�tzliche ben�tigte Pakete
+%zusätzliche benötigte Pakete
 \usepackage{graphicx}           %Graphik
 \usepackage{amsmath,amssymb}    %Mathematik
 \usepackage{natbib}             %Zitate
-\usepackage{marvosym}           %enth�lt Symbole wie das Eurozeichen
+\usepackage{marvosym}           %enthält Symbole wie das Eurozeichen
 \usepackage{eurosym}
 %\setcounter{secnumdepth}{3}
 %\setcounter{tocdepth}{3}
 \usepackage{footmisc}
 
 \usepackage{amsmath}
-%\usepackage{mathtools} % l�dt auch amsmath
+%\usepackage{mathtools} % lädt auch amsmath
 \usepackage{moreverb}
 
 \usepackage{amsthm}
@@ -32,13 +32,13 @@
 
 %\usepackage{hyperref}  %erlaubt Links innerhalb des pdf-Dokuments zu erzeugen
 
-\setlength{\parindent}{0pt}     %Verhinderung des horizontalen Einr�ckens zu Beginn eines Absatzes
+\setlength{\parindent}{0pt}     %Verhinderung des horizontalen Einrückens zu Beginn eines Absatzes
 
 %Seitenlayout
 \topmargin -0.9cm       %Vertikaler Abstand der Kopfzeile von der Bezugslinie
 \textheight 25cm        %Abstand der Grundlinie der Kopfzeile zum Haupttext
 \textwidth 16.5cm       %Breite des Haupttexts
-\footskip 1cm           %Abstand der Grundlinien der letzten Textzeile und der Fu�zeile
+\footskip 1cm           %Abstand der Grundlinien der letzten Textzeile und der Fußzeile
 \voffset -0.5cm         %Vertikale Bezugspunktposition
 \hoffset -1.2cm         %Horizontale Bezugspunktposition
 
@@ -63,16 +63,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-\pagenumbering{roman}  %r�mische Seitennummerierung
+\pagenumbering{roman}  %römische Seitennummerierung
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %    Titelseite
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \thispagestyle{empty}  %keine Seitenzahl auf Titelseite
-Leibniz Universit�t Hannover\\
-Wirtschaftswissenschaftliche Fakult�t\\
-Institut f�r Produktionswirtschaft\\
+Leibniz Universität Hannover\\
+Wirtschaftswissenschaftliche Fakultät\\
+Institut für Produktionswirtschaft\\
 Prof.\ Dr.\ Stefan Helber
 
 \vspace{5cm}
@@ -118,9 +118,9 @@ Abgabedatum: 24.03.2015
 %Tabellenverzeichnis erstellen
 \listoftables
 \newpage
-%Abk�rzungsverzeichnis
-\section*{Abk�rzungsverzeichnis}
-\addcontentsline{toc}{section}{Abk�rzungsverzeichnis}
+%Abkürzungsverzeichnis
+\section*{Abkürzungsverzeichnis}
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
 \begin{table}[h!]
     \vspace*{-3mm}
     \hspace*{2mm}
@@ -140,15 +140,15 @@ SGS & Schedule Generation Scheme\\
       \renewcommand{\arraystretch}{1,5}
     \begin{tabular}{ll} 
 $d_i$ & Dauer von Vorgang $i$ \\
-$FE_i$& fr�hestes Ende von Vorgang $i$\\
-$i,h=1,...,I$ & Vorg�nge \\
-$k_{ir}$& Kapazit�tsbedarf von Vorgang $i$ auf Ressource $r$\\
-$kp_r$ & verf�gbare Kapazit�t von Ressource $r$ je Periode\\
+$FE_i$& frühestes Ende von Vorgang $i$\\
+$i,h=1,...,I$ & Vorgänge \\
+$k_{ir}$& Kapazitätsbedarf von Vorgang $i$ auf Ressource $r$\\
+$kp_r$ & verfügbare Kapazität von Ressource $r$ je Periode\\
 $\mathcal{N}_i$ & Menge der direkten Nachfolger von Vorgang $i$ \\
 $r=1,...,R$ & Ressourcen \\
-$SE_i$& sp�testes Ende von Vorgang $i$\\
+$SE_i$& spätestes Ende von Vorgang $i$\\
 $t,\tau=1,..., T$ & Perioden\\
-$\mathcal{V}_i$ & Menge der direkten Vorg�nger von Vorgang $i$ \\
+$\mathcal{V}_i$ & Menge der direkten Vorgänger von Vorgang $i$ \\
 $X_{jt}\in\{0,1\}$ & gleich $1$, falls Vorgang $j$ in Periode $t$ endet, sonst $0$
   	\end{tabular}
 \end{table}
@@ -161,33 +161,33 @@ $X_{jt}\in\{0,1\}$ & gleich $1$, falls Vorgang $j$ in Periode $t$ endet, sonst $
 Bereits seit mehreren Dekaden spielt Projektarbeit eine wichtige Rolle bei der Aufgabenabwicklung in Wirtschaft und Verwaltung.\footnote{Vgl. \cite{zimmermann2006projektplanung}, S. VI} Dabei wird unter dem Begriff Projekt verstanden:
 
 \begin{mydef}
-\glqq Ein Projekt ist eine zeitlich befristete, relativ innovative und risikobehaftete Aufgabe von erheblicher Komplexit�t, die aufgrund ihrer Schwierigkeit und Bedeutung meist ein gesondertes Projektmanagement erfordert.\grqq\footnote{Vgl. \cite{projektdef}}
+\glqq Ein Projekt ist eine zeitlich befristete, relativ innovative und risikobehaftete Aufgabe von erheblicher Komplexität, die aufgrund ihrer Schwierigkeit und Bedeutung meist ein gesondertes Projektmanagement erfordert.\grqq\footnote{Vgl. \cite{projektdef}}
 \end{mydef}
 
-Laut dieser Definition geht eine zeitliche Restriktion mit einem Projekt einher. Durch das Zerlegen des Projekts in einzelne Arbeitsg�nge wird versucht die Komplexit�t zu reduzieren und eine geordnete Abfolge der Arbeitsg�nge zu erstellen, um das Projektziel zu erreichen.\footnote{Vgl. \cite{zimmermann2006projektplanung}, S. 4} Projektziele k�nnen unterschiedlich kategorisiert werden, z. B. in Sach-, Termin- oder Kostenziele.\footnote{Vgl. \cite{felkai2011analysieren}, S. 52}
+Laut dieser Definition geht eine zeitliche Restriktion mit einem Projekt einher. Durch das Zerlegen des Projekts in einzelne Arbeitsgänge wird versucht die Komplexität zu reduzieren und eine geordnete Abfolge der Arbeitsgänge zu erstellen, um das Projektziel zu erreichen.\footnote{Vgl. \cite{zimmermann2006projektplanung}, S. 4} Projektziele können unterschiedlich kategorisiert werden, z. B. in Sach-, Termin- oder Kostenziele.\footnote{Vgl. \cite{felkai2011analysieren}, S. 52}
 
-Nach DIN 69900 hat ein Arbeitsgang eines Projekts einen definierten Anfang sowie ein definiertes Ende und dient f�r das Projekt als Ablaufelement zur Beschreibung eines bestimmten Geschehens.\footnote{Vgl. \cite{69900D}, S. 15} Trotz der Zerlegung besitzen die einzelnen Arbeitsg�nge des Projekts eine Beziehung, mit der die Reihenfolge der Ablauffolge bestimmbar ist.\footnote{Vgl. \cite{kellenbrink2014einfuhrung}, S. 6-7} %D. h. es k�nnen nur Arbeitsg�nge abgeschlossen werden, wenn deren notwendigen Vorg�nge bereits abgeschlossen wurden. Ein einfaches Beispiel w�re die sogenannte Hochzeit in der Automobilherstellung. Sobald Karosserie und Motor eines Fahrzeugs hergestellt wurden, k�nnen diese zwei Elemente in einem nachfolgenden Prozess verbunden werden.
+Nach DIN 69900 hat ein Arbeitsgang eines Projekts einen definierten Anfang sowie ein definiertes Ende und dient für das Projekt als Ablaufelement zur Beschreibung eines bestimmten Geschehens.\footnote{Vgl. \cite{69900D}, S. 15} Trotz der Zerlegung besitzen die einzelnen Arbeitsgänge des Projekts eine Beziehung, mit der die Reihenfolge der Ablauffolge bestimmbar ist.\footnote{Vgl. \cite{kellenbrink2014einfuhrung}, S. 6-7} %D. h. es können nur Arbeitsgänge abgeschlossen werden, wenn deren notwendigen Vorgänge bereits abgeschlossen wurden. Ein einfaches Beispiel wäre die sogenannte Hochzeit in der Automobilherstellung. Sobald Karosserie und Motor eines Fahrzeugs hergestellt wurden, können diese zwei Elemente in einem nachfolgenden Prozess verbunden werden.
 Ein Arbeitsgang ist i. d. R. verbunden mit dem Einsatz von Ressourcen, welche wiederum mit Kosten verbunden sind. Dementsprechend versucht ein effizientes Projektmanagement, neben der Einhaltung des Projektziels, auch den Einsatz der Ressourcen zu minimieren.\footnote{Vgl. \cite{bartels2009projektplanung}, S. 11-12}
 
 \begin{mydef}
-\glqq Allgemein bezeichnet der Begriff Projektmanagement alle leitenden und administrativen Aktivit�ten, die zur Durchf�hrung eines Projektes notwendig sind. Es beschreibt die Gesamtheit von F�hrungsaufgaben, -organi\-sation, -techniken und -mitteln zur zielorientierten Durchf�hrung gro�er Vorhaben.\grqq\footnote{Vgl. \cite{hering2014projektmanagement}, S. 1-3; in Anlehnung an DIN 69901 und ISO 21500:2012-09}
+\glqq Allgemein bezeichnet der Begriff Projektmanagement alle leitenden und administrativen Aktivitäten, die zur Durchführung eines Projektes notwendig sind. Es beschreibt die Gesamtheit von Führungsaufgaben, -organi\-sation, -techniken und -mitteln zur zielorientierten Durchführung großer Vorhaben.\grqq\footnote{Vgl. \cite{hering2014projektmanagement}, S. 1-3; in Anlehnung an DIN 69901 und ISO 21500:2012-09}
 \end{mydef}
 
-Eine M�glichkeit, das Projektziel unter minimaler Ressourcenverwendung zu erreichen, ist die effiziente Planung der Ablauffolge der Arbeitsg�nge eines Projekts.\footnote{Vgl. \cite{bartels2009projektplanung}, S. 11-12} Damit ist es m�glich, mehrere Projekte bei einer gegebenen Zeitvorgabe unter Einhaltung von Ressourcenrestriktionen fertigzustellen bzw. bei konstanter Ressourcenkapazit�t ein Projekt in k�rzerer Zeit abzuschlie�en. Dementsprechend von großer Bedeutung ist die Projektplanung im Projektmanagement.\footnote{Vgl. \cite{zimmermann2006projektplanung}, S. VI\label{zum}}%Beispielweise kann ein Automobilhersteller durch Optimierung des Produktentstehungsprozess durch effizientes planen seiner vorhandenen Ressourcen in einer vordefinierten Zeit eine größere Anzahl an Fahrzeugen entwickeln, als wenn das Unternehmen keine effiziente Projektplanung verfolgt. 
+Eine Möglichkeit, das Projektziel unter minimaler Ressourcenverwendung zu erreichen, ist die effiziente Planung der Ablauffolge der Arbeitsgänge eines Projekts.\footnote{Vgl. \cite{bartels2009projektplanung}, S. 11-12} Damit ist es möglich, mehrere Projekte bei einer gegebenen Zeitvorgabe unter Einhaltung von Ressourcenrestriktionen fertigzustellen bzw. bei konstanter Ressourcenkapazität ein Projekt in kürzerer Zeit abzuschließen. Dementsprechend von großer Bedeutung ist die Projektplanung im Projektmanagement.\footnote{Vgl. \cite{zimmermann2006projektplanung}, S. VI\label{zum}}%Beispielweise kann ein Automobilhersteller durch Optimierung des Produktentstehungsprozess durch effizientes planen seiner vorhandenen Ressourcen in einer vordefinierten Zeit eine größere Anzahl an Fahrzeugen entwickeln, als wenn das Unternehmen keine effiziente Projektplanung verfolgt. 
 
 \begin{mydef}
-\glqq Projektplanung ist die Planung aller Arbeitsg�nge eines Projekts durch Zuweisung eines Startzeitpunktes, so dass die Zeitbeziehung zwischen den Vorg�ngen eingehalten und knappe Ressourcenkapazit�ten nicht �berschritten werden.\grqq\footref{zum}
+\glqq Projektplanung ist die Planung aller Arbeitsgänge eines Projekts durch Zuweisung eines Startzeitpunktes, so dass die Zeitbeziehung zwischen den Vorgängen eingehalten und knappe Ressourcenkapazitäten nicht überschritten werden.\grqq\footref{zum}
 \end{mydef}
 
-Eine effiziente Projektplanung reduziert die gesamte Fertigstellungsdauer eines Projekts. Es wird eine wirkungsvolle Gestaltung des Verbrauchs der zur Verf�gung stehenden Ressourcen �ber die Laufzeit des Projekts ermöglicht. Somit handelt es sich um ein mathematisches Optimierungsproblem, bei dem f�r ein Projekt die Ressourcenbeschr�nkung �ber die Laufzeit einzuhalten ist und die Fertigstellungszeit minimiert werden soll.
-%F�r das ressourcenbeschr�nkte Projektplanungsproblem gibt es Verfahren der exakten und heuristischen L�sung. In der Praxis, wie auch in dieser Arbeit \footnote{Vgl. Kapitel \ref{notwendig}}, wird i. d. R. auf Heuristiken zur�ckgegriffen.\footnote{Vgl. \cite{herroelen2005project}, S. 420}
+Eine effiziente Projektplanung reduziert die gesamte Fertigstellungsdauer eines Projekts. Es wird eine wirkungsvolle Gestaltung des Verbrauchs der zur Verfügung stehenden Ressourcen über die Laufzeit des Projekts ermöglicht. Somit handelt es sich um ein mathematisches Optimierungsproblem, bei dem für ein Projekt die Ressourcenbeschränkung über die Laufzeit einzuhalten ist und die Fertigstellungszeit minimiert werden soll.
+%Für das ressourcenbeschränkte Projektplanungsproblem gibt es Verfahren der exakten und heuristischen Lösung. In der Praxis, wie auch in dieser Arbeit \footnote{Vgl. Kapitel \ref{notwendig}}, wird i. d. R. auf Heuristiken zurückgegriffen.\footnote{Vgl. \cite{herroelen2005project}, S. 420}
 %Eine typische Ressource in der Projektplanung ist der Faktor Zeit, da lt. Definition ein Projekt zeitlich befristet ist. % Andere Arten von Ressourcen sind dürfen bei der Planung von Projekten jedoch nicht vernachlässigt werden.
 Ziel der vorliegenden Arbeit ist es...
 
-\section{Mathematische Modellformulierung des ressourcenbeschr�nkten Projektplanungsproblems} \label{Grund}
-Zur Sicherstellung des Planungserfolgs mittels Terminierung eines Projekts muss neben der Reihenfolgerestriktion auch der Ressourcenbedarf der unterschiedlichen Arbeitsg�nge sichergestellt werden, da Projekte meist ein beschr�nktes Ressourcenkontingent haben.\footnote{Vgl. \cite{kellenbrink2014einfuhrung}, S. 11} Mit der Einhaltung des Ressourcenbedarfs ist es f�r das Projekt m�glich, alle in Bearbeitung befindlichen Arbeitsg�nge auszuf�hren und folgerichtig das Projekt abzuschlie�en. Neben limitierten Ressourcen, die während des gesamten Projekts nur ein Mal zur Verfügung stehen, wie bspw. das Projektbudget, gibt es Ressourcen, die nach einer bestimmten Anzahl von Perioden erneuert werden können.\footnote{Vgl. \cite{neumann2003project}, S. 21-22} Erneuerbare Ressourcen sind bspw. die Produktionskapazit�t einer Maschine oder der Personaleinsatz f�r ein Projekt. In dieser Arbeit wird der Fokus auf erneuerbare Ressourcen gelegt.\\
+\section{Mathematische Modellformulierung des ressourcenbeschränkten Projektplanungsproblems} \label{Grund}
+Zur Sicherstellung des Planungserfolgs mittels Terminierung eines Projekts muss neben der Reihenfolgerestriktion auch der Ressourcenbedarf der unterschiedlichen Arbeitsgänge sichergestellt werden, da Projekte meist ein beschränktes Ressourcenkontingent haben.\footnote{Vgl. \cite{kellenbrink2014einfuhrung}, S. 11} Mit der Einhaltung des Ressourcenbedarfs ist es für das Projekt möglich, alle in Bearbeitung befindlichen Arbeitsgänge auszuführen und folgerichtig das Projekt abzuschließen. Neben limitierten Ressourcen, die während des gesamten Projekts nur ein Mal zur Verfügung stehen, wie bspw. das Projektbudget, gibt es Ressourcen, die nach einer bestimmten Anzahl von Perioden erneuert werden können.\footnote{Vgl. \cite{neumann2003project}, S. 21-22} Erneuerbare Ressourcen sind bspw. die Produktionskapazität einer Maschine oder der Personaleinsatz für ein Projekt. In dieser Arbeit wird der Fokus auf erneuerbare Ressourcen gelegt.\\
 
-Zur L�sung des ressourcenbeschr�nkten Projektplanungsproblems kann das Modell \textit{Resource-Constrained Project Scheduling Problem (RCPSP)} genutzt werden. Das Modell RCPSP legt durch Festlegung der Aktivit�tsstartzeitpunkte unter Einhaltung der Startzeitpunkt- bzw. der Vorrangsbedingung der einzelnen Arbeitsg�nge sowie der Kapazit�tsbeschr�nkung der erneuerbaren Ressourcen den Projektgrundablauf zur Zielerreichung der Minimierung der Projektdauer fest.\footnote{Vgl. \cite{demeulemeester2011robust}, S. 23} Die Zielfunktion des RCPSP zur Minimierung der Projektdauer ist weit verbreitet,\footnote{Vgl. \cite{drexl1997neuere}, S. 98} andere Varianten sind aber ebenfalls m�glich.\footnote{Vgl. \cite{talbot1982resource}, S. 1200}\\
+Zur Lösung des ressourcenbeschränkten Projektplanungsproblems kann das Modell \textit{Resource-Constrained Project Scheduling Problem (RCPSP)} genutzt werden. Das Modell RCPSP legt durch Festlegung der Aktivitätsstartzeitpunkte unter Einhaltung der Startzeitpunkt- bzw. der Vorrangsbedingung der einzelnen Arbeitsgänge sowie der Kapazitätsbeschränkung der erneuerbaren Ressourcen den Projektgrundablauf zur Zielerreichung der Minimierung der Projektdauer fest.\footnote{Vgl. \cite{demeulemeester2011robust}, S. 23} Die Zielfunktion des RCPSP zur Minimierung der Projektdauer ist weit verbreitet,\footnote{Vgl. \cite{drexl1997neuere}, S. 98} andere Varianten sind aber ebenfalls möglich.\footnote{Vgl. \cite{talbot1982resource}, S. 1200}\\
 
 Nachfolgend wird das deterministische RCPSP in diskreter Zeit formuliert.\footnote{????} Da es sich um eine mathematische Modellformulierung in diskreter Zeit handelt, sind die Zeiteinheiten gleich den Perioden $t, \tau$.\\
 \textbf{Modell RCPSP}
@@ -214,14 +214,14 @@ unter Beachtung der Restriktionen
 X_{it} \in \{0,1\}
 \hfill   i \in \mathcal{I};\; t \in \{FE_{i},...,SE_{i}\}\end{multline}\vspace{-6.0ex}\\
 
-Ein Projekt hat $I$ unterschiedliche Arbeitsg�nge. Jeder Arbeitsgang $i$ hat eine definierte Menge von zu erledigenden Vorg�ngerarbeitsg�ngen $h \in \mathcal{V}_{i}$ und die Arbeitsg�nge m�ssen zur Fertigstellung des Projekts topologisch abgearbeitet werden. D. h. der Vorg�nger $h$ hat stets eine kleinere Ordnungszahl als sein Nachfolger $i\;(h<i)$ und muss f�r den weiteren Projektverlauf beendet sein. Die Bearbeitungsdauer eines Arbeitsgangs $i$ wird mit dem Parameter $d_{i}$ festgelegt.  Bei dem RCPSP in diskreter Zeit wird die Annahme getroffen, dass die Dauer ganzzahlig ist. Der Startzeitpunkt des Projekts ist $t = 0$ und erstreckt sich �ber einen Gesamtzeitraum von $T$ Perioden. Um die Reihenfolgebedingungen einzuhalten, werden einem Projekt die zwei Dummy-Arbeitsg�nge \glqq Beginn\grqq\;($i=1$) und \glqq Ende\grqq\;($i=I$) hinzugef�gt, welche mit einer Dauer von $0$ Zeiteinheiten bewertet werden.\footnote{Vgl. \cite{zimmermann2006projektplanung}, S. 66} Die ben�tigten Kapazit�ten der erneuerbaren Ressource $r$ bei Durchf�hrung von Arbeitsgang $i$ wird durch $k_{ir}$ definiert. Die Ressourcen $r \in R$ sind in einer Periode innerhalb des Umfangs ihrer Kapazit�t $kp_{r}$ nutzbar. Da es sich um erneuerbare Ressourcen handelt, sind diese zu jeder neuen Periode in vollem Umfang erneut nutzbar, wobei nichtverbrauchte Ressourcen nicht auf nachfolgende Perioden �bertragbar sind.\footnote{Vgl. \cite{kellenbrink2014einfuhrung}, S. 12} Der Modellformulierung in diskreter Zeit wird die bin�re Entscheidungsvariable $X_{it}$ hinzugef�gt, damit der Fertigstellungszeitpunkt der einzelnen Arbeitsg�nge $i$ festgelegt werden kann.\footnote{Vgl. \cite{pritsker1969multiproject}, S. 94} \\%Die Bin�rvariable $x_{jt}$ wird f�r den Zeitraum vom fr�hesten Fertigstellungszeitpunkt $EFT_{j}$ bis zum sp�testen Fertigstellungszeitpunkt $LFT_{j}$ vom jeweiligen Arbeitsgang $j$ definiert.
+Ein Projekt hat $I$ unterschiedliche Arbeitsgänge. Jeder Arbeitsgang $i$ hat eine definierte Menge von zu erledigenden Vorgängerarbeitsgängen $h \in \mathcal{V}_{i}$ und die Arbeitsgänge müssen zur Fertigstellung des Projekts topologisch abgearbeitet werden. D. h. der Vorgänger $h$ hat stets eine kleinere Ordnungszahl als sein Nachfolger $i\;(h<i)$ und muss für den weiteren Projektverlauf beendet sein. Die Bearbeitungsdauer eines Arbeitsgangs $i$ wird mit dem Parameter $d_{i}$ festgelegt.  Bei dem RCPSP in diskreter Zeit wird die Annahme getroffen, dass die Dauer ganzzahlig ist. Der Startzeitpunkt des Projekts ist $t = 0$ und erstreckt sich über einen Gesamtzeitraum von $T$ Perioden. Um die Reihenfolgebedingungen einzuhalten, werden einem Projekt die zwei Dummy-Arbeitsgänge \glqq Beginn\grqq\;($i=1$) und \glqq Ende\grqq\;($i=I$) hinzugefügt, welche mit einer Dauer von $0$ Zeiteinheiten bewertet werden.\footnote{Vgl. \cite{zimmermann2006projektplanung}, S. 66} Die benötigten Kapazitäten der erneuerbaren Ressource $r$ bei Durchführung von Arbeitsgang $i$ wird durch $k_{ir}$ definiert. Die Ressourcen $r \in R$ sind in einer Periode innerhalb des Umfangs ihrer Kapazität $kp_{r}$ nutzbar. Da es sich um erneuerbare Ressourcen handelt, sind diese zu jeder neuen Periode in vollem Umfang erneut nutzbar, wobei nichtverbrauchte Ressourcen nicht auf nachfolgende Perioden übertragbar sind.\footnote{Vgl. \cite{kellenbrink2014einfuhrung}, S. 12} Der Modellformulierung in diskreter Zeit wird die binäre Entscheidungsvariable $X_{it}$ hinzugefügt, damit der Fertigstellungszeitpunkt der einzelnen Arbeitsgänge $i$ festgelegt werden kann.\footnote{Vgl. \cite{pritsker1969multiproject}, S. 94} \\%Die Binärvariable $x_{jt}$ wird für den Zeitraum vom frühesten Fertigstellungszeitpunkt $EFT_{j}$ bis zum spätesten Fertigstellungszeitpunkt $LFT_{j}$ vom jeweiligen Arbeitsgang $j$ definiert.
 
-Mit der Zielfunktion \eqref{Ziel} wird der Fertigstellungszeitpunkt des Projekts minimiert. Die Nebenbedingung \eqref{N1} sorgt daf�r, dass ein Arbeitsgang $i$ nur jeweils zwischen dem fr�hesten und dem sp�testen Fertigstellungszeitpunkt einmalig durchgef�hrt wird. Die Reihenfolgerestriktion wird mit der Nebenbedingung \eqref{N2} eingehalten. Sie stellt sicher, dass jeder Vorg�nger $h \in \mathcal{V}_{i}$ beendet ist, bevor der Arbeitsgang $i$ startet.
-Der Parameter $kp_{r}$ legt die Kapazit�tsgrenze f�r eine erneuerbare Ressource $r$ je Periode $t$ fest. Mit der Nebenbedingung \eqref{N3} wird dieses zum einen formal dargestellt und zum anderen wird der Ressourcenverzehr w�hrend der gesamten Bearbeitungsdauer der Fertigstellung beachtet.
-Mit der Nebenbedingung \eqref{N4} wird die Bin�rvariable $X_{it}$ f�r den Zeitraum $t = \{FE_{i},...,SE_{i}\}$ definiert, da aufgrund der Reihenfolgebeziehung \eqref{N2} der jeweils betrachtete Arbeitsgang nur in diesem Zeitraum fertiggestellt werden kann. Die gemischt-ganzzahlige Modellformulierung l�sst sich durch Standard-L�sungsverfahren exakt l�sen.\footnote{z. B. mittels eines Branch-and-Bound-Verfahrens, Vgl. \cite{kellenbrink2014einfuhrung}, S. 14}
+Mit der Zielfunktion \eqref{Ziel} wird der Fertigstellungszeitpunkt des Projekts minimiert. Die Nebenbedingung \eqref{N1} sorgt dafür, dass ein Arbeitsgang $i$ nur jeweils zwischen dem frühesten und dem spätesten Fertigstellungszeitpunkt einmalig durchgeführt wird. Die Reihenfolgerestriktion wird mit der Nebenbedingung \eqref{N2} eingehalten. Sie stellt sicher, dass jeder Vorgänger $h \in \mathcal{V}_{i}$ beendet ist, bevor der Arbeitsgang $i$ startet.
+Der Parameter $kp_{r}$ legt die Kapazitätsgrenze für eine erneuerbare Ressource $r$ je Periode $t$ fest. Mit der Nebenbedingung \eqref{N3} wird dieses zum einen formal dargestellt und zum anderen wird der Ressourcenverzehr während der gesamten Bearbeitungsdauer der Fertigstellung beachtet.
+Mit der Nebenbedingung \eqref{N4} wird die Binärvariable $X_{it}$ für den Zeitraum $t = \{FE_{i},...,SE_{i}\}$ definiert, da aufgrund der Reihenfolgebeziehung \eqref{N2} der jeweils betrachtete Arbeitsgang nur in diesem Zeitraum fertiggestellt werden kann. Die gemischt-ganzzahlige Modellformulierung lässt sich durch Standard-Lösungsverfahren exakt lösen.\footnote{z. B. mittels eines Branch-and-Bound-Verfahrens, Vgl. \cite{kellenbrink2014einfuhrung}, S. 14}
 
 
-\section{L�sung des RCPSP mittels Ruby on Rail und LP-Relaxation?!?} \label{Grund}
+\section{Lösung des RCPSP mittels Ruby on Rail und LP-Relaxation?!?} \label{Grund}
 
 \section{Schlussbemerkungen}
 
