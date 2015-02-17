@@ -8,7 +8,6 @@
 \contentsline {section}{\numberline {3}Implementierung des RCPSP mittels Ruby on Rail}{4}
 \contentsline {section}{\numberline {4}Kritische W\IeC {\"u}rdigung des Anwendungssystems}{4}
 \contentsline {section}{\numberline {5}Fazit}{4}
-\contentsline {section}{Literatur}{5}
-\contentsline {section}{\numberline {A}Anhang}{6}
-\contentsline {subsection}{\numberline {A.1}GAMS-Implementierung des Beispiels}{6}
-\contentsline {subsection}{\numberline {A.2}Ruby on Rails Programmcode}{6}
+\contentsline {section}{\numberline {A}Anhang}{5}
+\contentsline {subsection}{\numberline {A.1}GAMS-Implementierung des Beispiels}{5}
+\contentsline {subsection}{\numberline {A.2}Ruby on Rails Programmcode}{5}
