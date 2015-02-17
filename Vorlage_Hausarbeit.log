@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.17)  17 FEB 2015 15:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.17)  17 FEB 2015 16:15
 entering extended mode
-**F:/Hausarbeit/Textdatei/Vorlage_Hausarbeit.tex
-(F:/Hausarbeit/Textdatei/Vorlage_Hausarbeit.tex
+**C:/Sites/ha-as-rcpsp/Vorlage_Hausarbeit.tex
+(C:/Sites/ha-as-rcpsp/Vorlage_Hausarbeit.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -491,7 +491,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 LaTeX Warning: Unused global option(s):
     [parskip,bibtotoc,liststotoc].
 
-(F:\Hausarbeit\Textdatei\Vorlage_Hausarbeit.aux)
+(C:\Sites\ha-as-rcpsp\Vorlage_Hausarbeit.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
 LaTeX Font Info:    ... okay on input line 64.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
@@ -532,47 +532,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/Andreas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(F:\Hausarbeit\Textdatei\Vorlage_Hausarbeit.toc)
+(C:\Sites\ha-as-rcpsp\Vorlage_Hausarbeit.toc)
 \tf@toc=\write3
  [2]
-(F:\Hausarbeit\Textdatei\Vorlage_Hausarbeit.lof)
+(C:\Sites\ha-as-rcpsp\Vorlage_Hausarbeit.lof)
 \tf@lof=\write4
 
-(F:\Hausarbeit\Textdatei\Vorlage_Hausarbeit.lot)
+(C:\Sites\ha-as-rcpsp\Vorlage_Hausarbeit.lot)
 \tf@lot=\write5
  [3] [4] [5]
-
-Package natbib Warning: Citation `projektdef' on page 1 undefined on input line
- 163.
-
-
-Package natbib Warning: Citation `zimmermann2006projektplanung' on page 1 undef
-ined on input line 163.
-
-
-Package natbib Warning: Citation `zimmermann2006projektplanung' on page 1 undef
-ined on input line 163.
-
-
-Package natbib Warning: Citation `felkai2011analysieren' on page 1 undefined on
- input line 163.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
-
-
-Package natbib Warning: Citation `69900D' on page 1 undefined on input line 165
-.
-
-
-Package natbib Warning: Citation `kellenbrink2014einfuhrung' on page 1 undefine
-d on input line 165.
-
-
-Package natbib Warning: Citation `bartels2009projektplanung' on page 1 undefine
-d on input line 166.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 165--167
@@ -580,30 +551,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 165--167
  []
 
 [1]
-
-Package natbib Warning: Citation `kellenbrink2014einfuhrung' on page 2 undefine
-d on input line 183.
-
-
-Package natbib Warning: Citation `neumann2003project' on page 2 undefined on in
-put line 183.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
-
-
-Package natbib Warning: Citation `demeulemeester2011robust' on page 2 undefined
- on input line 185.
-
-
-Package natbib Warning: Citation `drexl1997neuere' on page 2 undefined on input
- line 185.
-
-
-Package natbib Warning: Citation `talbot1982resource' on page 2 undefined on in
-put line 185.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 185--186
@@ -611,19 +561,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 185--186
  []
 
 [2]
-
-Package natbib Warning: Citation `zimmermann2006projektplanung' on page 3 undef
-ined on input line 188.
-
-
-Package natbib Warning: Citation `kellenbrink2014einfuhrung' on page 3 undefine
-d on input line 188.
-
-
-Package natbib Warning: Citation `pritsker1969multiproject' on page 3 undefined
- on input line 188.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 187--189
 
  []
@@ -633,36 +570,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
-[4] (F:\Hausarbeit\Textdatei\Vorlage_Hausarbeit.bbl)
+[4] (C:\Sites\ha-as-rcpsp\Vorlage_Hausarbeit.bbl
+Underfull \hbox (badness 1648) in paragraph at lines 5--9
+[]\OT1/cmr/m/n/12 Bartels, J.H. (2009): Projektplanung--Grundlagen und An-wen-d
+ungs-bei-spie-le. In: An-
+ []
 
-Package natbib Warning: There were undefined citations.
 
-[5] (F:\Hausarbeit\Textdatei\Vorlage_Hausarbeit.aux) ) 
+Underfull \hbox (badness 1360) in paragraph at lines 5--9
+\OT1/cmr/m/n/12 wen-dung von Me-tho-den der res-sour-cen-be-schr[]ankten Pro-je
+kt-pla-nung mit mul-ti-plen
+ []
+
+) [5] [6] (C:\Sites\ha-as-rcpsp\Vorlage_Hausarbeit.aux) ) 
 Here is how much of TeX's memory you used:
- 5299 strings out of 493921
- 70998 string characters out of 3147276
+ 5323 strings out of 493921
+ 71654 string characters out of 3147276
  144844 words of memory out of 3000000
- 8495 multiletter control sequences out of 15000+200000
- 12157 words of font info for 47 fonts, out of 3000000 for 9000
+ 8520 multiletter control sequences out of 15000+200000
+ 11849 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 41i,11n,38p,2075b,220s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmti12.pfb>
-Output written on Vorlage_Hausarbeit.pdf (10 pages, 182005 bytes).
+ 41i,11n,38p,2072b,220s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmti12.pfb>
+Output written on Vorlage_Hausarbeit.pdf (11 pages, 178548 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
+ 90 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
