@@ -16,6 +16,53 @@
 %\setcounter{secnumdepth}{3}
 %\setcounter{tocdepth}{3}
 \usepackage{footmisc}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{textcomp}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstdefinestyle{befehl}{
+	backgroundcolor=\color{lbcolor},
+	tabsize=4,
+	rulecolor=,
+	language=ruby,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=true,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.133,0.545,0.133},
+        stringstyle=\color[rgb]{0.627,0.126,0.941}
+}
+
+\lstdefinestyle{Listing}{
+	frame=single,
+	tabsize=4,
+	rulecolor=,
+	language=ruby,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=true,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.133,0.545,0.133},
+        stringstyle=\color[rgb]{0.627,0.126,0.941}
+}
+
 
 \usepackage{amsmath}
 %\usepackage{mathtools} % lädt auch amsmath
@@ -117,6 +164,12 @@ Abgabedatum: 24.03.2015
 
 %Tabellenverzeichnis erstellen
 \listoftables
+
+%Codeverzeichnis
+\renewcommand\lstlistlistingname{Quellcodeverzeichnis} 
+\lstlistoflistings 
+\renewcommand*\lstlistingname{Quellcode} 
+
 \newpage
 %Abkürzungsverzeichnis
 \section*{Abkürzungsverzeichnis}
@@ -177,15 +230,14 @@ Ein Arbeitsgang ist i. d. R. verbunden mit dem Einsatz von Ressourcen, welche wi
 %Eine effiziente Projektplanung reduziert die gesamte Fertigstellungsdauer eines Projekts. Es wird eine wirkungsvolle Gestaltung des Verbrauchs der zur Verfügung stehenden Ressourcen über die Laufzeit des Projekts ermöglicht. Somit handelt es sich um ein mathematisches Optimierungsproblem, bei dem für ein Projekt die Ressourcenbeschränkung über die Laufzeit einzuhalten ist und die Fertigstellungszeit minimiert werden soll.
 %Für das ressourcenbeschränkte Projektplanungsproblem gibt es Verfahren der exakten und heuristischen Lösung. In der Praxis, wie auch in dieser Arbeit \footnote{Vgl. Kapitel \ref{notwendig}}, wird i. d. R. auf Heuristiken zurückgegriffen.\footnote{Vgl. \cite{herroelen2005project}, S. 420}
 %Eine typische Ressource in der Projektplanung ist der Faktor Zeit, da lt. Definition ein Projekt zeitlich befristet ist. % Andere Arten von Ressourcen sind dürfen bei der Planung von Projekten jedoch nicht vernachlässigt werden.
-Zur Bestimmung der optimalen Ablauffolge der einzelnen Arbeitsgänge eines Projekts kann ein Optimierungsmodell verwendet werden, bei der für eine festgelegten Ablauffolge eines Projekts und unter Berücksichtigung der Ressourcenbeschränkung die Fertigstellungszeit minimiert wird. Im Kapitel \ref{Grund} wird eine solche Modellformulierung für das ressourcenbeschränkte Projektplanungsproblem vorgestellt. Das Projektplanungsproblem unter Einhaltung der Ressourcenbeschränkung wird oft mit der aus dem Englischen stammenden Abkürzung RCPSP beschrieben.\footnote{Resource-Constrained Project Scheduling Problem} Bei dem RCPSP handelt es sich um eine abstrakte mathematische Modellformulierung. Ziel der vorliegenden Arbeit ist es das RCPSP in Ruby on Rails (RoR) zu implementieren. Bei RoR handelt es sich um ein Framework zur Entwicklung von Webdokumenten bzw. Internetseiten.\footnote{???} Es baut auf der Programmiersprache Ruby auf und ist ursprünglich von David Heinemeier Hansson entwickelt.\footnote{???} Die Implementierung bedarf einer Verknüpfung von RoR und GAMS\footnote{General Algebraic Modeling System}. Unter GAMS wird eine algebraische Modellierungssprache für mathematische Optimierungsprobleme verstanden, mit der das RCPSP gelöst wird.\footnote{???} Im Kapitel \ref{Haupt} wird die Entwicklung des Anwendungssystems zum Lösen des RCPSP ausführlich beschrieben. Ergänzt wird diese Arbeit durch eine kritische Würdigung des Anwendungssystems in Kapitel \ref{krit} sowie einem Fazit in Kapitel \ref{Fazit}.
+Zur Bestimmung der optimalen Ablauffolge der einzelnen Arbeitsgänge eines Projekts kann ein Optimierungsmodell verwendet werden, bei der für eine festgelegten Ablauffolge eines Projekts und unter Berücksichtigung der Ressourcenbeschränkung die Fertigstellungszeit minimiert wird. Im Kapitel \ref{Grund} wird eine solche Modellformulierung für das ressourcenbeschränkte Projektplanungsproblem vorgestellt. Bezeichnet wird das Projektplanungsproblem unter Einhaltung der Ressourcenbeschränkung oft mit der englischen Bezeichnung des \textit{Resource-Constrained Project Scheduling Problem (RCPSP)}. Bei dem RCPSP handelt es sich um eine abstrakte mathematische Modellformulierung. Ziel der vorliegenden Arbeit ist es das RCPSP in Ruby on Rails (RoR) zu implementieren. Bei RoR handelt es sich um ein Framework zur Entwicklung von Webdokumenten bzw. Internetseiten.\footnote{???} Es baut auf der Programmiersprache Ruby auf und ist ursprünglich von David Heinemeier Hansson entwickelt.\footnote{???} Die Implementierung bedarf einer Verknüpfung von RoR und GAMS\footnote{General Algebraic Modeling System}. Unter GAMS wird eine algebraische Modellierungssprache für mathematische Optimierungsprobleme verstanden, mit der das RCPSP gelöst wird.\footnote{???} Im Kapitel \ref{Haupt} wird die Entwicklung des Anwendungssystems zum Lösen des RCPSP ausführlich beschrieben. Ergänzt wird diese Arbeit durch eine kritische Würdigung des Anwendungssystems in Kapitel \ref{krit} sowie einem Fazit in Kapitel \ref{Fazit}.
 
 \section{Mathematische Modellformulierung des ressourcenbeschränkten Projektplanungsproblems} \label{Grund}
 Ein Großteill an Projekten besitzt die Eigenschaft eines beschränkten Ressourcenkontingents.\footnote{Vgl. \cite{kellenbrink2014einfuhrung}, S. 11} Soll demgemäß die vorgegebene Terminierung des Projektes als zuvor festgesetztes Ziel erreicht werden, muss neben der Reihenfolgerestriktion auch der Ressourcenbedarf der unterschiedlichen Arbeitsgänge sichergestellt werden. Mit der Einhaltung des Ressourcenbedarfs ist es möglich, alle zur Erfüllung des Projektes notwendigen Arbeitsgänge auszuführen und somit letztendlich das Projekt abzuschließen. Neben limitierten Ressourcen, die während des gesamten Projekts nur ein Mal zur Verfügung stehen, wie bspw. das Projektbudget, gibt es Ressourcen, die nach einer bestimmten Anzahl von Perioden erneuert werden können.\footnote{Vgl. \cite{neumann2003project}, S. 21-22} Erneuerbare Ressourcen sind bspw. die Produktionskapazität einer Maschine oder der Personaleinsatz für ein Projekt. In dieser Arbeit wird der Fokus auf diese erneuerbaren Ressourcen gelegt.\\
 
-Zur Lösung des ressourcenbeschränkten Projektplanungsproblems kann das Modell \textit{Resource-Constrained Project Scheduling Problem (RCPSP)} genutzt werden. Das RCPSP legt durch Fixierung der Aktivitätsstartzeitpunkte den Projektgrundablauf zur Zielerreichung der Minimierung der Projektdauer fest. Dies geschieht unter Einhaltung der Startzeitpunkt- bzw. der Vorrangsbedingung der einzelnen Arbeitsgänge sowie der Kapazitätsbeschränkung der erneuerbaren Ressourcen.\footnote{Vgl. \cite{demeulemeester2011robust}, S. 23} Die im folgenden aufgestellte Zielfunktion des RCPSP zur Minimierung der Projektdauer ist die gängige Version,\footnote{Vgl. \cite{drexl1997neuere}, S. 98} andere Variationen sind aber ebenfalls möglich und praktikabel.\footnote{Vgl. \cite{talbot1982resource}, S. 1200}\\
+Zur Lösung des ressourcenbeschränkten Projektplanungsproblems kann das Modell RCPSP genutzt werden. Das RCPSP legt durch Fixierung der Aktivitätsstartzeitpunkte den Projektgrundablauf zur Zielerreichung der Minimierung der Projektdauer fest. Dies geschieht unter Einhaltung der Startzeitpunkt- bzw. der Vorrangsbedingung der einzelnen Arbeitsgänge sowie der Kapazitätsbeschränkung der erneuerbaren Ressourcen.\footnote{Vgl. \cite{demeulemeester2011robust}, S. 23} Die im folgenden aufgestellte Zielfunktion des RCPSP zur Minimierung der Projektdauer ist die gängige Version,\footnote{Vgl. \cite{drexl1997neuere}, S. 98} andere Variationen sind aber ebenfalls möglich.\footnote{Vgl. \cite{talbot1982resource}, S. 1200}\\
 
 Nachfolgend wird das deterministische RCPSP in diskreter Zeit formuliert.\footnote{????} Charakteristisch für eine mathematische Modellformulierung in diskreter Zeit sind die Zeiteinheiten, die den Perioden $t, \tau$ entsprechen.\\
-Es wird ein Projket betrachtet, dass aus $I$ unterschiedlichen Arbeitsgängen besteht. Jeder Arbeitsgang $i$ hat eine definierte Menge von zu erledigenden Vorgängerarbeitsgängen $h \in \mathcal{V}_{i}$. Desweiteren ist eine topologische Abarbeitung der Arbeitsgänge zur Fertigstellung des Projekts notwendig. D. h. der Vorgänger $h$ hat stets eine kleinere Ordnungszahl als sein Nachfolger $i\;(h<i)$ und muss zur Fortsetzung des Projektverlaufs beendet sein. Die Bearbeitungsdauer eines Arbeitsgangs $i$ wird mit dem Parameter $d_{i}$ festgelegt.  Bei dem RCPSP in diskreter Zeit wird die Annahme getroffen, dass die Dauer durch einen ganzzahligen Parameter abgebildet wird. Der Startzeitpunkt des Projekts ist $t = 0$ und erstreckt sich über einen Gesamtzeitraum von $T$ Perioden. Um die Reihenfolgebedingungen einzuhalten, werden einem Projekt zwei Dummy-Arbeitsgänge \glqq Beginn\grqq\;($i=1$) und \glqq Ende\grqq\;($i=I$) hinzugefügt, welche mit einer Dauer von $0$ Zeiteinheiten bewertet werden. \footnote{Vgl. \cite{zimmermann2006projektplanung}, S. 66} Dadurch können der Projektbeginn und das Projektende exakt terminiert werden. $k_{ir}$ stellt die benötigten Kapazitäten der erneuerbaren Ressource $r$ bei der Durchführung von Arbeitsgang $i$ dar. Die Ressourcen $r \in R$ sind in einer Periode innerhalb des Umfangs ihrer Kapazität $kp_{r}$ nutzbar. Da es sich um erneuerbare Ressourcen handelt, stehen diese zu jeder neuen Periode in vollem Umfang erneut zur Verfügung. Ungenutzte Ressourcen sind jedoch nicht auf nachfolgende Arbeitsgänge und Perioden übertragbar.\footnote{Vgl. \cite{kellenbrink2014einfuhrung}, S. 12} Um den Fertigstellungszeitpunkt der einzelnen Arbeitsgänge $i$ festlegen zu können, wird der Modellformulierung in diskreter Zeit die binäre Entscheidungsvariable $X_{it}$ hinzugefügt.\footnote{Vgl. \cite{pritsker1969multiproject}, S. 94} Diese Binärvariable nimmt den Wert $1$ an, falls der Arbeitsgang $i$ zum Zeitpunkt $t$ beendet wird.\\
 
 \textbf{Modell RCPSP}
 \begin{eqnarray} \label{Ziel}
@@ -211,13 +263,30 @@ unter Beachtung der Restriktionen
 X_{it} \in \{0,1\}
 \hfill   i \in \mathcal{I};\; t \in \{FE_{i},...,SE_{i}\}\end{multline}\vspace{-6.0ex}\\
 
-Mittels der Zielfunktion \eqref{Ziel} wird versucht, den Fertigstellungszeitpunkt des Projekts zu minimieren. Dafür wird der Zeitraum zwischen dem frühesten und spätesten Fertigstellungszeitpunkt $FE_{I}$ und $SE_{I}$ aller durchzuführenden Arbeitsgänge $I$ betrachtet. Nebenbedingung \eqref{N1} stellt sicher, dass ein Arbeitsgang $i$ zwischen dem jeweiligen für diesen Arbeitsgang geltenden frühesten und spätesten Fertigstellungszeitpunkt nur exakt ein Mal durchgeführt wird. Die Reihenfolgerestriktion wird mit der Nebenbedingung \eqref{N2} eingehalten. Sie stellt sicher, dass jeder Vorgänger $h \in \mathcal{V}_{i}$ beendet ist, bevor der Arbeitsgang $i$ startet. Der Term $(t - d_{i})$ garantiert für den Arbeitsgang $i$, dass dieser erst beginnt, sobald der Vorgänger $h$ mit der Dauer $d_{i}$ abgeschlossen ist.
-Der Parameter $kp_{r}$ spiegelt die Kapazitätsgrenze für eine erneuerbare Ressource $r$ je Periode $t$ wieder. In Nebenbedingung \eqref{N3} findet zum einen eine formale Darstellung dieser Kapaiztätsbegrenzung statt. Zum anderen wird der Ressourcenverzehr während der gesamten Bearbeitungsdauer der Fertigstellung beachtet, in dem der Kapazitätsbedarf $k_{ir}$ aller Arbeitsgänge $I$ summiert wird. Eben diese Summe wird schließlich durch $kp_{r}$ beschränkt.
+Es wird ein Projekt betrachtet, dass aus $I$ unterschiedlichen Arbeitsgängen besteht. Jeder Arbeitsgang $i$ hat eine definierte Menge von zu erledigenden Vorgängerarbeitsgängen $h \in \mathcal{V}_{i}$. Des Weiteren ist für die Fertigstellung des Projekts die Abarbeitung der Arbeitsgänge in topologischer Reihenfolge notwendig. D. h. der Vorgänger $h$ hat stets eine kleinere Ordnungszahl als sein Nachfolger $i\;(h<i)$ und muss zur Fortsetzung des Projektverlaufs beendet sein. Die Bearbeitungsdauer eines Arbeitsgangs $i$ wird mit dem Parameter $d_{i}$ festgelegt.  Bei dem RCPSP in diskreter Zeit wird die Annahme getroffen, dass die Dauer durch einen ganzzahligen Parameter abgebildet wird. Der Startzeitpunkt des Projekts ist $t = 0$ und erstreckt sich über einen Gesamtzeitraum von $T$ Perioden. Um die Reihenfolgebedingungen einzuhalten, werden einem Projekt zwei Dummy-Arbeitsgänge \glqq Beginn\grqq\;($i=1$) und \glqq Ende\grqq\;($i=I$) hinzugefügt, welche mit einer Dauer von $0$ Zeiteinheiten bewertet werden.\footnote{Vgl. \cite{zimmermann2006projektplanung}, S. 66} Dadurch wird der Projektbeginn und das Projektende exakt terminiert. $k_{ir}$ stellt die benötigten Kapazitäten der erneuerbaren Ressource $r$ bei der Durchführung von Arbeitsgang $i$ dar. Die Ressourcen $r \in R$ sind in einer Periode innerhalb des Umfangs ihrer Kapazität $kp_{r}$ nutzbar. Da es sich um erneuerbare Ressourcen handelt, stehen diese zu jeder neuen Periode in vollem Umfang erneut zur Verfügung. Ungenutzte Ressourcen sind jedoch nicht auf nachfolgende Arbeitsgänge und Perioden übertragbar.\footnote{Vgl. \cite{kellenbrink2014einfuhrung}, S. 12} Um den Fertigstellungszeitpunkt der einzelnen Arbeitsgänge $i$ festlegen zu können, wird der Modellformulierung in diskreter Zeit die binäre Entscheidungsvariable $X_{it}$ hinzugefügt.\footnote{Vgl. \cite{pritsker1969multiproject}, S. 94} Diese Binärvariable nimmt den Wert $1$ an, falls der Arbeitsgang $i$ zum Zeitpunkt $t$ beendet wird.\\
+
+Mittels der Zielfunktion \eqref{Ziel} wird der Fertigstellungszeitpunkt des Projekts minimiert. Dafür wird der Zeitraum zwischen dem frühesten und spätesten Fertigstellungszeitpunkt $FE_{I}$ und $SE_{I}$ aller durchzuführenden Arbeitsgänge $I$ betrachtet. Nebenbedingung \eqref{N1} stellt sicher, dass ein Arbeitsgang $i$ zwischen dem jeweiligen für diesen Arbeitsgang geltenden frühesten und spätesten Fertigstellungszeitpunkt nur exakt ein Mal durchgeführt wird. Die Reihenfolgerestriktion wird mit der Nebenbedingung \eqref{N2} eingehalten. Sie stellt sicher, dass jeder Vorgänger $h \in \mathcal{V}_{i}$ beendet ist, bevor der Arbeitsgang $i$ startet. Der Term $(t - d_{i})$ garantiert für den Arbeitsgang $i$, dass dieser erst beginnt, sobald der Vorgänger $h$ mit der Dauer $d_{i}$ abgeschlossen ist.
+Der Parameter $kp_{r}$ spiegelt die Kapazitätsgrenze für eine erneuerbare Ressource $r$ je Periode $t$ wieder. In Nebenbedingung \eqref{N3} findet zum einen eine formale Darstellung dieser Kapaiztätsbegrenzung statt. Zum anderen wird der Ressourcenverzehr während der gesamten Bearbeitungsdauer der Fertigstellung beachtet, in dem der Kapazitätsbedarf $k_{ir}$ aller Arbeitsgänge $I$ summiert wird. Eben diese Summe wird schließlich durch $kp_{r}$ beschränkt. %????Da ist irgendwas falsch...
 Mit der Nebenbedingung \eqref{N4} wird die Binärvariable $X_{it}$ für den Zeitraum $t = \{FE_{i},...,SE_{i}\}$ formal definiert. Aufgrund der Reihenfolgebeziehung \eqref{N2} darf der jeweils betrachtete Arbeitsgang nur in diesem Zeitraum fertiggestellt werden.
-%Die gemischt-ganzzahlige Modellformulierung lässt sich durch Standard-Lösungsverfahren exakt lösen.\footnote{z. B. mittels eines Branch-and-Bound-Verfahrens, Vgl. \cite{kellenbrink2014einfuhrung}, S. 14}
+Die gemischt-ganzzahlige Modellformulierung lässt sich durch Standard-Lösungsverfahren exakt lösen.\footnote{z. B. mittels eines Branch-and-Bound-Verfahrens, Vgl. \cite{kellenbrink2014einfuhrung}, S. 14}
 
 
-\section{Implementierung des RCPSP mittels Ruby on Rail} \label{Haupt}
+\section{Implementierung des RCPSP mittels Ruby on Rails} \label{Haupt}
+\begin{lstlisting}[style=Befehl]
+$ Put your code here.
+>> Put your code here.
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Beispielcode, style=Listing]
+if draw
+    print([outputpath, 'mygraph.eps'],'-depsc')
+end
+\end{lstlisting}
+
+
+%\lstinputlisting[language=ruby, firstline=37, lastline=45, caption=Name, style=Listing]{Dateiname.html}
+
+
 
 \section{Kritische Würdigung des Anwendungssystems} \label{krit}
 
