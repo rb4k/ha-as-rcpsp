@@ -4,11 +4,14 @@
 \contentsline {section}{Abk\IeC {\"u}rzungsverzeichnis}{iv}
 \contentsline {section}{Symbolverzeichnis}{v}
 \contentsline {section}{\numberline {1}Einleitung}{1}
-\contentsline {section}{\numberline {2}Mathematische Modellformulierung des ressourcenbeschr\IeC {\"a}nkten Projektplanungsproblems}{2}
-\contentsline {section}{\numberline {3}Implementierung des RCPSP mittels Ruby on Rails}{4}
-\contentsline {section}{\numberline {4}Kritische W\IeC {\"u}rdigung des Anwendungssystems}{5}
-\contentsline {section}{\numberline {5}Fazit}{5}
-\contentsline {section}{Literatur}{6}
-\contentsline {section}{\numberline {A}Anhang}{7}
-\contentsline {subsection}{\numberline {A.1}GAMS-Implementierung des Beispiels}{7}
-\contentsline {subsection}{\numberline {A.2}Ruby on Rails Programmcode}{7}
+\contentsline {section}{\numberline {2}Grundlagen zur ressourcen-beschr\IeC {\"a}nkten Projektplanung und zu dem Framework Ruby on Rails}{2}
+\contentsline {subsection}{\numberline {2.1}Kapazit\IeC {\"a}tsplanung}{2}
+\contentsline {subsection}{\numberline {2.2}Kostenplanung}{4}
+\contentsline {subsection}{\numberline {2.3}Ruby on Rails}{6}
+\contentsline {section}{\numberline {3}Implementierung des RCPSP mittels Ruby on Rails}{7}
+\contentsline {section}{\numberline {4}Kritische W\IeC {\"u}rdigung des Anwendungssystems}{7}
+\contentsline {section}{\numberline {5}Fazit}{7}
+\contentsline {section}{Literatur}{8}
+\contentsline {section}{\numberline {A}Anhang}{10}
+\contentsline {subsection}{\numberline {A.1}GAMS-Implementierung des Beispiels}{10}
+\contentsline {subsection}{\numberline {A.2}Ruby on Rails Programmcode}{10}
