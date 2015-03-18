@@ -178,8 +178,9 @@ Abgabedatum: 24.03.2015
     \vspace*{-3mm}
     \hspace*{2mm}
   \renewcommand{\arraystretch}{1,5}
-    \begin{tabular}{ll}  %hier die Spaltenausrichtung und Anzahl eintragen
-           RCPSP      & Resource-Constrained Project Scheduling \\
+    \begin{tabular}{ll}  %hier die Spaltenausrichtung und Anzahl eintragen 
+	Admin & Administrator \\         
+	RCPSP      & Resource-Constrained Project Scheduling \\
            RoR & Ruby on Rails \\
 SGS & Schedule Generation Scheme\\
 	\end{tabular}
@@ -285,33 +286,77 @@ end
 
 \subsection{Darstellung der Funktionsweise der Anwendung anhand eines Userguides}\label{User}
 Die Funktionsweise der mit \textit{Ruby-on-Rails} programmierten Anwendung \textit {"Projektplanung"} zur Lösung der Kapizitäts- und Kostenplanung des \textit{RCPSP} lässt sich am anschaulichsten mit Hilfe eines Userguides darstellen. Neben der Besonderheiten, die durch das Problem der Projektplanung auftreten, können im selben Zuge auch die Spezifika der einzelnen Benutzerrollen aufgezeigt werden.\\
-Zunächst wird die Anwendung aus der Sicht eines Anwenders betrachtet, der sich nicht in die Applikation eingeschreiben hat. Konkret kann man sich darunter einen potentiellen Mitarbeiter des entsprechenden Projektes vorstellen, der sich über die Projektplanung informieren möchte, um sich gegebenenfalls als User anzumelden. Nach dem Start des Ruby-Servers und der Eingabe von \textit {"http://localhost:3000/"} in die Adresszeile eines beliebigen Browers gelangt dieser auf die Startseite der Projektplanung. Dort hat er zum einen die Möglichkeit, sich anzumelden bzw. sich einzuloggen, für den Fall, dass er bereits User der Anwendung ist.\\
+Zunächst wird die Anwendung aus der Sicht eines Anwenders betrachtet, der sich nicht in die Applikation eingeschreiben hat. Konkret kann man sich darunter einen potentiellen Mitarbeiter des entsprechenden Projektes vorstellen, der sich über die Projektplanung informieren möchte, um sich gegebenenfalls als User anzumelden. Nach dem Start des Ruby-Servers und der Eingabe von \textit {"http://localhost:3000/"} in die Adresszeile eines beliebigen Browers gelangt dieser auf die Startseite der Projektplanung (siehe Abbildung \ref{Start}). Dort hat er zum einen die Möglichkeit, sich anzumelden bzw. sich einzuloggen, für den Fall, dass er bereits User der Anwendung ist.\\
 
-Screenshot - Startseite\\
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Startseite_unsigned.png}
+    \caption{Startseite Projektplanung Applikation}  \label{Start}
+  \end{center}
+\end{figure}
 
-Neben Links wie \textit{Hilfe} und \textit{Kontakt} findet sich ein Link \textit{Ressourcen} zur einer Übersicht, in der alle Ressourcen des Projektes gelistet sind. Neben den jeweiligen Ressourcennamen befindet sich ein Button \textit{Bewerben}, der mit der Anmeldeseite verlinkt ist. Der Link \textit{Hier geht es zur Anmeldung} führt ebenfalls dorthin. Beschließt sich der Besucher der Seite, sich für das Projekt anzumelden, muss er alle Felder des Anmeldeformulars befüllen.\\
+Neben Links wie \textit{Hilfe} und \textit{Kontakt} findet sich ein Link \textit{Ressourcen} zur einer Übersicht, in der alle Ressourcen des Projektes gelistet sind. Neben den jeweiligen Ressourcennamen befindet sich ein Button \textit{Bewerben}, der mit der Anmeldeseite verlinkt ist (siehe Abbildung \ref{Anm}). Der Link \textit{Hier geht es zur Anmeldung} führt ebenfalls dorthin. Beschließt sich der Besucher der Seite, sich für das Projekt anzumelden, muss er alle Felder des Anmeldeformulars befüllen.\\
 
-Screenshot - Anmeldung\\
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Anmeldung.png}
+    \caption{Anmeldebildschirm}  \label{Anm}
+  \end{center}
+\end{figure}
 
-Neben dem Namen, einer Mailadresse und eines konformen Passwortes sind projektspezifische Informationen zur erfolgreichen Registrierung nötig. Im Feld \textit{Arbeitszeit pro Tag} muss ein entsprechender Wert eingegeben werden, den der neue User bereit ist, pro Tag für das Projekt an Zeit zu investieren. Wird in diesem Feld keine ganze Zahl, sondern eine Dezimalzahl oder ein Wort eingegeben, kann die Anmeldung im System nicht stattfinden. Es wird ein Fehler angezeigt, der das Defizit aufzeigt und behoben werden muss.\\
+Neben dem Namen, einer Mailadresse und eines konformen Passwortes sind projektspezifische Informationen zur erfolgreichen Registrierung nötig. Im Feld \textit{Arbeitszeit pro Tag} muss ein entsprechender Wert eingegeben werden, den der neue User bereit ist, pro Tag für das Projekt an Zeit zu investieren. Wird in diesem Feld keine ganze Zahl, sondern eine Dezimalzahl oder ein Wort eingegeben, kann die Anmeldung im System nicht stattfinden. Es wird ein Fehler angezeigt, der das Defizit aufzeigt und behoben werden muss (siehe Abbildung \ref{Fehler}).\\
 
-Screenshot - Fehleranzeige\\
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Anmeldung_Fehleranzeige.png}
+    \caption{Fehleranzeige bei Anmeldung}  \label{Fehler}
+  \end{center}
+\end{figure}
 
 Desweiteren kann eine der vorhandenen Ressourcen ausgewählt werden, in dessen Gruppe der neue Mitarbeiter eingeordnet werden möchte. Findet keine Anmeldung auf der Seite statt, sind keine weiterführenden Tätigkeiten möglich. Die Startseite liefert keine weiterführenden Informationen und bei der Eingabe von anderen Links in die Adresszeile des Browers wird man jederzeit zur \textit{Login}-Seite geführt, da alle Daten für nicht angemeldete Anwender gesperrt sind. Die Verlinkung \textit{"http://localhost:3000/rcpsp/"} öffnet zwar die Seite der Projektplanung, alle angezeigten Buttons führen aber ebenfalls direkt zur Anmeldemaske. \\
 
-Um die Applikation nutzen zu können, ist demzurfolge die Anmeldung als User zwingend notwendig. Findet diese entweder nach erstmaliger Registrierung über den Link \textit{Anmelden} oder über \textit{Login} statt, wird die eigene Profilseite angezeigt.\\
+Um die Applikation nutzen zu können, ist demzurfolge die Anmeldung als User zwingend notwendig. Findet diese entweder nach erstmaliger Registrierung über den Link \textit{Anmelden} oder über \textit{Login} statt, wird die eigene Profilseite angezeigt (siehe Abbildung \ref{Profil}).\\
 
-Screenshot - Profilseite\\
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Profilseite.png}
+    \caption{Profilseite eines Users}  \label{Profil}
+  \end{center}
+\end{figure}
 
 Die Profilseite gibt einen Überblick über all die Daten, die für den User in Hinblick auf das Projekt relevant sind. Es werden die Daten dargestellt, die bei der Anmeldung angegeben wurden (Arbeitszeit, Rolle im Projekt) sowie die Vorgänge, die durch die Wahl der Ressource für diesen User relevant sind, in denen er also arbeiten muss. Zu jedem Vorgang wird die Dauer und gegebenenfalls die Zeitspanne angegeben, wann er jeweils stattfindet. Die Grenze liegt zwischen dem frühesten Startzeitpunkt $FA_{i}$ und spätesten Endzeitpunkt $SE_{i}$ des Vorgangs $i$. Ob diese Tabelle mit Daten gefüllt ist, hängt davon ab, ob das Kapazitäts- bzw. Kostenplanungsproblem bereits gelöst wurde. Möchte der User seine Daten, wie z.B. die Wahl der Ressource oder die Quantität der Arbeitszeit, ändern, gelangt er über den Button \textit{Einstellung} zu einer Seite, die äquivalent aufgebaut ist wie die Anmeldeseite, um dort seine Daten zu aktualisieren. Nach korrekter Eingabe können die Daten über den Button \textit{Speichere Änderungen} gesichert werden. Auf der Profilseite erscheint daraufhin eine Anzeige \textit{"Profil updated"} mit der Bestätigung, dass das Profil aktualisiert wurde. Im Vergleich zum fremden Anwender gelangt der angemeldete User außerdem in der Kopfzeile über den Link \textit{Mitarbeiter} über eine Übersicht aller Mitarbeiter, die für das Projekt auf dieser Applikation angemeldet sind. Die Profilseite jedes Mitarbeiters kann betrachtet werden mit all den Informationen, die auch auf der eigenen Profilseite einzusehen sind. Es können jedoch keine Änderungen vorgenommen werden. Neben der Verlinkung zu der Übersicht der Mitarbeiter lässt sich in der Kopfzeile ein Feld \textit{Menü} finden, dass die Unterpunkte \textit{Profil}, \textit{Einstellungen} und \textit{Logout} enthält. Die Verlinkung \textit{Profil} stellt eine Verlinkung zur Profilseite dar, unter \textit{Einstellungen} kann das eigene Profil aktualisiert werden.\\
-Unter \textit{Ressourcen} kann der User, wie auch der nicht angemeldete Anwender, zur Übersicht der vorhandenen Ressourcen gelangen. Die Anzeige stellt sich für den angemeldeten User jedoch vielfältiger dar, als für den einfachen Anwender.\\
+Unter \textit{Ressourcen} kann der User, wie auch der nicht angemeldete Anwender, zur Übersicht der vorhandenen Ressourcen gelangen. Die Anzeige stellt sich für den angemeldeten User jedoch vielfältiger dar, als für den einfachen Anwender (siehe Abbildung \ref{ResUs}).\\
 
-Screenshot - Übersicht Ressourcen-angemeldet\\
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Ressourcen_User.png}
+    \caption{Übersicht der Ressourcen für User}  \label{ResUs}
+  \end{center}
+\end{figure}
 
 Für den User sind alle Eigenschaften der verschiedenen Ressourcen einsehbar. Es werden die Gesamtkapazität, Kosten pro ME, Grundkosten und Zusatzkosten pro ME angezeigt. Wurde bereits eine Lösung für das Problem der Kostenplanung ermittelt, werden die kalkulierten Werte für die Zusatzeinheiten, gesamten Zusatzkosten und die Gesamtkosten pro Ressource dargestellt. Zudem wird der Zielfunktionswert, bei der Kostenplanung die gesamten anfallenden Zusatzkosten, in Verbindung mit dem Zeitpunkt der Optimierung über der Tabelle dargestellt. Über den Button \textit{Anzeigen} sind die Eigenschaften einer Ressource seperat einsehbar. Da der User bzw. Mitarbeiter in diesem Modell durch die Planung innerhalb des Projektes eingeteilt wird und seine Rechte nicht über die Organisation der eigenen Daten hinaus reicht, hat er keine weiteren Kompetenzen bei der Nutzung dieser Appliaktion. \\
 
-Geht es nun um die Verwaltung der Mitarbeiter und die Organisation und Durchführung der Projektplanung, ist die Anmeldung als Administrator erforderlich.         
-   
+Die Verwaltung der Mitarbeiter und die Organisation sowie Durchführung der Projektplanung kann auschließlich nach der Anmeldung als Administrator erfolgen. Der Admin gilt in dieser Anwendung als durchführende Gewalt, er trägt den Namen \textit{"Example User"}. Nach der erfolgreichen Anmeldung erscheint zunächst erneut die Profilseite, aufgebaut wie beim einfachen User. Im Gegensatz zu normalen Usern bietet die Seite dem Admin jedoch zusätzliche Handlungsspielräume neben der einfachen Auflistung der Vorgänge (siehe Abbildung \ref{ProAd}). Er hat die Möglichkeit, die Dauer der Vorgänge abzuändern oder Vorgänge aus dem Projekt zu löschen. In gleicher Weise stellt sich die Ausweitung der Kompetenzen bei den Ressourcen dar. Über die Verlinkung \textit{Ressourcen} können nun die Ressourcen ebenfalls gelöscht oder die Eigenschaften (Kosten und Zusatzkosten je ME) verändert werden. Desweiteren kann über den Button \textit{Neue Ressource anlegen} eben dies vollzogen werden.\\
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Profilseite_Admin.png}
+    \caption{Profilseite des Administrators}  \label{ProAd}
+  \end{center}
+\end{figure}             
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Ressourcen_Admin.png}
+    \caption{Übersicht der Ressourcen aus Sicht des Administrators}  \label{ResAd}
+  \end{center}
+\end{figure}     
+  
+Um nun zur Kernaufgabe der Applikation, der Projektplanung, zu gelangen, kann entweder der Button \textit{Zurück zur Projektplanung} getätigt werden, oder in der Kopfzeile wird unter \textit{Menü} der Unterpunkt \textit{Projektplanung} ausgewählt. Wie bereits erwähnt, hat nur der Admin die Berächtigung, dieses Menü aufzurufen. Im oberen Bereich der Seite sind die Verlinkungen zur Verwaltung der nötigen Inputs zur Lösung beider Planungsproblematiken angesiedelt. 
+
+
+Das Problem der Projektplanung, das \textit{RCPSP}, besteht aus der Kapazitätsplanung und Kostenplanung (siehe Kapitel ..).     
+
 
 %\lstinputlisting[language=ruby, firstline=37, lastline=45, caption=Name, style=Listing]{Dateiname.html}
 

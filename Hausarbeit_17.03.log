@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.17)  17 MAR 2015 18:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.17)  18 MAR 2015 16:39
 entering extended mode
 **F:/Hausarbeit/Textdatei/Hausarbeit_17.03.tex
 (F:/Hausarbeit/Textdatei/Hausarbeit_17.03.tex
@@ -743,37 +743,37 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (F:\Hausarbeit\Textdatei\Hausarbeit_17.03.lol)
 \tf@lol=\write6
  [3] [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--220
+Underfull \hbox (badness 10000) in paragraph at lines 219--221
 
  []
 
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 236--237
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
 
  []
 
@@ -785,88 +785,132 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 File: lstlang2.sty 2014/09/06 1.5e listings language file
 )
 
-Package xcolor Warning: Incompatible color definition on input line 275.
+Package xcolor Warning: Incompatible color definition on input line 276.
 
 
-Package xcolor Warning: Incompatible color definition on input line 275.
+Package xcolor Warning: Incompatible color definition on input line 276.
 
 
-Package xcolor Warning: Incompatible color definition on input line 275.
+Package xcolor Warning: Incompatible color definition on input line 276.
 
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 276
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 277
 .
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd"
 File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 277.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 278.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 277.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 278.
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--289
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+Underfull \hbox (badness 10000) in paragraph at lines 288--290
 
  []
 
+[4] <Bilder/Startseite_unsigned.png, id=46, 992.20688pt x 399.74344pt>
+File: Bilder/Startseite_unsigned.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+<use Bilder/Startseite_unsigned.png>
+Package pdftex.def Info: Bilder/Startseite_unsigned.png used on input line 293.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
-
- []
-
+(pdftex.def)             Requested size: 341.43306pt x 137.55785pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 298--299
 
  []
 
+<Bilder/Anmeldung.png, id=47, 977.90344pt x 531.48563pt>
+File: Bilder/Anmeldung.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
-
- []
+<use Bilder/Anmeldung.png>
+Package pdftex.def Info: Bilder/Anmeldung.png used on input line 302.
+(pdftex.def)             Requested size: 341.43306pt x 185.5686pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--305
-
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--308
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 
  []
 
+[5 <F:/Hausarbeit/Textdatei/Bilder/Startseite_unsigned.png>]
+<Bilder/Anmeldung_Fehleranzeige.png, id=51, 772.38562pt x 398.23781pt>
+File: Bilder/Anmeldung_Fehleranzeige.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+<use Bilder/Anmeldung_Fehleranzeige.png>
+Package pdftex.def Info: Bilder/Anmeldung_Fehleranzeige.png used on input line 
+311.
+(pdftex.def)             Requested size: 341.43306pt x 176.03944pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
 
  []
 
-[6] [7] (F:\Hausarbeit\Textdatei\Hausarbeit_17.03.bbl
+<Bilder/Profilseite.png, id=52, 960.58875pt x 534.49687pt>
+File: Bilder/Profilseite.png Graphic file (type png)
+
+<use Bilder/Profilseite.png>
+Package pdftex.def Info: Bilder/Profilseite.png used on input line 322.
+(pdftex.def)             Requested size: 341.43306pt x 189.98015pt.
+ [6 <F:/Hausarbeit/Textdatei/Bilder/Anmeldung.png> <F:/Hausarbeit/Textdatei/Bil
+der/Anmeldung_Fehleranzeige.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 327--329
+
+ []
+
+<Bilder/Ressourcen_User.png, id=56, 773.89125pt x 319.1925pt>
+File: Bilder/Ressourcen_User.png Graphic file (type png)
+
+<use Bilder/Ressourcen_User.png>
+Package pdftex.def Info: Bilder/Ressourcen_User.png used on input line 332.
+(pdftex.def)             Requested size: 341.43306pt x 140.82503pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
+
+ []
+
+[7 <F:/Hausarbeit/Textdatei/Bilder/Profilseite.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
+
+ []
+
+<Bilder/Profilseite_Admin.png, id=60, 810.02625pt x 481.8pt>
+File: Bilder/Profilseite_Admin.png Graphic file (type png)
+
+<use Bilder/Profilseite_Admin.png>
+Package pdftex.def Info: Bilder/Profilseite_Admin.png used on input line 343.
+(pdftex.def)             Requested size: 341.43306pt x 203.08243pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Bilder/Ressourcen_Admin.png, id=61, 789.70032pt x 344.03531pt>
+File: Bilder/Ressourcen_Admin.png Graphic file (type png)
+
+<use Bilder/Ressourcen_Admin.png>
+Package pdftex.def Info: Bilder/Ressourcen_Admin.png used on input line 350.
+(pdftex.def)             Requested size: 341.43306pt x 148.74597pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8 <F:/Hausarbeit/Textdatei/Bilder/Ressourcen_User.png>] [9 <F:/Hausarbeit/Text
+datei/Bilder/Profilseite_Admin.png> <F:/Hausarbeit/Textdatei/Bilder/Ressourcen_
+Admin.png>] (F:\Hausarbeit\Textdatei\Hausarbeit_17.03.bbl
 Underfull \hbox (badness 1648) in paragraph at lines 5--9
 []\OT1/cmr/m/n/12 Bartels, J.H. (2009): Projektplanung--Grundlagen und An-wen-d
 ungs-bei-spie-le. In: An-
@@ -878,34 +922,34 @@ Underfull \hbox (badness 1360) in paragraph at lines 5--9
 kt-pla-nung mit mul-ti-plen
  []
 
-) [8] [9] (F:\Hausarbeit\Textdatei\Hausarbeit_17.03.aux) ) 
+) [10] [11] (F:\Hausarbeit\Textdatei\Hausarbeit_17.03.aux) ) 
 Here is how much of TeX's memory you used:
- 7647 strings out of 493921
- 103469 string characters out of 3147276
- 189105 words of memory out of 3000000
- 10799 multiletter control sequences out of 15000+200000
+ 7693 strings out of 493921
+ 104584 string characters out of 3147276
+ 189163 words of memory out of 3000000
+ 10836 multiletter control sequences out of 15000+200000
  12652 words of font info for 49 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  41i,11n,49p,2083b,1379s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Andreas\Ap
-pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk> <C:\User
-s\Andreas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tctt1200.
-pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Hausarbeit_17.03.pdf (14 pages, 200201 bytes).
+ <C:\Users\Andreas\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk> <C:\Us
+ers\Andreas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tctt120
+0.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Hausarbeit_17.03.pdf (16 pages, 361560 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
+ 127 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
