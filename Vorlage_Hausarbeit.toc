@@ -9,9 +9,10 @@
 \contentsline {subsection}{\numberline {2.2}Kostenplanung}{4}
 \contentsline {subsection}{\numberline {2.3}Ruby on Rails}{6}
 \contentsline {section}{\numberline {3}Implementierung des RCPSP mittels Ruby on Rails}{7}
-\contentsline {section}{\numberline {4}Kritische W\IeC {\"u}rdigung des Anwendungssystems}{7}
-\contentsline {section}{\numberline {5}Fazit}{7}
-\contentsline {section}{Literatur}{8}
-\contentsline {section}{\numberline {A}Anhang}{10}
-\contentsline {subsection}{\numberline {A.1}GAMS-Implementierung des Beispiels}{10}
-\contentsline {subsection}{\numberline {A.2}Ruby on Rails Programmcode}{10}
+\contentsline {subsection}{\numberline {3.1}Darstellung der Funktionsweise der Anwendung anhand eines Userguides}{7}
+\contentsline {section}{\numberline {4}Kritische W\IeC {\"u}rdigung des Anwendungssystems}{18}
+\contentsline {section}{\numberline {5}Fazit}{18}
+\contentsline {section}{Literatur}{19}
+\contentsline {section}{\numberline {A}Anhang}{21}
+\contentsline {subsection}{\numberline {A.1}GAMS-Implementierung des Beispiels}{21}
+\contentsline {subsection}{\numberline {A.2}Ruby on Rails Programmcode}{21}

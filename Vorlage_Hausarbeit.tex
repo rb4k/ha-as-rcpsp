@@ -27,7 +27,7 @@
 	rulecolor=,
 	language=ruby,
         upquote=true,
-        aboveskip={1.5\baselineskip},
+        aboveskip={0.5\baselineskip},
         columns=fixed,
         showstringspaces=false,
         extendedchars=true,
@@ -45,10 +45,12 @@
 \lstdefinestyle{Listing}{
 	frame=single,
 	tabsize=4,
+        extendedchars=true,
+        basicstyle=\footnotesize,
 	rulecolor=,
 	language=ruby,
         upquote=true,
-        aboveskip={1.5\baselineskip},
+        aboveskip={0.5\baselineskip},
         columns=fixed,
         showstringspaces=false,
         extendedchars=true,
@@ -63,7 +65,16 @@
         stringstyle=\color[rgb]{0.627,0.126,0.941}
 }
 
-
+\lstset{literate=%
+    {Ö}{{\"O}}1
+    {Ä}{{\"A}}1
+    {Ü}{{\"U}}1
+    {ß}{{\ss}}1
+    {ü}{{\"u}}1
+    {ä}{{\"a}}1
+    {ö}{{\"o}}1
+    {~}{{\textasciitilde}}1
+}
 \usepackage{amsmath}
 %\usepackage{mathtools} % lädt auch amsmath
 \usepackage{moreverb}
@@ -276,7 +287,7 @@ Die gemischt-ganzzahlige Modellformulierung lässt sich durch Standard-Lösungsv
 \subsection{Kostenplanung}
 Aufbauen auf der Kapazitätsplanung kann das RCPSP um die Nutzung von Zusatzkapazitäten der Ressourcen erweitert werden, damit dem Projektplanungsmodell gestattet ist den Vorgänge zusätzliche Kapazitätseinheiten der notwendigen Ressourcen bereitzustellen. Die Kapazitätsrestriktion wird dementsprechend um die Entscheidungsvariable $O_{rt} \geq 0$ erweitert. Die Variable $O_{rt}$ beschreibt die Einheiten an Zusatzkapazitäten einer Ressource $r$ in der Periode $t$. Damit steht nicht die Einhaltung der verfügbaren Kapazitäten im Vordergrund, sonder unter Beachtung der Projektstruktur die aufgewendeten Zusatzkosten des Projekts. Dem Optimierungsmodell ist es damit gestattet durch Erhöhung der Kapazitäten der Ressourcen die anfängliche Ressourcenbeschränkung zu umgehen. Bei der Modellerweiterung der Kostenplanung wird der Parameter $oc_r$ eingeführt, der für eine betrachtete Ressource $r$ die Kosten einer Einheit der Zusatzkapazitäten beschreibt. Ziel des Optimierungsmodells ist es damit die Kosten des Projekts zu minimieren. Das Modell hilft damit der Entscheidung, ob durch Einführen der Möglichkeit von Zusatzkapazitäten das Projektziel verbessert erreicht wird. Es handelt sich um den Trade-off des frühzeitigen Erreichens des Projektziels durch Nutzung von Zusatzkapazitäten und der gesamten Projektkosten die für das Projekt aufgewendet werden sollen.\\
 
-Nachfolgend wird das deterministische RCPSP+ in diskreter Zeit formuliert.
+Nachfolgend wird das deterministische RCPSP+ in diskreter Zeit formuliert.\\
 
 \textbf{Modell RCPSP+}
 \begin{eqnarray} \label{Ziel2}
@@ -310,18 +321,293 @@ Mit Hilfe des RoR Frameworks lassen sich dadurch schnell Web-Applikationen mit D
 
 \section{Implementierung des RCPSP mittels Ruby on Rails} \label{Haupt}
 
-IDEs=RubyMine
+\subsection{Darstellung der Funktionsweise der Anwendung anhand eines Userguides}\label{User}
+Die Funktionsweise der mit \textit{RoR} programmierten Anwendung \textit {\glqq Projektplanung\grqq} zur Lösung der Kapizitäts- und Kostenplanung des \textit{RCPSP} lässt sich am anschaulichsten mit Hilfe eines Userguides darstellen. Neben der Besonderheiten, die durch das Problem der Projektplanung auftreten, können im selben Zuge auch die Spezifika der einzelnen Benutzerrollen aufgezeigt werden. Beachtet werden muss, dass die hier vorgestellte Web-Applikation auf der Arbeit von \cite{hartl2012ruby} aufbaut.\\
 
-\begin{lstlisting}[style=Befehl]
-$ Put your code here.
->> Put your code here.
+Zunächst wird die Anwendung aus der Sicht eines Anwenders betrachtet, der sich nicht in die Applikation per Benutzererkennung eingeloggt hat. Konkret kann man sich darunter einen potentiellen Mitarbeiter des entsprechenden Projektes vorstellen, der sich über die Projektplanung informieren möchte, um sich gegebenenfalls als Mitarbeiter im Projekt (User) anzumelden. Im Testbetrieb wird der Ruby-Servers gestartet und durch Eingabe der URL \textit {"http://localhost:3000/"} in die Adresszeile eines beliebigen modernen Browers wird die Startseite der Projektplanung angezeigt (siehe Abbildung \ref{Start}). Alternativ ist der Betrieb auf einem Webserver möglich, sofern die benötigte Software installiert und betriebsbereit ist. Auf der Startseite hat der User zum einen die Möglichkeit, sich anzumelden bzw. sich einzuloggen, für den Fall, dass er bereits User der Anwendung ist. \\
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=150mm]{Bilder/Startseite_unsigned.png}
+    \caption{Startseite Projektplanung Applikation}  \label{Start}
+  \end{center}
+\end{figure}
+
+Bei der Startseite (\texttt{home.html.rb}) der RoR-Applikation handelt es sich um eine statische Seite (\texttt{static\_pages}) der \texttt{views}. Weiter gehören zu dieser Kategorie die HTML.RB-Dokumente die Seiten \texttt{about}, \texttt{contact}, \texttt{help} und \texttt{rcpsp}. Letztere wird zum späteren Zeitpunkt thematisiert. Ein Beispiel einer statischen Seite eines RoR \texttt{views} liefert Quellcode \ref{test}.
+
+\begin{lstlisting}[caption=Code der Startseite (\texttt{app/views/static\_pages/home.html.rb}), style=Listing, label=test]
+<div class="center hero-unit">
+  <h1>Projektplanung</h1>
+  <br/>
+  <br/>
+  <% if signed_in? %>
+      <th><%= link_to "Zur Optimierung", rcpsp_path, class: "btn btn-info btn-large" %></th>
+<%else %>
+      <th><%= link_to "Anmelden", signup_path, class: "btn btn-primary btn-large" %></th>
+      <th><%= link_to "Login", signin_path, class: "btn btn-info btn-large" %></th>
+  <% end %>
+</div>
 \end{lstlisting}
 
-\begin{lstlisting}[caption=Beispielcode, style=Listing]
-if draw
-    print([outputpath, 'mygraph.eps'],'-depsc')
+Anhand der \texttt{static\_pages} kann die Besonderheit von RoR deutlich gemacht werden. Durch das Model-View-Controller-Paradigma hilft der \texttt{static\_pages\_controller} bei der Verarbeitung von Anfragen. Es handelt sich hier um das typische ein Scaffolding (Bauprinzip) in RoR, bei dem ein \texttt{controller}, \texttt{models} und \texttt{views} erstellt werden.\footnote{Vgl. \cite{walter2008ruby}, S. 464} Generiert werden können die Scaffolds durch  einen Ruby-Befehl im Terminalfenster.
+\begin{lstlisting}[style=Befehl]
+$ rails generate scaffold <name> <name:datentyp> 
+\end{lstlisting}
+
+Wie der Name aber schon andeutet, bedarf es bei den statischen Seiten kaum der Verarbeitung von Datensätzen der RoR \texttt{models} zur Erstellung von dynamischen Seiten, wie der Quellcode \ref{spc} zeigt.
+\begin{lstlisting}[caption=Controller der statischen Seiten (\texttt{app/controller/static\_pages\_controller.rb}), style=Listing, label=spc]
+class StaticPagesController < ApplicationController
+  def home
+  end
+
+  def help
+  end
+
+  def about
+  end
+
+  def contact
+  end
+
+  def rcpsp
+    @project = Project.find(1)
+  end
+
 end
 \end{lstlisting}
+
+Für die \texttt{static\_pages} bedarf es einen speziellen \textit{Match}, der in \texttt{config/routs.rb} Datei hinterlegt wird (Vgl. Quellcode \ref{routs}). Die \texttt{config/routs.rb} ordnet den Scaffolds und HMTL-Dokumente spezifische Verzeichnisse in der Applikation zu. RoR erkennt die Unterseiten der angelegten Scaffolds und ermöglicht die Verlinkung der Seiten auch ohne spezifische Angabe.
+\begin{lstlisting}[caption=\texttt{config/routs.rb}, style=Listing, label=routs]
+class StaticPagesController < ApplicationController
+SampleApp::Application.routes.draw do
+
+  resources :projects
+  resources :procedure_resources
+  resources :procedures
+  resources :resources
+  resources :procedure_procedures
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+
+  root to: 'static_pages#home'
+
+  match '/signup', to: 'users#new'
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
+
+  match '/help', to: 'static_pages#help'
+  match '/about', to: 'static_pages#about'
+  match '/contact', to: 'static_pages#contact'
+  match '/rcpsp', to: 'static_pages#rcpsp'
+
+  match 'rcpsp/read_optimization_results', :to => 'rcpsps#read_optimization_results'
+  match 'rcpsp/optimize', :to => 'rcpsps#optimize'
+  match 'rcpsp/solution', to: 'rcpsps#solution'
+
+  match 'rcpsp/read_optimization_results2', :to => 'rcpsps#read_optimization_results2'
+  match 'rcpsp/optimize2', :to => 'rcpsps#optimize2'
+  match 'rcpsp/solution2', to: 'rcpsps#solution2'
+\end{lstlisting}
+
+
+Mit dem Link \textit{Anmelden} erfolgt die Weiterleitung von der Startseite zur Anmeldeseite. Beschließt sich der Besucher der Seite, sich für das Projekt anzumelden, muss er alle Felder des Anmeldeformulars befüllen.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Anmeldung.png}
+    \caption{Anmeldebildschirm}  \label{Anm}
+  \end{center}
+\end{figure}
+
+Neben dem Namen, einer Mailadresse und eines konformen Passwortes sind projektspezifische Informationen zur erfolgreichen Registrierung nötig. Im Feld \textit{Arbeitszeit pro Tag} muss ein entsprechender Wert eingegeben werden, den der neue User bereit ist, pro Tag für das Projekt an Zeit zu investieren. Wird in diesem Feld keine ganze Zahl, sondern eine Dezimalzahl oder ein Wort eingegeben, kann die Anmeldung im System nicht stattfinden. Es wird ein Fehler angezeigt, der das Defizit aufzeigt und behoben werden muss (siehe Abbildung \ref{Fehler}). Ausgelöst wird dieser Fehler durch einen Vermerk im zugehörigen RoR \texttt{models}, dass es sich um eine ganzahlilge Zahl handelt (\textit{Integer}). Der Quellcode \ref{fehler_code} zeigt dies anhand des hier betrachteten Beispiels.\\
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Anmeldung_Fehleranzeige.png}
+    \caption{Fehleranzeige bei Anmeldung}  \label{Fehler}
+  \end{center}
+\end{figure}
+
+\begin{lstlisting}[caption=\texttt{app/models/users.rb}, style=Listing, label=fehler_code]
+class User < ActiveRecord::Base
+  attr_accessible :email, :name, :password, :password_confirmation, :capacity, :resource_id
+  has_secure_password
+
+  belongs_to :resource
+
+  before_save { |user| user.email = email.downcase }
+  before_save :create_remember_token
+
+  validates :name, presence: true, length: { maximum: 50 }
+
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },
+            uniqueness: { case_sensitive: false}
+  validates :password, presence: true, length: { minimum: 6}
+  validates :password_confirmation, presence: true
+  validates :capacity, :numericality => {:only_integer => true}
+
+  private
+    def create_remember_token
+      self.remember_token = SecureRandom.urlsafe_base64
+    end
+end
+\end{lstlisting}
+
+
+Auf der Startseite (sowie allen anderen Seiten) sind eben Links wie \textit{Hilfe} und \textit{Kontakt} auch der Link zu \textit{Ressourcen}-Übersicht, in der alle Ressourcen des Projektes gelistet sind. Hier kommt der Grundsatz von RoR zum Tragen: \textit{Don’t repeat yourself} Der Gestaltung und der Aufbau einer jeden Seite in der Web-Applikation orientiert sich anhand der CSS-Stylesheets bzw. der Layout-Dateien. Die Layout-Dateien sind unter \texttt{app/views/} gelistet und definieren auf jeder Seite spezifische Bereiche. Die \texttt{application.html.erb} generiert für jede Seite dieses einheitliche Layout, unterstützt durch die Dateien \texttt{\_footer.html.erb} und \texttt{\_header.html.erb}. Im \texttt{\_header.html.erb} ist der Link zur Ressourcen-Übersicht vermerkt (Vgl. Quellcode \ref{header}).
+
+\begin{lstlisting}[caption=\texttt{app/views/layouts/\_header.html.erb}, style=Listing, label=header]
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "Projektplanung", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "Startseite", root_path, id: "main_links" %></li>
+          <li><%= link_to "Hilfe", help_path, id: "main_links" %></li>
+          <li><%= link_to "Ressource", resources_path,id:"main_links"%></li>
+          <% if signed_in? %>
+            <li><%= link_to "Mitarbeiter", users_path,id:"main_links"%></li>
+              <li id="fat-menu" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Menü <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Profil", current_user %></li>
+                  <li><%= link_to "Einstellungen", edit_user_path(current_user) %></li>
+                  <% if current_user.admin? %>
+                  <li><%= link_to "Projektplanung", rcpsp_path %></li>
+                  <% end %>
+                  <li class="divider"></li>
+                  <li><%= link_to "Logout", signout_path, method: "delete" %></li>
+                </ul>
+              </li>
+          <% else %>
+              <li><%= link_to "Login", signin_path %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+\end{lstlisting}
+
+
+Der \texttt{\_header.html.erb} zeigt schon einige \textit{If}-Befehle, mit denen unterschiedliche Daten anhand der Eigenschaften unangemeldeten, angemeldeten und Admin-Usern angezeigt werden. Durch folgen des Links \textit{Ressource} wird die Index-Seite des der RoR \texttt{views/ressources} angezeigt (Siehe Abbildung ???). Der Quellcode \ref{index_res} zeigt die notwendige Programmierung für die Seite.
+
+\begin{lstlisting}[caption=\texttt{app/views/resources/index.html.erb}, style=Listing, label=index_res]
+<% provide(:title, 'Übersicht der Ressourcen') %>
+<h1>Übersicht der Ressourcen</h1>
+
+<% if signed_in? %>
+<%= render 'resources/signed_in' %>
+<% else %>
+<%= render 'resources/free' %>
+<% end %>
+\end{lstlisting}
+
+RoR durchläuft aufgrund der Aktivierung des Links die Aktion \textit{index} des dazugehörigen Controllers \texttt{resources\_controller.rb} und generiert die zugehörige HTML-Seite (\texttt{views}). Die Indexseite prüft, ob der aktuelle User angemeldet ist. Abhängig dieser Entscheidung integriert RoR einen unterschiedlichen Seiteninhalt. Sofern der aktuelle User nicht angemeldet ist, wird eine vereinfachte Ressourcen-Übersicht angezeigt (siehe Abbildung \ref{Anm}). In dieser Ansicht sind alle jeweilig aktuellen Ressourcen mit zugehörigen Namen aufgelistet, sowie dem Link \textit{Bewerben}, der wiederum mit der Anmeldeseite verlinkt ist.\\
+
+Findet keine Anmeldung in die Web-Applikation statt, sind keine weiterführenden Tätigkeiten möglich. Die Startseite liefert keine weiterführenden Informationen und bei der Eingabe von anderen Links in die Adresszeile des Browers wird der aktuelle User zur \textit{Login}-Seite geführt, da alle Daten für nicht angemeldete Anwender gesperrt sind. %Die Verlinkung \textit{"http://localhost:3000/rcpsp/"} öffnet zwar die Seite der Projektplanung, alle angezeigten Buttons führen aber ebenfalls direkt zur Anmeldemaske. \\
+Um die Applikation nutzen zu können, ist demzufolge die Anmeldung als User zwingend notwendig. Findet diese entweder nach erstmaliger Registrierung über den Link \textit{Anmelden} oder über \textit{Login} statt, wird die eigene Profilseite angezeigt (siehe Abbildung \ref{Profil}).\\
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Profilseite.png}
+    \caption{Profilseite eines Users}  \label{Profil}
+  \end{center}
+\end{figure}
+
+Die Profilseite gibt einen Überblick über all die Daten, die für den User in Hinblick auf das Projekt relevant sind. Es werden die Daten dargestellt, die bei der Anmeldung angegeben wurden (Arbeitszeit, Rolle im Projekt) sowie die Vorgänge, die durch die Wahl der Ressource für diesen User relevant sind, in denen er also arbeiten muss. Der Aufbau der Seite ist im Quellcode \ref{show_user} dargestellt.
+
+\begin{lstlisting}[caption=\texttt{app/views/users/show.html.erb}, style=Listing, label=show_user]
+Quellcode ergänzen!!! Ist noch falsch in der App!!!
+\end{lstlisting}
+
+Zu jedem Vorgang wird die Dauer und gegebenenfalls die Zeitspanne angegeben, wann er jeweils stattfindet. Die Grenze liegt zwischen dem frühesten Startzeitpunkt $FA_{i}$ und spätesten Endzeitpunkt $SE_{i}$ des Vorgangs $i$. Ebenfalls wird der kritische Pfad angezeigt. Dieser zeigt für die aufgeführten Vorgängen den Endzeitpunkt nach Start des Projekts unter Einhaltung der Ressourcenbeschränkung an, jeweils in Zeiteinheiten. Ob diese Tabelle mit Daten gefüllt ist, hängt davon ab, ob das Kapazitäts- bzw. Kostenplanungsproblem bereits gelöst wurde. Möchte der User seine Daten, wie z.B. die Wahl der Ressource oder die Quantität der Arbeitszeit, ändern, gelangt er über den Button \textit{Einstellung} zu einer Seite, die äquivalent aufgebaut ist wie die Anmeldeseite, um dort seine Daten zu aktualisieren. Nach korrekter Eingabe können die Daten über den Button \textit{Speichere Änderungen} gesichert werden. Auf der Profilseite erscheint daraufhin eine Anzeige \textit{Profil updated} mit der Bestätigung, dass das Profil aktualisiert wurde. Im Vergleich zum fremden Anwender gelangt der angemeldete User außerdem in der Kopfzeile über den Link \textit{Mitarbeiter} über eine Übersicht aller Mitarbeiter, die für das Projekt auf dieser Applikation angemeldet sind. Die Profilseite jedes Mitarbeiters kann betrachtet werden mit all den Informationen, die auch auf der eigenen Profilseite einzusehen sind. Es können jedoch keine Änderungen vorgenommen werden. Neben der Verlinkung zu der Übersicht der Mitarbeiter lässt sich in der Kopfzeile ein Feld \textit{Menü} finden, dass die Unterpunkte \textit{Profil}, \textit{Einstellungen} und \textit{Logout} enthält. Die Verlinkung \textit{Profil} stellt eine Verlinkung zur Profilseite dar, unter \textit{Einstellungen} kann das eigene Profil aktualisiert werden.\\
+
+Unter \textit{Ressourcen} kann der User, wie auch der nicht angemeldete Anwender, zur Übersicht der vorhandenen Ressourcen gelangen. Die Anzeige stellt sich für den angemeldeten User jedoch vielfältiger dar, als für den einfachen Anwender (siehe Abbildung \ref{ResUs}), da hier eine andere Quellcode integriert wird (Vgl. Quellcode \ref{index_res}). Der Quellcode \ref{sign_res} zeigt den integrierten Inhalt.\\
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Ressourcen_User.png}
+    \caption{Übersicht der Ressourcen für User}  \label{ResUs}
+  \end{center}
+\end{figure}
+\begin{lstlisting}[caption=\texttt{app/views/resources/\_signed\_in.html.erb}, style=Listing, label=sign_res]
+<% if @project.zwc!=nil %>
+    Die Projektzusatzkosten betragen <strong><%=  @project.zwc %></strong> Geldeinheiten. Die Optimierung erfolgte mit einem Datenstand vom <strong><%=  @project.updated_at.strftime("%d.%m.%Y") %>.</strong><br> <br>
+<% end %>
+
+<table id="resources" class="table table-hover">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Gesamt- kapazität</th>
+    <th>Kosten/ ME</th>
+    <th>Grund- kosten</th>
+    <th>Zusatz- kosten/ ME</th>
+    <th>Zusatz- einheiten</th>
+    <th>Zusatzkosten Gesamt</th>
+    <th>Gesamtkosten</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <% @resources.each do |resource| %>
+      <tr>
+        <td><%= resource.name %></td>
+        <td><%= User.sum(:capacity, :conditions => {:resource_id => resource}) %></td>
+        <td><%= resource.cost %></td>
+        <th><%= resource.cost * resource.procedures.sum(&:prot) %></th>
+        <td><%= resource.ocr %></td>
+        <td><%= resource.oce %></td>
+        <th><%= resource.ocr * resource.oce %></th>
+        <th><%= resource.ocr * resource.oce + (resource.cost *  resource.procedures.sum(&:prot) ) %></th>
+        <td><%= link_to 'Anzeigen', resource %></td>
+        <% if signed_in? && current_user.admin? %>
+            <td><%= link_to 'Ändern', edit_resource_path(resource) %></td>
+            <td><%= link_to 'Löschen', resource, method: :delete, data: { confirm: 'Sind sie sicher?' } %></td>
+        <% end %>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<% if current_user.admin? %>
+    <div class="btn-group btn-lg">
+      <%= link_to 'Neue Ressource anlegen', new_resource_path, :class => "btn" %>
+      <%= link_to 'Zurück zur Projektplanung', rcpsp_path, :class => "btn" %>
+    </div>
+<% end %>
+\end{lstlisting}
+
+Für den User sind alle Eigenschaften der verschiedenen Ressourcen einsehbar. Es werden die Gesamtkapazität, Kosten pro ME, Grundkosten und Zusatzkosten pro ME angezeigt. Wurde bereits eine Lösung für das Problem der Kostenplanung ermittelt, werden die kalkulierten Werte für die Zusatzeinheiten, gesamten Zusatzkosten und die Gesamtkosten pro Ressource dargestellt. Zudem wird der Zielfunktionswert, bei der Kostenplanung die gesamten anfallenden Zusatzkosten, in Verbindung mit dem Zeitpunkt der Optimierung über der Tabelle dargestellt. Die Darstellung der Tabellen in dieser Web-Applikation orientiert sich an dem Bootstrap-Framework\footnote{http://getbootstrap.com}. Alternativ bietet die App die Anzeige der Tabellen anhand einer JavaScript-Tabelle.\footnote{Auf Implementierung wurde jedoch aufgrund der möglichen Inkompatibilität zu bestimmten Browser und aufgrund der Laufzeitverbesserung der Web-Applikation verzichtet.} Über den Button \textit{Anzeigen} in der hier betrachteten Tabelle sind die Eigenschaften einer Ressource separat einsehbar. Da der User bzw. Mitarbeiter in diesem Modell durch die Planung innerhalb des Projektes eingeteilt wird und seine Rechte nicht über die Organisation der eigenen Daten hinaus reicht, hat er keine weiteren Kompetenzen bei der Nutzung dieser Applikation. \\
+
+Die Verwaltung der Mitarbeiter und die Organisation sowie Durchführung der Projektplanung kann ausschließlich nach der Anmeldung als Administrator erfolgen. Der Admin gilt in dieser Anwendung als durchführende Gewalt, er trägt den Namen \textit{"Example User"}. Nach der erfolgreichen Anmeldung erscheint zunächst erneut die Profilseite, aufgebaut wie beim einfachen User. Im Gegensatz zu normalen Usern bietet die Seite dem Admin jedoch zusätzliche Handlungsspielräume neben der einfachen Auflistung der Vorgänge (siehe Abbildung \ref{ProAd}). Er hat die Möglichkeit, die Dauer der Vorgänge abzuändern oder Vorgänge aus dem Projekt zu löschen. In gleicher Weise stellt sich die Ausweitung der Kompetenzen bei den Ressourcen dar. Über die Verlinkung \textit{Ressourcen} können nun die Ressourcen ebenfalls gelöscht oder die Eigenschaften (Kosten und Zusatzkosten je ME) verändert werden. Desweiteren kann über den Button \textit{Neue Ressource anlegen} eben dies vollzogen werden.\\
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Profilseite_Admin.png}
+    \caption{Profilseite des Administrators}  \label{ProAd}
+  \end{center}
+\end{figure}             
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Ressourcen_Admin.png}
+    \caption{Übersicht der Ressourcen aus Sicht des Administrators}  \label{ResAd}
+  \end{center}
+\end{figure}     
+  
+Um nun zur Kernaufgabe der Applikation, der Projektplanung, zu gelangen, kann entweder der Button \textit{Zurück zur Projektplanung} getätigt werden, oder in der Kopfzeile wird unter \textit{Menü} der Unterpunkt \textit{Projektplanung} ausgewählt. Wie bereits erwähnt, hat nur der Admin die Berächtigung, dieses Menü aufzurufen. Im oberen Bereich der Seite sind die Verlinkungen zur Verwaltung der nötigen Inputs zur Lösung beider Planungsproblematiken angesiedelt. 
+
+
+Das Problem der Projektplanung, das \textit{RCPSP}, besteht aus der Kapazitätsplanung und Kostenplanung (siehe Kapitel ..).     
 
 
 %\lstinputlisting[language=ruby, firstline=37, lastline=45, caption=Name, style=Listing]{Dateiname.html}
