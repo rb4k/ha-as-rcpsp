@@ -180,6 +180,7 @@ Abgabedatum: 24.03.2015
   \renewcommand{\arraystretch}{1,5}
     \begin{tabular}{ll}  %hier die Spaltenausrichtung und Anzahl eintragen 
 	Admin & Administrator \\         
+	GAMS & General Algebraic Modeling System\\
 	RCPSP      & Resource-Constrained Project Scheduling \\
            RoR & Ruby on Rails \\
 SGS & Schedule Generation Scheme\\
@@ -352,10 +353,29 @@ Die Verwaltung der Mitarbeiter und die Organisation sowie Durchführung der Proj
   \end{center}
 \end{figure}     
   
-Um nun zur Kernaufgabe der Applikation, der Projektplanung, zu gelangen, kann entweder der Button \textit{Zurück zur Projektplanung} getätigt werden, oder in der Kopfzeile wird unter \textit{Menü} der Unterpunkt \textit{Projektplanung} ausgewählt. Wie bereits erwähnt, hat nur der Admin die Berächtigung, dieses Menü aufzurufen. Im oberen Bereich der Seite sind die Verlinkungen zur Verwaltung der nötigen Inputs zur Lösung beider Planungsproblematiken angesiedelt. 
+Um nun zur Kernaufgabe der Applikation, der Projektplanung, zu gelangen, kann entweder der Button \textit{Zurück zur Projektplanung} getätigt werden, oder in der Kopfzeile wird unter \textit{Menü} der Unterpunkt \textit{Projektplanung} ausgewählt (siehe Abbildung \ref{RCPSP}). Wie bereits erwähnt, hat nur der Admin die Berechtigung, dieses Menü aufzurufen. Im oberen Bereich der Seite sind die Verlinkungen zur Verwaltung der nötigen Inputs zur Lösung beider Planungsproblematiken angesiedelt. Neben den bereits behandelten Links zu den Vorgängen und Ressourcen finden sich Verlinkungen zu den Vorgangsrelationen und Vorgang-Ressourcen-Kombinationen.\\ 
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Projektplanung.png}
+    \caption{Projektplanung mit dem RCPSP - Übersicht}  \label{RCPSP}
+  \end{center}
+\end{figure}
+
+Die Übersicht der Relationen zwischen den Vorgängen stellt eine Auflistung eines jeden Vorgänger und Nachfolger dar. Der Admin kann diese Relationen löschen oder neue anlegen. Wenn er sich dazu entschließt, eine neue anzulegen, ist zu beachten, dass ein Strukturplan eines Projektes keine Zyklen beinhalten darf. Damit Zyklen verhindert werden, findet beim Prozess des Anlegens einer neuen Vorgangsrelation eine Prüfung statt. Beinhaltet die neu angelegte Relation einen Zyklus, tritt ein Fehler auf und die Relationen muss überarbeitet werden (siehe Abbildung \ref{VorErr}). So wird verhindert, dass der Strukturplan Zyklen enthält.\\
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Vorgangsrel_Fehler.png}
+    \caption{Fehler aufgrund eines Zyklus`in der topologischen Reihenfolge}  \label{VorErr}
+  \end{center}
+\end{figure}
+ 
+Der Button \textit{Vorgang-Ressourcen-Kombination} führt zu einer Übersicht der verschiedenen Ressourcen zu den Vorgängen. Neben der Auflistung können die Kombnationen verändert, gelöscht oder neu erstellt werden. Bei der Veränderung oder Erstellung ist zu beachten,dass die Angabe des Kapazitätsbedarfs nur mit Hilfe einer ganzen Zahl erfolgen darf. Entsprechend der Kapazitätsangabe bei der Bearbeitung eines Profils erscheint bei jeder anderen Art von Eingabe ein Fehler, der die Datenspeicherung verhindert.\\
+Nachdem all diese Daten geprüft und gegebenfalls verändert wurden, steht die Basis sowohl für die Optimierung der Kapazitäts- als auch der Kostenplanung. Bevor der Optimierungsprozess stattfinden kann, müssen noch einige Rahmenbedingungen geprüft werden. Da die Optimierung mit dem Programm \textit{GAMS} stattfindet, muss die Applikation auf dieses Programm zurückgreifen können. Dafür muss \textit{GAMS} auf dem hiesigen Computer installiert sein. Nach der Recherche des Installationsortes muss der korrekte Pfad in das Feld eingetragen werden, in dem der Beispielpfad zu sehen ist. Nach der Eingabe wird der Pfadzugriff durch \textit{Verzeichnis aktualisieren} eingestellt (siehe Abbildung \ref{RCPSP}).
 
 
-Das Problem der Projektplanung, das \textit{RCPSP}, besteht aus der Kapazitätsplanung und Kostenplanung (siehe Kapitel ..).     
+     
 
 
 %\lstinputlisting[language=ruby, firstline=37, lastline=45, caption=Name, style=Listing]{Dateiname.html}

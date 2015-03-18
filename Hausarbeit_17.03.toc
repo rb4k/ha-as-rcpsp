@@ -7,9 +7,9 @@
 \contentsline {section}{\numberline {2}Mathematische Modellformulierung des ressourcenbeschr\IeC {\"a}nkten Projektplanungsproblems}{2}
 \contentsline {section}{\numberline {3}Implementierung des RCPSP mittels Ruby on Rails}{4}
 \contentsline {subsection}{\numberline {3.1}Darstellung der Funktionsweise der Anwendung anhand eines Userguides}{5}
-\contentsline {section}{\numberline {4}Kritische W\IeC {\"u}rdigung des Anwendungssystems}{9}
-\contentsline {section}{\numberline {5}Fazit}{9}
-\contentsline {section}{Literatur}{10}
-\contentsline {section}{\numberline {A}Anhang}{11}
-\contentsline {subsection}{\numberline {A.1}GAMS-Implementierung des Beispiels}{11}
-\contentsline {subsection}{\numberline {A.2}Ruby on Rails Programmcode}{11}
+\contentsline {section}{\numberline {4}Kritische W\IeC {\"u}rdigung des Anwendungssystems}{11}
+\contentsline {section}{\numberline {5}Fazit}{11}
+\contentsline {section}{Literatur}{12}
+\contentsline {section}{\numberline {A}Anhang}{13}
+\contentsline {subsection}{\numberline {A.1}GAMS-Implementierung des Beispiels}{13}
+\contentsline {subsection}{\numberline {A.2}Ruby on Rails Programmcode}{13}
