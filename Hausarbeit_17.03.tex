@@ -372,10 +372,32 @@ Die Übersicht der Relationen zwischen den Vorgängen stellt eine Auflistung ein
 \end{figure}
  
 Der Button \textit{Vorgang-Ressourcen-Kombination} führt zu einer Übersicht der verschiedenen Ressourcen zu den Vorgängen. Neben der Auflistung können die Kombnationen verändert, gelöscht oder neu erstellt werden. Bei der Veränderung oder Erstellung ist zu beachten,dass die Angabe des Kapazitätsbedarfs nur mit Hilfe einer ganzen Zahl erfolgen darf. Entsprechend der Kapazitätsangabe bei der Bearbeitung eines Profils erscheint bei jeder anderen Art von Eingabe ein Fehler, der die Datenspeicherung verhindert.\\
-Nachdem all diese Daten geprüft und gegebenfalls verändert wurden, steht die Basis sowohl für die Optimierung der Kapazitäts- als auch der Kostenplanung. Bevor der Optimierungsprozess stattfinden kann, müssen noch einige Rahmenbedingungen geprüft werden. Da die Optimierung mit dem Programm \textit{GAMS} stattfindet, muss die Applikation auf dieses Programm zurückgreifen können. Dafür muss \textit{GAMS} auf dem hiesigen Computer installiert sein. Nach der Recherche des Installationsortes muss der korrekte Pfad in das Feld eingetragen werden, in dem der Beispielpfad zu sehen ist. Nach der Eingabe wird der Pfadzugriff durch \textit{Verzeichnis aktualisieren} eingestellt (siehe Abbildung \ref{RCPSP}).
+Nachdem all diese Daten geprüft und gegebenfalls verändert wurden, steht die Basis sowohl für die Optimierung der Kapazitäts- als auch der Kostenplanung. Bevor der Optimierungsprozess stattfinden kann, müssen noch einige Rahmenbedingungen geprüft werden. Da die Optimierung mit dem Programm \textit{GAMS} stattfindet, muss die Applikation auf dieses Programm zurückgreifen können. Dafür muss \textit{GAMS} auf dem hiesigen Computer installiert sein. Nach der Recherche des Installationsortes muss der korrekte Pfad in das Feld eingetragen werden, in dem der Beispielpfad zu sehen ist. Nach der Eingabe wird der Pfadzugriff durch \textit{Verzeichnis aktualisieren} gesichert (siehe Abbildung \ref{RCPSP}). Neben den Programmpfad muss ein Termin ausgewählt werden, zu dem das Projekt startet  (siehe Abbildung \ref{Startdatum}). Anhand dieses Startdatums werden alle Daten bezüglich der Vorgänge berechnet, zudem stellt der Starttermin bei der Kostenplanung einen wichtigen Faktor dar. Durch die Betätigung des Feldes, das ein Muster anzeigt, öffnet sich ein Kalendermenü, in dem ein beliebiges Datum ausgewählt werden kann.\\  
 
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Projektplanung_Datum.png}
+    \caption{Einstellung des Starttermins anhand eines Kalendermenüs}  \label{Startdatum}
+  \end{center}
+\end{figure}
 
-     
+Nachdem das \textit{GAMS}-Verzeichnis und der Starttermin eingestellt wurden, kann die Kapazitätsplanung durch die Betätigung des Buttons \textit{Optimiere Kapazitätsplanung} durchgeführt werden. Nach einer kurzen Rechenzeit, währenddessen der Button, mit dem die Optimierung gestartet wurde, auf den Rechenprozess hinweist, leitet die Applikation den Admin direkt zu der Übersicht der Vorgänge. Wie bereits dargestellt (siehe Abbildung \ref{ProAd}), sind hier alle möglichen Zeitpunkte dargestellt, an denen die einzelnen Vorgänge stattfinden können. Zusätzlich wird die Projektdauer über der Tabelle und der kritische Pfad, durch den die Projektdauer erzielt wird, in die Tabelle geschrieben (siehe Abbildung \ref{Kap}). Die Kapazitätsplanung ist mit dem Einlesen der Ergebnisse abgeschlossen.\\   
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Kapazitaetsplanung.png}
+    \caption{Ergebnis der Kapazitätsplanung}  \label{Kap}
+  \end{center}
+\end{figure}
+
+Über den Button \textit{Zurück zur Projektplanung} gelangt der Admin zurück zur Verwaltungsseite. Bevor die der optimale Kostenplan für das vorhandene Projekt berechnet werden kann, muss zunächst äquivalent zur Einstellung des Starttermins eine Deadline eingerichtet werden. Dies funktioniert erneut über ein Kalendermenü. Es sollte bei der Bestimmung der Deadline darauf geachtet werden, dass die Deadline in einem sinnvollen Verhältnis zum Starttermin steht. Eine zu kurze oder lange Zeitspanne zwischen den beiden Terminen kann zu unbrauchbaren Ergebnissen führen. Wurde eine geeignete Deadline ausgewählt und die Optimierung des Kostenplans gestartet, öffnet sich nach einer kurzen Rechenzeit die Übersicht der Ressourcen. Auf dieser Seite werden die Projektkosten und die Zusatzkosten, die jede Ressource durch Einhaltung der Deadline verursachen, ausgelesen (siehe Abbildung \ref{ResAd}). Bei der Kostenplanung ist jedoch nicht nur relevant, wie hoch die Kosten zur Durchführung des Projektes sind, sondern auch die Zeitpunkte, zu denen die Vorgänge stattfinden. Um dies zu untersuchen, bietet sich dem Admin die Möglichkeit, ein weiteres Mal die Seite mit der Übersicht der Vorgänge aufzurufen. Auf dieser Seite wurde angestoßen durch die Berechnung des optimalen Kostenplans der entsprechende kritische Pfad mit allen frühesten und spätesten Zeitpunkten in die Tabelle eingelesen und die alten Ergebnisse der Kapazitätsplanung überschrieben (siehe Abbildung \ref{VorKo}). Somit sind alle Informationen des Kostenplans einsehbar, die Kostenplanung ist ebenfalls abgeschlossen.\\  
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Vorgaenge_Kostenpl.png}
+    \caption{Ergebnis der Kapazitätsplanung}  \label{VorKo}
+  \end{center}
+\end{figure}
 
 
 %\lstinputlisting[language=ruby, firstline=37, lastline=45, caption=Name, style=Listing]{Dateiname.html}
