@@ -321,7 +321,7 @@ Mit Hilfe des RoR Frameworks lassen sich dadurch schnell Web-Applikationen mit D
 
 \section{Implementierung des RCPSP mittels Ruby on Rails} \label{Haupt}
 
-\subsection{Darstellung der Funktionsweise der Anwendung anhand eines Userguides}\label{User}
+%\subsection{Darstellung der Funktionsweise der Anwendung anhand eines Userguides}\label{User}
 Die Funktionsweise der mit \textit{RoR} programmierten Anwendung \textit {\glqq Projektplanung\grqq} zur Lösung der Kapizitäts- und Kostenplanung des \textit{RCPSP} lässt sich am anschaulichsten mit Hilfe eines Userguides darstellen. Neben der Besonderheiten, die durch das Problem der Projektplanung auftreten, können im selben Zuge auch die Spezifika der einzelnen Benutzerrollen aufgezeigt werden. Beachtet werden muss, dass die hier vorgestellte Web-Applikation auf der Arbeit von \cite{hartl2012ruby} aufbaut.\\
 
 Zunächst wird die Anwendung aus der Sicht eines Anwenders betrachtet, der sich nicht in die Applikation per Benutzererkennung eingeloggt hat. Konkret kann man sich darunter einen potentiellen Mitarbeiter des entsprechenden Projektes vorstellen, der sich über die Projektplanung informieren möchte, um sich gegebenenfalls als Mitarbeiter im Projekt (User) anzumelden. Im Testbetrieb wird der Ruby-Servers gestartet und durch Eingabe der URL \textit {"http://localhost:3000/"} in die Adresszeile eines beliebigen modernen Browers wird die Startseite der Projektplanung angezeigt (siehe Abbildung \ref{Start}). Alternativ ist der Betrieb auf einem Webserver möglich, sofern die benötigte Software installiert und betriebsbereit ist. Auf der Startseite hat der User zum einen die Möglichkeit, sich anzumelden bzw. sich einzuloggen, für den Fall, dass er bereits User der Anwendung ist. \\
@@ -604,13 +604,52 @@ Die Verwaltung der Mitarbeiter und die Organisation sowie Durchführung der Proj
   \end{center}
 \end{figure}     
   
-Um nun zur Kernaufgabe der Applikation, der Projektplanung, zu gelangen, kann entweder der Button \textit{Zurück zur Projektplanung} getätigt werden, oder in der Kopfzeile wird unter \textit{Menü} der Unterpunkt \textit{Projektplanung} ausgewählt. Wie bereits erwähnt, hat nur der Admin die Berächtigung, dieses Menü aufzurufen. Im oberen Bereich der Seite sind die Verlinkungen zur Verwaltung der nötigen Inputs zur Lösung beider Planungsproblematiken angesiedelt. 
+Um nun zur Kernaufgabe der Applikation, der Projektplanung, zu gelangen, kann entweder der Button \textit{Zurück zur Projektplanung} getätigt werden, oder in der Kopfzeile wird unter \textit{Menü} der Unterpunkt \textit{Projektplanung} ausgewählt (siehe Abbildung \ref{RCPSP}). Wie bereits erwähnt, hat nur der Admin die Berechtigung, dieses Menü aufzurufen. Im oberen Bereich der Seite sind die Verlinkungen zur Verwaltung der nötigen Inputs zur Lösung beider Planungsproblematiken angesiedelt. Neben den bereits behandelten Links zu den Vorgängen und Ressourcen finden sich Verlinkungen zu den Vorgangsrelationen und Vorgang-Ressourcen-Kombinationen.\\ 
 
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Projektplanung.png}
+    \caption{Projektplanung mit dem RCPSP - Übersicht}  \label{RCPSP}
+  \end{center}
+\end{figure}
 
-Das Problem der Projektplanung, das \textit{RCPSP}, besteht aus der Kapazitätsplanung und Kostenplanung (siehe Kapitel ..).     
+Die Übersicht der Relationen zwischen den Vorgängen stellt eine Auflistung eines jeden Vorgänger und Nachfolger dar. Der Admin kann diese Relationen löschen oder neue anlegen. Wenn er sich dazu entschließt, eine neue anzulegen, ist zu beachten, dass ein Strukturplan eines Projektes keine Zyklen beinhalten darf. Damit Zyklen verhindert werden, findet beim Prozess des Anlegens einer neuen Vorgangsrelation eine Prüfung statt. Beinhaltet die neu angelegte Relation einen Zyklus, tritt ein Fehler auf und die Relationen muss überarbeitet werden (siehe Abbildung \ref{VorErr}). So wird verhindert, dass der Strukturplan Zyklen enthält.\\
 
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Vorgangsrel_Fehler.png}
+    \caption{Fehler aufgrund eines Zyklus`in der topologischen Reihenfolge}  \label{VorErr}
+  \end{center}
+\end{figure}
+ 
+Der Button \textit{Vorgang-Ressourcen-Kombination} führt zu einer Übersicht der verschiedenen Ressourcen zu den Vorgängen. Neben der Auflistung können die Kombnationen verändert, gelöscht oder neu erstellt werden. Bei der Veränderung oder Erstellung ist zu beachten,dass die Angabe des Kapazitätsbedarfs nur mit Hilfe einer ganzen Zahl erfolgen darf. Entsprechend der Kapazitätsangabe bei der Bearbeitung eines Profils erscheint bei jeder anderen Art von Eingabe ein Fehler, der die Datenspeicherung verhindert.\\
+Nachdem all diese Daten geprüft und gegebenfalls verändert wurden, steht die Basis sowohl für die Optimierung der Kapazitäts- als auch der Kostenplanung. Bevor der Optimierungsprozess stattfinden kann, müssen noch einige Rahmenbedingungen geprüft werden. Da die Optimierung mit dem Programm \textit{GAMS} stattfindet, muss die Applikation auf dieses Programm zurückgreifen können. Dafür muss \textit{GAMS} auf dem hiesigen Computer installiert sein. Nach der Recherche des Installationsortes muss der korrekte Pfad in das Feld eingetragen werden, in dem der Beispielpfad zu sehen ist. Nach der Eingabe wird der Pfadzugriff durch \textit{Verzeichnis aktualisieren} gesichert (siehe Abbildung \ref{RCPSP}). Neben den Programmpfad muss ein Termin ausgewählt werden, zu dem das Projekt startet  (siehe Abbildung \ref{Startdatum}). Anhand dieses Startdatums werden alle Daten bezüglich der Vorgänge berechnet, zudem stellt der Starttermin bei der Kostenplanung einen wichtigen Faktor dar. Durch die Betätigung des Feldes, das ein Muster anzeigt, öffnet sich ein Kalendermenü, in dem ein beliebiges Datum ausgewählt werden kann.\\  
 
-%\lstinputlisting[language=ruby, firstline=37, lastline=45, caption=Name, style=Listing]{Dateiname.html}
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Projektplanung_Datum.png}
+    \caption{Einstellung des Starttermins anhand eines Kalendermenüs}  \label{Startdatum}
+  \end{center}
+\end{figure}
+
+Nachdem das \textit{GAMS}-Verzeichnis und der Starttermin eingestellt wurden, kann die Kapazitätsplanung durch die Betätigung des Buttons \textit{Optimiere Kapazitätsplanung} durchgeführt werden. Nach einer kurzen Rechenzeit, währenddessen der Button, mit dem die Optimierung gestartet wurde, auf den Rechenprozess hinweist, leitet die Applikation den Admin direkt zu der Übersicht der Vorgänge. Wie bereits dargestellt (siehe Abbildung \ref{ProAd}), sind hier alle möglichen Zeitpunkte dargestellt, an denen die einzelnen Vorgänge stattfinden können. Zusätzlich wird die Projektdauer über der Tabelle und der kritische Pfad, durch den die Projektdauer erzielt wird, in die Tabelle geschrieben (siehe Abbildung \ref{Kap}). Die Kapazitätsplanung ist mit dem Einlesen der Ergebnisse abgeschlossen.\\   
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Kapazitaetsplanung.png}
+    \caption{Ergebnis der Kapazitätsplanung}  \label{Kap}
+  \end{center}
+\end{figure}
+
+Über den Button \textit{Zurück zur Projektplanung} gelangt der Admin zurück zur Verwaltungsseite. Bevor die der optimale Kostenplan für das vorhandene Projekt berechnet werden kann, muss zunächst äquivalent zur Einstellung des Starttermins eine Deadline eingerichtet werden. Dies funktioniert erneut über ein Kalendermenü. Es sollte bei der Bestimmung der Deadline darauf geachtet werden, dass die Deadline in einem sinnvollen Verhältnis zum Starttermin steht. Eine zu kurze oder lange Zeitspanne zwischen den beiden Terminen kann zu unbrauchbaren Ergebnissen führen. Wurde eine geeignete Deadline ausgewählt und die Optimierung des Kostenplans gestartet, öffnet sich nach einer kurzen Rechenzeit die Übersicht der Ressourcen. Auf dieser Seite werden die Projektkosten und die Zusatzkosten, die jede Ressource durch Einhaltung der Deadline verursachen, ausgelesen (siehe Abbildung \ref{ResAd}). Bei der Kostenplanung ist jedoch nicht nur relevant, wie hoch die Kosten zur Durchführung des Projektes sind, sondern auch die Zeitpunkte, zu denen die Vorgänge stattfinden. Um dies zu untersuchen, bietet sich dem Admin die Möglichkeit, ein weiteres Mal die Seite mit der Übersicht der Vorgänge aufzurufen. Auf dieser Seite wurde angestoßen durch die Berechnung des optimalen Kostenplans der entsprechende kritische Pfad mit allen frühesten und spätesten Zeitpunkten in die Tabelle eingelesen und die alten Ergebnisse der Kapazitätsplanung überschrieben (siehe Abbildung \ref{VorKo}). Somit sind alle Informationen des Kostenplans einsehbar, die Kostenplanung ist ebenfalls abgeschlossen.\\  
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=120mm]{Bilder/Vorgaenge_Kostenpl.png}
+    \caption{Ergebnis der Kapazitätsplanung}  \label{VorKo}
+  \end{center}
+\end{figure}
+
 
 
 
@@ -632,10 +671,123 @@ Das Problem der Projektplanung, das \textit{RCPSP}, besteht aus der Kapazitätsp
 \begin{appendix}
 \section{Anhang}
 
+\subsection{Datenbankschema}\label{db-schema}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=150mm]{Bilder/DB.pdf}
+    \caption{Datenbankschema der Web-Applikation Projektplanung}  \label{VorKo}
+  \end{center}
+\end{figure}
+
 \subsection{GAMS-Implementierung des Beispiels}\label{Imp}
+%\lstinputlisting[language=ruby, firstline=37, lastline=45, caption=Name, style=Listing]{/Users/Superuser/as-rcpsp/RCPSP1.gms}
+\lstinputlisting[language=ruby, caption=GAMS-Code zur Kapazitätsplanung, style=Listing]{/Users/Superuser/as-rcpsp/RCPSP1.gms}
 
-\subsection{Ruby on Rails Programmcode}\label{Anhang2}
+\lstinputlisting[language=ruby, caption=GAMS-Code zur Kostenplanung, style=Listing]{/Users/Superuser/as-rcpsp/RCPSP2.gms}
 
+\subsection{Ruby on Rails Programmcodes}\label{Anhang2}
+
+\lstinputlisting[language=ruby, caption=Gemfile der Web-Applikation Projektplanung, style=Listing]{/Users/Superuser/as-rcpsp/Gemfile}
+
+\lstinputlisting[language=ruby, caption=RoR-Controller für die Vorgangsrelationen, style=Listing]{/Users/Superuser/as-rcpsp/app/controllers/procedure_procedures_controller.rb}
+
+\lstinputlisting[language=ruby, caption=RoR-Controller für die Vorgangs-Ressourcen-Beziehung, style=Listing]{/Users/Superuser/as-rcpsp/app/controllers/procedure_resources_controller.rb}
+
+\lstinputlisting[language=ruby, caption=RoR-Controller für die Vorgänge, style=Listing]{/Users/Superuser/as-rcpsp/app/controllers/procedures_controller.rb}
+
+\lstinputlisting[language=ruby, caption=RoR-Controller für das Projekt, style=Listing]{/Users/Superuser/as-rcpsp/app/controllers/projects_controller.rb}
+
+\lstinputlisting[language=ruby, caption=RoR-Controller für das RCPSP, style=Listing]{/Users/Superuser/as-rcpsp/app/controllers/rcpsps_controller.rb}
+
+\lstinputlisting[language=ruby, caption=RoR-Controller für die Ressourcen, style=Listing]{/Users/Superuser/as-rcpsp/app/controllers/resources_controller.rb}
+
+\lstinputlisting[language=ruby, caption=RoR-Controller für die statischen Seiten, style=Listing]{/Users/Superuser/as-rcpsp/app/controllers/static_pages_controller.rb}
+
+\lstinputlisting[language=ruby, caption=RoR-Controller für die Users, style=Listing]{/Users/Superuser/as-rcpsp/app/controllers/users_controller.rb}
+
+%%%%
+\lstinputlisting[language=ruby, caption=RoR-Modell für die Vorgangsrelationen, style=Listing]{/Users/Superuser/as-rcpsp/app/models/procedure_procedure.rb}
+
+\lstinputlisting[language=ruby, caption=RoR-Modell für die Vorgangs-Ressourcen-Beziehung, style=Listing]{/Users/Superuser/as-rcpsp/app/models/procedure_resource.rb}
+
+\lstinputlisting[language=ruby, caption=RoR-Modell für die Vorgänge, style=Listing]{/Users/Superuser/as-rcpsp/app/models/procedure.rb}
+
+\lstinputlisting[language=ruby, caption=RoR-Modell für das Projekt, style=Listing]{/Users/Superuser/as-rcpsp/app/models/project.rb}
+
+\lstinputlisting[language=ruby, caption=RoR-Modell für die Ressourcen, style=Listing]{/Users/Superuser/as-rcpsp/app/models/resource.rb}
+
+\lstinputlisting[language=ruby, caption=RoR-Modell für die Users, style=Listing]{/Users/Superuser/as-rcpsp/app/models/user.rb}
+
+%%%VIEWS propro
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangsrelationen - Formular, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_procedures/_form.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangsrelationen - Bearbeitung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_procedures/edit.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangsrelationen - Übersicht, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_procedures/index.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangsrelationen - Erstellung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_procedures/new.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangsrelationen - Anzeige, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_procedures/show.html.erb}
+
+%%%VIEWS prores
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangs-Ressourcen-Beziehung - Formular, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_resources/_form.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangs-Ressourcen-Beziehung - Bearbeitung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_resources/edit.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangs-Ressourcen-Beziehung - Übersicht, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_resources/index.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangs-Ressourcen-Beziehung - Erstellung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_resources/new.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangs-Ressourcen-Beziehung - Anzeige, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_resources/show.html.erb}
+
+%%%VIEWS pro
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgänge - Formular, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedures/_form.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgänge - Bearbeitung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedures/edit.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgänge - Übersicht, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedures/index.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgänge - Erstellung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedures/new.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgänge - Anzeige, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedures/show.html.erb}
+
+%%%VIEWS res
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Ressourcen - Formular, style=Listing]{/Users/Superuser/as-rcpsp/app/views/resources/_form.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Ressourcen - Tabelle als unangemeldeter User, style=Listing]{/Users/Superuser/as-rcpsp/app/views/resources/_free.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Ressourcen - Tabelle als angemeldeter User, style=Listing]{/Users/Superuser/as-rcpsp/app/views/resources/_signed_in.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Ressourcen - Bearbeitung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/resources/edit.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Ressourcen - Übersicht, style=Listing]{/Users/Superuser/as-rcpsp/app/views/resources/index.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Ressourcen - Erstellung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/resources/new.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Ressourcen - Anzeige, style=Listing]{/Users/Superuser/as-rcpsp/app/views/resources/show.html.erb}
+
+%%%VIEWS static
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Optimierungsseite zur Projektplanung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/static_pages/rcpsp.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Startseite, style=Listing]{/Users/Superuser/as-rcpsp/app/views/static_pages/home.html.erb}
+
+%%%VIEWS pro
+\lstinputlisting[language=ruby, caption=RoR-Seite bzgl. der Lösung von Usern über die Übersichtsseite, style=Listing]{/Users/Superuser/as-rcpsp/app/views/users/_user.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die User - Bearbeitung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/users/edit.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die User - User-/Mitarbeiterübersicht, style=Listing]{/Users/Superuser/as-rcpsp/app/views/users/index.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die User - Erstellung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/users/new.html.erb}
+
+\lstinputlisting[language=ruby, caption=RoR-Seite für die User - Anzeige, style=Listing]{/Users/Superuser/as-rcpsp/app/views/users/show.html.erb}
+
+%%%schema
+\lstinputlisting[language=ruby, caption=RoR-Datenbankschema, style=Listing]{/Users/Superuser/as-rcpsp/db/schema.rb}
+
+%%%sample
+\lstinputlisting[language=ruby, caption=Beispieldaten für die Datenbank, style=Listing]{/Users/Superuser/as-rcpsp/lib/tasks/sample_data.rake}
 
 \end{appendix}
 \end{document}
