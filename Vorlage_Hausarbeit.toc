@@ -1,7 +1,6 @@
 \select@language {ngerman}
 \contentsline {section}{Abbildungsverzeichnis}{iii}
-\contentsline {section}{Tabellenverzeichnis}{iii}
-\contentsline {section}{Abk\IeC {\"u}rzungsverzeichnis}{v}
+\contentsline {section}{Abk\IeC {\"u}rzungsverzeichnis}{iii}
 \contentsline {section}{Symbolverzeichnis}{vi}
 \contentsline {section}{\numberline {1}Einleitung}{1}
 \contentsline {section}{\numberline {2}Grundlagen zur ressourcen-beschr\IeC {\"a}nkten Projektplanung und zu dem Framework Ruby on Rails}{2}
@@ -10,11 +9,10 @@
 \contentsline {subsection}{\numberline {2.3}Ruby on Rails}{6}
 \contentsline {section}{\numberline {3}Implementierung des RCPSP mittels Ruby on Rails}{7}
 \contentsline {subsection}{\numberline {3.1}Darstellung der Funktionsweise der Anwendung anhand eines Userguides}{7}
-\contentsline {subsection}{\numberline {3.2}Integration in die Web-Applikation und Beschreibung des Unterprogramms \textit {\glqq rgl\grqq }}{18}
 \contentsline {section}{\numberline {4}Kritische W\IeC {\"u}rdigung des Anwendungssystems}{18}
-\contentsline {section}{\numberline {5}Fazit}{18}
-\contentsline {section}{Literatur}{19}
-\contentsline {section}{\numberline {A}Anhang}{21}
-\contentsline {subsection}{\numberline {A.1}Datenbankschema}{21}
-\contentsline {subsection}{\numberline {A.2}GAMS-Implementierung des Beispiels}{21}
-\contentsline {subsection}{\numberline {A.3}Ruby on Rails Programmcodes}{28}
+\contentsline {section}{\numberline {5}Fazit}{20}
+\contentsline {section}{Literatur}{21}
+\contentsline {section}{\numberline {A}Anhang}{23}
+\contentsline {subsection}{\numberline {A.1}Datenbankschema}{23}
+\contentsline {subsection}{\numberline {A.2}GAMS-Implementierung des Beispiels}{23}
+\contentsline {subsection}{\numberline {A.3}Ruby on Rails Programmcodes}{30}

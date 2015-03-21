@@ -196,16 +196,6 @@ Abgabedatum: 24.03.2015
 %Abbildungsverzeichnis erstellen
 \listoffigures
 
-%Tabellenverzeichnis erstellen
-\listoftables
-
-%Codeverzeichnis
-\renewcommand\lstlistlistingname{Quellcodeverzeichnis} 
-\lstlistoflistings 
-\renewcommand*\lstlistingname{Quellcode} 
-
-\newpage
-%Abkürzungsverzeichnis
 \section*{Abkürzungsverzeichnis}
 \addcontentsline{toc}{section}{Abkürzungsverzeichnis}
 \begin{table}[h!]
@@ -213,11 +203,25 @@ Abgabedatum: 24.03.2015
     \hspace*{2mm}
   \renewcommand{\arraystretch}{1,5}
     \begin{tabular}{ll}  %hier die Spaltenausrichtung und Anzahl eintragen
-           RCPSP      & Resource-Constrained Project Scheduling \\
+	Admin & Administrator \\         
+	GAMS & General Algebraic Modeling System\\
+	RCPSP      & Resource-Constrained Project Scheduling \\
            RoR & Ruby on Rails \\
 SGS & Schedule Generation Scheme\\
 	\end{tabular}
 \end{table}
+%Tabellenverzeichnis erstellen
+%\listoftables
+
+%Codeverzeichnis
+\newpage
+\renewcommand\lstlistlistingname{Quellcodeverzeichnis} 
+\lstlistoflistings 
+\renewcommand*\lstlistingname{Quellcode} 
+
+\newpage
+%Abkürzungsverzeichnis
+
 \newpage
 %Symbolverzeichnis
 \section*{Symbolverzeichnis}
@@ -487,13 +491,20 @@ Auf der Seite mit der Ressourcenübersicht sind die Projektkosten und die Zusatz
   \end{center}
 \end{figure}
 
-\subsection{Integration in die Web-Applikation und Beschreibung des Unterprogramms \textit{\glqq rgl\grqq}}\label{rgl}
-
-
-
 \section{Kritische Würdigung des Anwendungssystems} \label{krit}
-
+In dieser Ausarbeitung werden zunächst die Problematiken der Projektplanung dargelegt und das \textit{RCPSP} für die Kapazitäts- und Kostenplanung formuliert. Dabei steht neben der Lösung des Modells mit einem Programm die Integration und Verknüpfung mit einer Applikation im Vordergrund. Ziel ist es, eine Applikation zu erstellen, die im Hintergrund der Anwendung auf das Lösungstool, dass die Rechnungen durchführt, zurückgreift, die Ergebnisse abruft und darstellt.\\
+Das \textit{RCPSP} wird in dem Programm \textit{GAMS} programmiert und mit dessen Hilfe gelöst. Da der Schwerpunkt dieser Arbeit auf \textit{RoR} liegt, sind in \textit{GAMS} nur die essentiellen Bestandteile zur Lösung des \textit{RCPSP} implementiert. Dank einer Schnittstelle zwischen \textit{RoR} und \textit{GAMS} ist es möglich, einen Großteil der Daten in \textit{RoR} zu programmieren, um sie dann in \textit{GAMS} einzulesen. Der Schwerpunkt liegt dementsprechend auf der Implementierung in \textit{RoR} und der Bildung der Schnittstelle.\\
+Bei der Erstellung der Applikation ist die herausragende Rolle der Controller zu erwähnen. Ein Controller ist für jede Art von Programmierungselement erforderlich, unabhängig von der Tatsache, ob es sich zum Beispiel um die Entwicklung eines Datenmodells oder die Strukturierung der Homepage handelt. In den jeweiligen Controllern werden alle Aktionen definiert, auf die in anderen Verzeichnissen zurückgegriffen werden. Nur Aktionen, die im Controller hinterlegt sind, können an anderer Stelle aufgerufen bzw. genutzt werden. Falls der Controller fehlerhaft programmiert ist, führt dies zwangsläufig an einem gewissen Punkt der Applikation zu Komplikationen. Am Beispiel des \textit{RCPSP Controller} lässt sich die Signifikanz des Controllers in \textit{RoR} demonstrieren.\\
+-- Quellcode RCPSP Controller(Teil: "def optimize") --\\
+Im \textit{RCPSP Controller} sind alle Aktionen bezüglich der Optimierung der Kapazitäts- und Kostenplannung hinterlegt. \textit{"def optimize"} beinhaltet alle Aktionen, die \textit{RoR} durchführen muss, damit die \textit{GAMS}-Datei zur Lösung der Kapazitätsplanung den vollständigen Input erhält und der Output korrekt ausgelesen wird. Die Aktion \textit{"Optimiere Kapazitätsplanung"} (siehe Abbildung \ref{RCPSP}), die die Betätigung des Buttons auslöst, funktioniert ausschließlich durch die korrekte Programmierung unter \textit{"def optimize"} im Controller.\\
+Die kritische Betrachtung impliziert neben den Besonderheiten des Programms auch die zukünftigen Verbesserungsmöglichkeiten dieses Anwendungssystems. Die hier implementierte Applikation behandelt ausschließlich das \textit{RCPSP} bei exakt einem vorhandenen Projekt. Die Multiprojektplanung wurde außer Acht gelassen. Mit der Einführung der Multiprojektplanung eröffnen sich zwar neue Problemstellungen bei der Implementierung, es bietet jedoch auch neue Anwendungsmöglichkeiten der Applikation. Anstatt einzelne Aspekte eines Projektes zu optimieren, kann nun ein Portfolio an mehreren Projekten erstellt werden. Ein Mitarbeiter hat somit die Wahl, an welchen Projekten er partizipieren möchte und die Durchführung des Projektportfolios ist Ziel der Optimierung. Es findet dementsprechend eine Projektion der Kapazitäts- und Kostenplanung auf die Multiprojektplanung statt.\\
+Die tatsächlich durchgeführte Programmierung bietet ebenfalls Verbesserungspotential. Auf der Übersichtsseite der Projektplanung, auf der die Optimierungsvorgänge gestartet werden können, finden sich auch die Felder zur Aktualisierung des Starttermins und der Deadline. Die Felder und Funktionen, die in diesem Zusammenhang ausgelöst werden, funktionieren zwar fehlerfrei, die zeitliche Abhängigkeit ist aber nicht in der Form gegeben, wie es die Bezeichnungen voraussetzen. Wird die zeitliche Reihenfolge vertauscht, führt das Modell die Optimierung trotzdem korrekt durch. Der Termin der Deadline muss laut der implementierten Regularien nicht nach dem Starttermin stattfinden. Die Bezeichnung der Begriffe lässt diese Vertauschung der Reihenfolge unlogisch erscheinen, da es sich für \textit{RoR} aber nur um reine Strings handelt, existiert keine logische Verknüpfung der Begrifflichkeiten.\\
+Ein weiteres Problem tritt bei der Aktualisierung der Pfade für die Programme \textit{GAMS} und \textit{Graphviz} (siehe Abbildung \ref{RCPSP}). Die Optimierung aller Planungsprobleme erfolgt erst nach der Angabe des korrekten Pfads von \textit{GAMS}. Nach diesem Schema funktioniert die Erstellung des Graphen der Vorgangsrelationen nur, wenn erfolgreich auf \textit{Graphviz} zurückgegriffen werden kann. Diese Kausalitäten führen zu der Frage, was bei der Angabe von falschen Pfaden für das jeweilige Programm passiert. Faktisch funktionieren sie nicht. Beim Start der Optimierung mit einem flaschen \textit{GAMS}-Pfad sucht der Controller vergeblich nach textit{GAMS}. Statt den Vorgang abzubrechen, bleibt der Server an dieser Stelle hängen und es der Nutzer kann keine weiteren Aktionen ausführen. Um dieses "Abstürzen" des Servers zu verhindern, falls der Programmpfad inkorrekt ist, könnte ein \textit{Timeout}-Befehl die Aktion nach einer vorgegebenen Zeitspanne abbrechen. So wäre es möglich, den Pfad zu ändern und den Vorgang erneut zu starten. Eine andere Möglichkeit als \textit{Timeout} ist \textit{"terminator"}. \textit{"terminator"} ist keine interne \textit{RoR}-Methode, daher muss der passende Gemfile installiert werden, damit \textit{RoR} diese Methode verwenden kann.\\
+Auch bei der Verwaltung der Vorgänge und Vorgangsrelationen offenbaren sich Lücken, die in späteren Ausarbeitungen überarbeitet werden sollten. Das Anlegen, Ändern und Löschen von Vorgängen funktioniert reibungslos. Zur Darstellung der Vorgangsrelationen wird das Modell \textit{Graphviz} verwendet. Dieses Modell kommt aus einer Internetquelle. Der Großteil der Programmcodes dieses Modells ist übernommen, nur eine Anpassung des Problems an die Gegebenheiten findet statt. Diese Datenübernahme hat zur Folge, dass der Name jedes Vorgangs aus mindestens zwölf Zeichen bestehen muss. Bei einem kürzeren Vorgangsnamen zeichnet das Programm keinen Graphen. Die Gründe dafür sind unklar. In dieser Arbeit ist eine Mindestlänge für den Namen eines Vorgangs vorgegeben. Das ursprüngliche Problem von \textit{Graphviz} besteht dadurch weiterhin, ist im Rahmen dieser Arbeit aber nicht lösbar. Auf andere Funtkionen der Vorgänge oder Vorgangsrelationen hat dieser Umstand keinen Einfluss. Die Vorgangsrelationen stellen einen wichtigen Part der Projektplanung dar. Schließlich ist die Bestimmung der Reihenfolge der abzuarbeitenden Vorgänge die Basis für viele andere Operationen auf dem Weg zur Projektopimierung. Beim Anlegen einer neuen Vorgangsrelation dürfen, wie bereits beschrieben, keine Zyklen entstehen. Es findet aber keine Prüfung statt, ob die neu angelegte Vorgangsrelation bereits existiert. Folglich wird nicht verhindert, dass z.B. die Relation von \textit{Vorgang 1} zu \textit{Vorgang 2} zwei Mal angelegt wird. Für alle weiteren Prozesse resultieren keine Schäden, da doppelt vorhandene Relationen nicht beachtet werden, trotzdem handelt es sich hier um eine Prüfungslücke im Modell der Vorgangsrelationen.\\      
+  
 \section{Fazit} \label{Fazit}
+Ziel dieser Ausarbeitung war es, mit der Programmierumgebung \textit{RoR} eine Homepage zu erstellen, mit dessen Hilfe eine Fragestellung aus dem Bereich des Operations Management gelöst werden kann. Konkret wurde das \textit{RCPSP} zur Optimierung der Projektplanung mit einer Schnittstelle zu \textit{GAMS} implementiert. Es lässt sich festhalten, dass \textit{RoR}     
+
 
 \bibliographystyle{Prod_Seminar}    %legt die zu verwendende BIBTEX-Stildatei fest
 \newpage
@@ -567,13 +578,11 @@ Auf der Seite mit der Ressourcenübersicht sind die Projektkosten und die Zusatz
 %%%VIEWS propro
 \lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangsrelationen - Formular, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_procedures/_form.html.erb}
 
-\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangsrelationen - Bearbeitung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_procedures/edit.html.erb}
-
 \lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangsrelationen - Übersicht, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_procedures/index.html.erb}
 
 \lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangsrelationen - Erstellung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_procedures/new.html.erb}
 
-\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangsrelationen - Anzeige, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_procedures/show.html.erb}
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangsrelationen - Grafische Darstellung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_procedures/graph.html.erb}
 
 %%%VIEWS prores
 \lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangs-Ressourcen-Kombinationen - Formular, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_resources/_form.html.erb}

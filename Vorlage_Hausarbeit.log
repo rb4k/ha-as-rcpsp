@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.15)  20 MAR 2015 12:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.15)  21 MAR 2015 17:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -673,7 +673,11 @@ Package caption Info: listings package is loaded.
 LaTeX Warning: Unused global option(s):
     [parskip,bibtotoc,liststotoc].
 
-(./Vorlage_Hausarbeit.aux)
+(./Vorlage_Hausarbeit.aux
+
+LaTeX Warning: Label `Fazit' multiply defined.
+
+)
 \openout1 = `Vorlage_Hausarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
@@ -691,8 +695,7 @@ LaTeX Font Info:    ... okay on input line 145.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 145.
 
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 145.
@@ -781,83 +784,79 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@lof=\write4
 \openout4 = `Vorlage_Hausarbeit.lof'.
 
+ [3]
+(./Vorlage_Hausarbeit.lol [4])
+\tf@lol=\write5
+\openout5 = `Vorlage_Hausarbeit.lol'.
 
-(./Vorlage_Hausarbeit.lot)
-\tf@lot=\write5
-\openout5 = `Vorlage_Hausarbeit.lot'.
-
- (./Vorlage_Hausarbeit.lol [3])
-\tf@lol=\write6
-\openout6 = `Vorlage_Hausarbeit.lol'.
-
- [4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 252--253
+ [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--256
+Underfull \hbox (badness 10000) in paragraph at lines 258--260
 
  []
 
 
-Overfull \hbox (12.149pt too wide) in paragraph at lines 269--270
+Overfull \hbox (12.149pt too wide) in paragraph at lines 273--274
 \OT1/cmr/m/n/12 beschr[]ankte Pro-jekt-pla-nungs-pro-blem mit der eng-li-schen 
 Be-zeich-nung des \OT1/cmr/m/it/12 Resource-Constrained
  []
 
 [1]
-Overfull \hbox (4.52328pt too wide) in paragraph at lines 271--271
+Overfull \hbox (4.52328pt too wide) in paragraph at lines 275--275
 []\OT1/cmr/bx/n/17.28 Grundlagen zur ressourcen-beschr[]ankten Pro-jekt-pla-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--274
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
-
- []
-
-[2]
 Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
 
  []
 
 [5]
 
 Package natbib Warning: Citation `Walter:2008aa' on page 6 undefined on input l
-ine 333.
+ine 337.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
 
@@ -865,7 +864,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 333--334
 File: Bilder/Terminal.pdf Graphic file (type pdf)
 
 <use Bilder/Terminal.pdf>
-Package pdftex.def Info: Bilder/Terminal.pdf used on input line 337.
+Package pdftex.def Info: Bilder/Terminal.pdf used on input line 341.
 (pdftex.def)             Requested size: 341.43306pt x 255.04004pt.
  [6 <./Bilder/Terminal.pdf>]
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -875,25 +874,25 @@ File: lstlang1.sty 2014/03/04 1.5c listings language file
 File: lstlang2.sty 2014/03/04 1.5c listings language file
 )
 
-Package xcolor Warning: Incompatible color definition on input line 349.
+Package xcolor Warning: Incompatible color definition on input line 353.
 
 
-Package xcolor Warning: Incompatible color definition on input line 349.
+Package xcolor Warning: Incompatible color definition on input line 353.
 
 
-Package xcolor Warning: Incompatible color definition on input line 349.
+Package xcolor Warning: Incompatible color definition on input line 353.
 
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 350
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 354
 .
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 353--354
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
@@ -901,37 +900,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 355--356
 File: Bilder/Startseite_unsigned.png Graphic file (type png)
 
 <use Bilder/Startseite_unsigned.png>
-Package pdftex.def Info: Bilder/Startseite_unsigned.png used on input line 359.
+Package pdftex.def Info: Bilder/Startseite_unsigned.png used on input line 363.
 
 (pdftex.def)             Requested size: 426.79134pt x 171.94731pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--365
+Underfull \hbox (badness 10000) in paragraph at lines 368--369
 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 367.
+Package xcolor Warning: Incompatible color definition on input line 371.
 
 
-Package xcolor Warning: Incompatible color definition on input line 367.
+Package xcolor Warning: Incompatible color definition on input line 371.
 
 
-Package xcolor Warning: Incompatible color definition on input line 367.
+Package xcolor Warning: Incompatible color definition on input line 371.
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 368.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 372.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 368.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 372.
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--372
+Underfull \hbox (badness 10000) in paragraph at lines 375--376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--374
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
 
@@ -940,43 +939,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 373--374
 File: Bilder/Anmeldung.png Graphic file (type png)
 
 <use Bilder/Anmeldung.png>
-Package pdftex.def Info: Bilder/Anmeldung.png used on input line 379.
+Package pdftex.def Info: Bilder/Anmeldung.png used on input line 383.
 (pdftex.def)             Requested size: 341.43306pt x 185.5686pt.
 
 
-LaTeX Warning: Reference `Fehler' on page 9 undefined on input line 384.
+LaTeX Warning: Reference `Fehler' on page 9 undefined on input line 388.
 
 
-LaTeX Warning: Reference `rcotes' on page 9 undefined on input line 384.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
-
- []
+LaTeX Warning: Reference `rcotes' on page 9 undefined on input line 388.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
 
-[9 <./Bilder/Anmeldung.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 390--391
 
  []
 
 
-Overfull \hbox (2.76346pt too wide) in paragraph at lines 392--394
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
+
+ []
+
+[9 <./Bilder/Anmeldung.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
+
+ []
+
+
+Overfull \hbox (2.76346pt too wide) in paragraph at lines 396--398
 []\OT1/cmr/m/n/12 Findet kei-ne An-mel-dung in die Web-Applikation statt, sind 
 kei-ne wei-terf[]uhrenden T[]atigkeiten
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--394
+Underfull \hbox (badness 10000) in paragraph at lines 396--398
 
  []
 
@@ -984,20 +983,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 392--394
 File: Bilder/Profilseite.png Graphic file (type png)
 
 <use Bilder/Profilseite.png>
-Package pdftex.def Info: Bilder/Profilseite.png used on input line 397.
+Package pdftex.def Info: Bilder/Profilseite.png used on input line 401.
 (pdftex.def)             Requested size: 341.43306pt x 189.98015pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
 
 [10 <./Bilder/Profilseite.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 404--405
+Underfull \hbox (badness 10000) in paragraph at lines 408--409
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--407
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
 
  []
 
@@ -1005,15 +1004,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 406--407
 File: Bilder/Ressourcen_User.png Graphic file (type png)
 
 <use Bilder/Ressourcen_User.png>
-Package pdftex.def Info: Bilder/Ressourcen_User.png used on input line 410.
+Package pdftex.def Info: Bilder/Ressourcen_User.png used on input line 414.
 (pdftex.def)             Requested size: 341.43306pt x 140.82503pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--416
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
 
  []
 
 [11 <./Bilder/Ressourcen_User.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 417--418
+Underfull \hbox (badness 10000) in paragraph at lines 421--422
 
  []
 
@@ -1021,14 +1020,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 417--418
 File: Bilder/Profilseite_Admin.png Graphic file (type png)
 
 <use Bilder/Profilseite_Admin.png>
-Package pdftex.def Info: Bilder/Profilseite_Admin.png used on input line 421.
+Package pdftex.def Info: Bilder/Profilseite_Admin.png used on input line 425.
 (pdftex.def)             Requested size: 341.43306pt x 203.08243pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
@@ -1036,14 +1035,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 426--427
 File: Bilder/Ressourcen_Admin.png Graphic file (type png)
 
 <use Bilder/Ressourcen_Admin.png>
-Package pdftex.def Info: Bilder/Ressourcen_Admin.png used on input line 430.
+Package pdftex.def Info: Bilder/Ressourcen_Admin.png used on input line 434.
 (pdftex.def)             Requested size: 341.43306pt x 148.74597pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--436
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
  []
 
@@ -1051,19 +1050,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 435--436
 File: Bilder/Projektplanung.png Graphic file (type png)
 
 <use Bilder/Projektplanung.png>
-Package pdftex.def Info: Bilder/Projektplanung.png used on input line 440.
+Package pdftex.def Info: Bilder/Projektplanung.png used on input line 444.
 (pdftex.def)             Requested size: 341.43306pt x 193.72755pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 445--446
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
 
  []
 
 [13 <./Bilder/Profilseite_Admin.png> <./Bilder/Ressourcen_Admin.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 447--448
+
+LaTeX Warning: Reference `rgl' on page 14 undefined on input line 451.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--452
 
  []
 
@@ -1071,22 +1074,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 447--448
 File: Bilder/Vorgangsrel_Fehler.png Graphic file (type png)
 
 <use Bilder/Vorgangsrel_Fehler.png>
-Package pdftex.def Info: Bilder/Vorgangsrel_Fehler.png used on input line 451.
+Package pdftex.def Info: Bilder/Vorgangsrel_Fehler.png used on input line 455.
 (pdftex.def)             Requested size: 341.43306pt x 191.4545pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--457
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
 
  []
 
 
-LaTeX Warning: Reference `gemfilie' on page 14 undefined on input line 458.
+LaTeX Warning: Reference `gemfilie' on page 14 undefined on input line 462.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--459
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
 
  []
 
@@ -1095,7 +1098,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 458--459
 File: Bilder/Projektplanung_Datum.png Graphic file (type png)
 
 <use Bilder/Projektplanung_Datum.png>
-Package pdftex.def Info: Bilder/Projektplanung_Datum.png used on input line 462
+Package pdftex.def Info: Bilder/Projektplanung_Datum.png used on input line 466
 .
 (pdftex.def)             Requested size: 341.43306pt x 219.73872pt.
 
@@ -1106,48 +1109,52 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Bilder/Kapazitaetsplanung.png Graphic file (type png)
 
 <use Bilder/Kapazitaetsplanung.png>
-Package pdftex.def Info: Bilder/Kapazitaetsplanung.png used on input line 470.
+Package pdftex.def Info: Bilder/Kapazitaetsplanung.png used on input line 474.
 (pdftex.def)             Requested size: 341.43306pt x 222.21164pt.
 
-Overfull \hbox (3.51698pt too wide) in paragraph at lines 467--474
+Overfull \hbox (3.51698pt too wide) in paragraph at lines 471--478
 \OT1/cmr/m/n/12 Optimierung voll-zo-gen ist, liest der RoR \OT1/cmtt/m/n/12 rcp
 sps[]controller \OT1/cmr/m/n/12 die von der \OT1/cmr/m/it/12 GAMS\OT1/cmr/m/n/1
 2 -Optimierung
  []
 
 [15 <./Bilder/Vorgangsrel_Fehler.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 475--476
+Underfull \hbox (badness 10000) in paragraph at lines 479--480
 
  []
 
 [16 <./Bilder/Projektplanung_Datum.png> <./Bilder/Kapazitaetsplanung.png>]
 (/Users/Superuser/as-rcpsp/app/controllers/rcpsps_controller.rb
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 107.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 107.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 479--480
+Underfull \hbox (badness 10000) in paragraph at lines 483--484
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 481--482
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
 
  []
 
-[17] <Bilder/Vorgaenge_Kostenpl.png, id=113, 742.27313pt x 460.72125pt>
+[17] <Bilder/Vorgaenge_Kostenpl.png, id=114, 742.27313pt x 460.72125pt>
 File: Bilder/Vorgaenge_Kostenpl.png Graphic file (type png)
 
 <use Bilder/Vorgaenge_Kostenpl.png>
-Package pdftex.def Info: Bilder/Vorgaenge_Kostenpl.png used on input line 485.
+Package pdftex.def Info: Bilder/Vorgaenge_Kostenpl.png used on input line 489.
 (pdftex.def)             Requested size: 341.43306pt x 211.9273pt.
- [18 <./Bilder/Vorgaenge_Kostenpl.png>]
-(./Vorlage_Hausarbeit.bbl
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--504
+
+ []
+
+[18 <./Bilder/Vorgaenge_Kostenpl.png>] [19] [20] (./Vorlage_Hausarbeit.bbl
 Underfull \hbox (badness 1648) in paragraph at lines 5--9
 []\OT1/cmr/m/n/12 Bartels, J.H. (2009): Projektplanung--Grundlagen und An-wen-d
 ungs-bei-spie-le. In: An-
@@ -1171,110 +1178,111 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--34
 sql.com/tech-
  []
 
-[19]) [20] <Bilder/DB.pdf, id=125, 564.18782pt x 415.7934pt>
+[21]) [22] <Bilder/DB.pdf, id=131, 564.18782pt x 415.7934pt>
 File: Bilder/DB.pdf Graphic file (type pdf)
 
 <use Bilder/DB.pdf>
-Package pdftex.def Info: Bilder/DB.pdf used on input line 516.
+Package pdftex.def Info: Bilder/DB.pdf used on input line 527.
 (pdftex.def)             Requested size: 426.79134pt x 314.54703pt.
- (/Users/Superuser/as-rcpsp/RCPSP1.gms [21 <./Bilder/DB.pdf>]
+ (/Users/Superuser/as-rcpsp/RCPSP1.gms [23 <./Bilder/DB.pdf>]
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 47.
- [22] [23]) (/Users/Superuser/as-rcpsp/RCPSP2.gms [24] [25] [26] [27])
-(/Users/Superuser/as-rcpsp/Gemfile [28])
-(/Users/Superuser/as-rcpsp/config/routes.rb [29] [30])
+ [24] [25]) (/Users/Superuser/as-rcpsp/RCPSP2.gms [26] [27] [28] [29])
+(/Users/Superuser/as-rcpsp/Gemfile [30])
+(/Users/Superuser/as-rcpsp/config/routes.rb [31])
 (/Users/Superuser/as-rcpsp/app/controllers/procedure_procedures_controller.rb
-[31] [32])
+[32] [33])
 (/Users/Superuser/as-rcpsp/app/controllers/procedure_resources_controller.rb
-[33] [34]) (/Users/Superuser/as-rcpsp/app/controllers/procedures_controller.rb
-[35] [36] [37])
-(/Users/Superuser/as-rcpsp/app/controllers/projects_controller.rb [38] [39])
-(/Users/Superuser/as-rcpsp/app/controllers/rcpsps_controller.rb [40] [41]
-[42] [43] [44] [45] [46])
-(/Users/Superuser/as-rcpsp/app/controllers/resources_controller.rb [47]
-[48] [49])
+[34] [35]) (/Users/Superuser/as-rcpsp/app/controllers/procedures_controller.rb
+[36] [37]) [38]
+(/Users/Superuser/as-rcpsp/app/controllers/projects_controller.rb [39])
+[40] (/Users/Superuser/as-rcpsp/app/controllers/rcpsps_controller.rb [41]
+[42] [43] [44] [45] [46] [47])
+(/Users/Superuser/as-rcpsp/app/controllers/resources_controller.rb [48]
+[49] [50])
 (/Users/Superuser/as-rcpsp/app/controllers/static_pages_controller.rb)
-(/Users/Superuser/as-rcpsp/app/controllers/users_controller.rb [50] [51])
+(/Users/Superuser/as-rcpsp/app/controllers/users_controller.rb [51] [52])
 (/Users/Superuser/as-rcpsp/app/models/procedure_procedure.rb)
 (/Users/Superuser/as-rcpsp/app/models/procedure_resource.rb)
 (/Users/Superuser/as-rcpsp/app/models/procedure.rb)
-(/Users/Superuser/as-rcpsp/app/models/project.rb [52])
+(/Users/Superuser/as-rcpsp/app/models/project.rb) [53]
 (/Users/Superuser/as-rcpsp/app/models/resource.rb)
-(/Users/Superuser/as-rcpsp/app/models/user.rb [53])
+(/Users/Superuser/as-rcpsp/app/models/user.rb [54])
 (/Users/Superuser/as-rcpsp/app/views/procedure_procedures/_form.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/procedure_procedures/edit.html.erb
-[54]) (/Users/Superuser/as-rcpsp/app/views/procedure_procedures/index.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/procedure_procedures/new.html.erb)
-[55] (/Users/Superuser/as-rcpsp/app/views/procedure_procedures/show.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/procedure_resources/_form.html.erb
-[56]) (/Users/Superuser/as-rcpsp/app/views/procedure_resources/edit.html.erb)
+(/Users/Superuser/as-rcpsp/app/views/procedure_procedures/index.html.erb
+[55]) (/Users/Superuser/as-rcpsp/app/views/procedure_procedures/new.html.erb)
+(/Users/Superuser/as-rcpsp/app/views/procedure_procedures/graph.html.erb
+[56]) (/Users/Superuser/as-rcpsp/app/views/procedure_resources/_form.html.erb
+[57]) (/Users/Superuser/as-rcpsp/app/views/procedure_resources/edit.html.erb)
 (/Users/Superuser/as-rcpsp/app/views/procedure_resources/index.html.erb
-[57]) (/Users/Superuser/as-rcpsp/app/views/procedure_resources/new.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/procedure_resources/show.html.erb [58])
+[58]) (/Users/Superuser/as-rcpsp/app/views/procedure_resources/new.html.erb)
+(/Users/Superuser/as-rcpsp/app/views/procedure_resources/show.html.erb [59])
 (/Users/Superuser/as-rcpsp/app/views/procedures/_form.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/procedures/edit.html.erb [59])
-(/Users/Superuser/as-rcpsp/app/views/procedures/index.html.erb [60])
-(/Users/Superuser/as-rcpsp/app/views/procedures/new.html.erb) [61]
-(/Users/Superuser/as-rcpsp/app/views/procedures/show.html.erb [62])
-(/Users/Superuser/as-rcpsp/app/views/resources/_form.html.erb [63])
+(/Users/Superuser/as-rcpsp/app/views/procedures/edit.html.erb)
+(/Users/Superuser/as-rcpsp/app/views/procedures/index.html.erb [60] [61])
+(/Users/Superuser/as-rcpsp/app/views/procedures/new.html.erb)
+(/Users/Superuser/as-rcpsp/app/views/procedures/show.html.erb [62] [63])
+(/Users/Superuser/as-rcpsp/app/views/resources/_form.html.erb [64])
 (/Users/Superuser/as-rcpsp/app/views/resources/_free.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/resources/_signed_in.html.erb [64]
-[65]) (/Users/Superuser/as-rcpsp/app/views/resources/edit.html.erb)
+(/Users/Superuser/as-rcpsp/app/views/resources/_signed_in.html.erb [65]
+[66]) (/Users/Superuser/as-rcpsp/app/views/resources/edit.html.erb)
 (/Users/Superuser/as-rcpsp/app/views/resources/index.html.erb)
 (/Users/Superuser/as-rcpsp/app/views/resources/new.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/resources/show.html.erb [66])
-(/Users/Superuser/as-rcpsp/app/views/static_pages/rcpsp.html.erb [67] [68])
-(/Users/Superuser/as-rcpsp/app/views/static_pages/home.html.erb [69])
-(/Users/Superuser/as-rcpsp/app/views/layouts/_header.html.erb [70])
+(/Users/Superuser/as-rcpsp/app/views/resources/show.html.erb [67])
+(/Users/Superuser/as-rcpsp/app/views/static_pages/rcpsp.html.erb [68] [69])
+(/Users/Superuser/as-rcpsp/app/views/static_pages/home.html.erb [70])
+(/Users/Superuser/as-rcpsp/app/views/layouts/_header.html.erb [71])
 (/Users/Superuser/as-rcpsp/app/views/users/_user.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/users/edit.html.erb [71])
+(/Users/Superuser/as-rcpsp/app/views/users/edit.html.erb [72])
 (/Users/Superuser/as-rcpsp/app/views/users/index.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/users/new.html.erb [72])
-(/Users/Superuser/as-rcpsp/app/views/users/show.html.erb [73])
-(/Users/Superuser/as-rcpsp/db/schema.rb [74] [75])
-(/Users/Superuser/as-rcpsp/lib/tasks/sample_data.rake [76] [77] [78])
+(/Users/Superuser/as-rcpsp/app/views/users/new.html.erb [73])
+(/Users/Superuser/as-rcpsp/app/views/users/show.html.erb [74])
+(/Users/Superuser/as-rcpsp/db/schema.rb [75] [76])
+(/Users/Superuser/as-rcpsp/lib/tasks/sample_data.rake [77] [78] [79])
 
 Package natbib Warning: There were undefined citations.
 
-[79] (./Vorlage_Hausarbeit.aux)
+[80] (./Vorlage_Hausarbeit.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 9002 strings out of 493117
- 129081 string characters out of 6135432
- 416363 words of memory out of 5000000
- 12116 multiletter control sequences out of 15000+600000
- 13782 words of font info for 53 fonts, out of 8000000 for 9000
+ 9012 strings out of 493117
+ 129086 string characters out of 6135432
+ 407391 words of memory out of 5000000
+ 12131 multiletter control sequences out of 15000+600000
+ 13423 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,49p,2075b,1776s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,49p,2075b,1778s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/te
-xmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Vorlage_Hausarbeit.pdf (85 pages, 803212 bytes).
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/201
+4/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on Vorlage_Hausarbeit.pdf (86 pages, 802510 bytes).
 PDF statistics:
- 417 PDF objects out of 1000 (max. 8388607)
- 284 compressed objects within 3 object streams
+ 416 PDF objects out of 1000 (max. 8388607)
+ 283 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
