@@ -166,8 +166,8 @@ Entwicklung von Anwendungssystemen  im WiSe 2014/2015 \\
 \vspace{2.5cm}
 
 %Thema Nr. 5\\[1mm]    %hier Themennummer eintragen
-{\Large RCPSP \\
-RCPSP}
+{\Large Entwicklung einer Web-Applikation zur Lösung  \\
+des ressourcenbeschränkten Projektplanungsproblems}
 \end{center}
 
 \vspace{5.5cm}
@@ -206,8 +206,8 @@ Abgabedatum: 24.03.2015
 	Admin & Administrator \\         
 	GAMS & General Algebraic Modeling System\\
 	RCPSP      & Resource-Constrained Project Scheduling \\
+	RGL & Ruby Graph Library\\
            RoR & Ruby on Rails \\
-SGS & Schedule Generation Scheme\\
 	\end{tabular}
 \end{table}
 %Tabellenverzeichnis erstellen
@@ -448,7 +448,7 @@ Um nun zur Kernaufgabe der Applikation, der Projektplanung, zu gelangen, kann en
 
 Im oberen Bereich der Seite sind die Verlinkungen zur Verwaltung der nötigen Inputs zur Lösung beider Planungsproblematiken angesiedelt. Neben den bereits behandelten Links zu den Vorgängen und Ressourcen finden sich Verlinkungen zu den Vorgangsrelationen und Vorgang-Ressourcen-Kombinationen.\\ 
 
-Die Übersicht der Relationen zwischen den Vorgängen stellt eine Auflistung eines jeden Vorgänger und Nachfolger dar. Durch anklicken auf den Button \textit{Graph anzeigen} wird die aktuelle Projektstruktur mittels Vorgangsknoten-Netzplan dargestellt (siehe Abbildung \ref{???}). Die genaue Implementierung dieses Graphen wird in Kapitel \ref{rgl-kapitel} beschrieben. Ein Admin kann eine Relationen löschen oder neue anlegen. Wenn er sich dazu entschließt, eine neue anzulegen, ist zu beachten, dass ein Strukturplan eines Projektes keine Zyklen beinhalten darf. Damit Zyklen verhindert werden, findet beim Prozess des Anlegens einer neuen Vorgangsrelation eine Prüfung statt. Beinhaltet die neu angelegte Relation einen Zyklus, tritt ein Fehler auf und die Relationen muss überarbeitet werden (siehe Abbildung \ref{VorErr}). So wird verhindert, dass der Strukturplan Zyklen enthält. Dieser Vorgang wird gesteuert durch die dafür zuständige Aktion \texttt{create} aus dem \textit{RoR} \texttt{procedure\_procedures\_controller} (Vgl. Quellcode \ref{ppc} im Anhang \ref{rcodes}). Inbegriffen in dieser Aktion ist ein frei-verfügbares Unterprogramm (\texttt{gem}\footnote{https://github.com/monora/rgl}). In Kapitel \ref{rgl-kapitel} wird die Integration und Funktionsweise dieses Unterprogramms beschrieben. \\
+Die Übersicht der Relationen zwischen den Vorgängen stellt eine Auflistung eines jeden Vorgänger und Nachfolger dar. Durch anklicken auf den Button \textit{Graph anzeigen} wird die aktuelle Projektstruktur mittels Vorgangsknoten-Netzplan dargestellt (siehe Abbildung \ref{???}). Die genaue Implementierung dieses Graphen wird in Kapitel \ref{rgl-kapitel} beschrieben. Ein Admin kann eine Relationen löschen oder neue anlegen. Wenn er sich dazu entschließt, eine neue anzulegen, ist zu beachten, dass ein Strukturplan eines Projektes keine Zyklen beinhalten darf. Damit Zyklen verhindert werden, findet beim Prozess des Anlegens einer neuen Vorgangsrelation eine Prüfung statt. Beinhaltet die neu angelegte Relation einen Zyklus, tritt ein Fehler auf und die Relationen muss überarbeitet werden (siehe Abbildung \ref{VorErr}). So wird verhindert, dass der Strukturplan Zyklen enthält. Dieser Vorgang wird gesteuert durch die dafür zuständige Aktion \texttt{create} aus dem \textit{RoR} \texttt{procedure\_procedures\_controller} (Vgl. Quellcode \ref{ppc} im Anhang \ref{rcodes}). Inbegriffen in dieser Aktion ist ein frei-verfügbares Unterprogramm (\texttt{gem 'rgl'}\footnote{https://github.com/monora/rgl}). In Kapitel \ref{rgl-kapitel} wird die Integration und Funktionsweise dieses Unterprogramms beschrieben. \\
 
 \begin{figure}[h!]
   \begin{center}
@@ -478,7 +478,7 @@ Nachdem das \textit{GAMS}-Verzeichnis und der Starttermin eingestellt wurden, ka
 
 Die Besonderheit der Aktion \texttt{optimize} ist, dass \textit{RoR} die durch die \textit{GAMS}-Optimierung (Quellcode \ref{rcpsp2} aus Anhang \ref{Imp}) erstellte Textdatei zum Parameter $X_{it}$ trotz der zwei Indizes auslesen kann. Dies erfolgt durch einen \textit{If}-Befehl, wie der Ausschnitt (Quellcode \ref{rcpsp_a}) des Quellcodes \ref{rcpspc} aus dem Anhang \ref{rcodes} zeigt. Die Kapazitätsplanung ist mit dem Einlesen der Ergebnisse abgeschlossen.\\
 
-\lstinputlisting[language=ruby, firstline=102, lastline=114, caption=Ausschnitt aus dem RoR-Controller für das RCPSP, style=Listing, label= rcpsp_a]{/Users/Superuser/as-rcpsp/app/controllers/rcpsps_controller.rb}
+\lstinputlisting[language=ruby, firstline=104, lastline=116, caption=Ausschnitt aus dem RoR-Controller für das RCPSP, style=Listing, label= rcpsp_a]{/Users/Superuser/as-rcpsp/app/controllers/rcpsps_controller.rb}
 
 Über den Button \textit{Zurück zur Projektplanung} gelangt ein Admin zurück zur Verwaltungsseite. Sofern die Kostenplanung gewünscht ist, kann diese über die Verwaltungsseite gestartet werden. Bevor der optimale Kostenplan für das vorhandene Projekt berechnet werden kann, muss zunächst äquivalent zur Einstellung des Starttermins eine Deadline eingerichtet werden. Dies funktioniert erneut über ein Kalendermenü des \glqq Bootstrap-Datepicker-Rails\grqq. Es sollte bei der Bestimmung der Deadline darauf geachtet werden, dass die Deadline in einem sinnvollen Verhältnis zum Starttermin steht. Eine zu kurze oder lange Zeitspanne zwischen den beiden Terminen kann zu unbrauchbaren Ergebnissen führen. Wurde eine geeignete Deadline ausgewählt und die Optimierung des Kostenplans gestartet, öffnet sich nach einer kurzen Rechenzeit die Übersicht der Ressourcen. Dieses erfolgt mit der Aktion \texttt{optimize2} und \texttt{solution2} des \texttt{rcpsps\_controller}.\\ 
 
@@ -487,11 +487,61 @@ Auf der Seite mit der Ressourcenübersicht sind die Projektkosten und die Zusatz
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[width=120mm]{Bilder/Vorgaenge_Kostenpl.png}
-    \caption{Ergebnis der Kapazitätsplanung}  \label{VorKo}
+    \caption{Ergebnis der Kostenplanung}  \label{VorKo}
   \end{center}
 \end{figure}
 
 \subsection{Integration des Unterprogramms \textit{\glqq rgl\grqq} und des Programms \textit{GraphViz} in die Web-Applikation}\label{rgl-kapitel}
+Für die Lösung des Projektplanungsproblems bedarf es der topologischen Reihenfolgebeziehung der einzelnen Vorgänge untereinander. Weiter dürfen keine Zyklen in der Projektstruktur inbegriffen sein.\footnote{????} Zur Prüfung der aktuellen Projektstruktur der aktuell gespeicherten Datensätze zu dem Projekt (Vorgänge und Vorgangsrelationen) muss \textit{RoR} ein Algorithmus hinterlegt werden, der die Projektstruktur nach Zyklen untersucht. Eine Sammlung von hierfür geeigneten Algorithmen bietet die Ruby Graph Library (RGL) in Form des Unterprogramms \texttt{gem 'rgl'}\footnote{https://github.com/monora/rgl}. Mit dieser \texttt{gem} wird die Web-Applikation um die dafür notwendigen Kommandobefehlen erweitert. Bei der \texttt{gem 'rgl'} handelt es sich um eine Sammlung von Kommandobefehlen für die Graphentheorie, deren Datenstruktur und die zur Analyse notwendigen Algorithmen. Alternativ gibt es andere Sammlungen bzw. Erweiterungen der \texttt{gem 'rgl'}, wie z. B. die \texttt{gem 'plexus'}.\\
+
+In der hier betrachteten Web-Applikation zur Lösung des Projektplanungsproblems ist die \texttt{gem 'rgl'} implementiert. Eine bestehende Web-Applikation kann durch eine \texttt{gem} mittels \textit{GitHub} und dazugehörigem Terminalbefehl erweitert werden. Beachtet werden muss jedoch, dass in der \texttt{Gemfile}, in der \texttt{Rakefile} sowie in ggf. anderen Dateien Fehler durch den \texttt{pull}-Befehl auftreten könnten. Daher empfiehlt es sich einen neuen \texttt{git branch} zu erstellen. Nachfolgende Kommandobefehle im Terminal zeigen die vorher beschriebenen Schritte:  
+\begin{lstlisting}[style=Befehl]
+$ cd <Verzeichnis der Web-Applikation>
+$ git branch -b <Branch-Name>
+$ git pull https://github.com/monora/rgl.git
+\end{lstlisting}
+
+Nach dem das Verzeichnis der Web-Applikation um die Dateien der \texttt{gem 'rgl'} erweitert ist, muss in der \texttt{Gemfile} das nötige \texttt{gem} aktiviert werden (siehe Ausschnitt aus Quellcode \ref{gemfile}).
+
+%%%%%%GEMFILIE
+\lstinputlisting[language=ruby, firstline=11, lastline=15, caption=Ausschnitt der Gemfile der Web-Applikation Projektplanung, style=Listing, label=gemfile1]{/Users/Superuser/as-rcpsp/Gemfile}
+
+Durch den Befehl zur Installation mittels \textit{Bundler} wird die Web-Applikation um die ergänzten \texttt{gem}-Dateien erweitert. 
+\begin{lstlisting}[style=Befehl]
+$ bundle install
+\end{lstlisting}
+
+Damit sind neue Kommandobefehle innerhalb der Programmierung der Web-Applikation möglich. Zur Prüfung der Projektstruktur auf Zyklen wird der Algorithmus bzw. die \textit{Klasse} \texttt{RGL::TopsortIterator} der \texttt{gem 'rgl'} verwendet.\footnote{http://www.rubydoc.info/github/monora/rgl/RGL/TopsortIterator} Die \textit{Klasse} ordnet die Datensätze der Vorgangsbeziehung in eine lineare Ordnung ein. Anschließend wird der dadurch generierte Graph nach Zyklen durchsucht. Abbildung \ref{rgl-vonseite} zeigt dies anhand eines Beispiels.
+\begin{lstlisting}[caption=Prüfung auf Zyklen mittels des Unterprogramms \glqq rgl\grqq, style=Listing, label=rgl-vonseite]
+>> require 'rgl/adjacency'
+>> dg=RGL::DirectedAdjacencyGraph[1,2 ,2,3 ,2,4, 4,5, 6,4, 1,6]
+(1-2)(1-6)(2-3)(2-4)(4-5)(6-4)
+>> require 'rgl/topsort'
+>> dg.acyclic?
+true
+\end{lstlisting}
+
+Für die hier betrachtete Web-Applikation bedarf es eines Zugriffs auf das Datenbankmodell des RoR \texttt{models/procedure\_procedure.rb} zur Prüfung der Projektstruktur. Das Modell dient dazu die einzelnen Vorgänge in eine Beziehung zueinander zu bringen, damit in der \textit{GAMS}-Optimierung die topologische Reihenfolge eingehalten werden kann. Das Modell hilft aber auch zur Generierung eines Graphs für das Unterprogramm \texttt{rgl}. Dafür wird eine Schleife erstellt, in der die Vorgänger (\texttt{prepro\_id}) und die Nachfolger (\texttt{sucpro\_id}) eines jeden Vorgangs (\texttt{procedure}) in einen direkten Nachbarschaftsgraphen ergänzt werden (siehe Quellcode \ref{rgl-vonseite}).
+
+\begin{lstlisting}[caption=Erstellung eines Graphen mittels des Unterprogramms \glqq rgl\grqq, style=Listing, label=rgl-vonseite]
+require 'rgl/adjacency'result = RGL::DirectedAdjacencyGraph.new ProcedureProcedure.all.each { | x |result.add_edge x.prepro_id , x.sucpro_id }
+\end{lstlisting}
+
+Nachdem dieser Graph generiert ist, wird dieser durch die Methode \texttt{\#acyclic?}\footnote{http://www.rubydoc.info/github/monora/rgl/RGL/Graph\#acyclic\%3F-instance\_method} auf bestehende Zyklen untersucht. Diese Untersuchung ist in dem \textit{RoR} \texttt{controller} unter der Aktion \texttt{create} ergänzt. Abbildung \ref{vorgangsbez} zeigt einen Ausschnitt mit der hier beschriebenen Aktion.
+\lstinputlisting[language=ruby, firstline=38, lastline=59, caption=Ausschnitt aus dem RoR-Controller für die Vorgangsbeziehungen, style=Listing, label=vorgangsbez]{/Users/Superuser/as-rcpsp/app/controllers/procedure_procedures_controller.rb}
+
+Weiter bietet das Unterprogramm \texttt{rgl} die Möglichkeit, eine \texttt{dot}-Datei zu erstellen, damit der Graph mittels des Programms \textit{GraphViz} visualisiert wird.
+\begin{lstlisting}[caption=Prüfung auf Zyklen mittels des Unterprogramms \glqq rgl\grqq, style=Listing, label=rgl-vonseite]
+>> require 'rgl/adjacency'
+>> dg=RGL::DirectedAdjacencyGraph[1,2 ,2,3 ,2,4, 4,5, 6,4, 1,6]
+>> require 'rgl/dot'
+>> dg.write_to_graphic_file
+"graph.dot"
+\end{lstlisting}
+
+Zur Visualisierung der \texttt{dot}-Datei bedarf es jedoch der Integration des Open-Source-Programms \textit{GraphViz} in die Web-Applikation. Mit dem Programm ist es möglich Strukturinformationen als abstrakte Graphen und Netzwerke darzustellen.\footnote{http://www.graphviz.org/About.php} Damit \textit{RoR} mit dem Programm kommunizieren kann, wird seitens der Anbieter empfohlen das Unterprogramm \texttt{gem 'ruby-graphviz'} zu verwenden. Nachdem die Installation des Unterprogramms durchgeführt und das Programm \textit{GraphViz} in einem lokalen Computerverzeichnis gespeichert ist, kann die \texttt{dot}-Datei mittels Kommandobefehl ausgelesen und visualisiert werden. Dies erfolgt im RoR \texttt{controllers/procedure\_procedures\_controller.rb} sowie auf der Unterseite \texttt{graph.html.rb} der \textit{RoR} \texttt{views/procedure\_procedures} (Vgl. Quellcode \ref{ppc} bzw. \ref{graphv} im Anhang \ref{rcodes}). Abbildung \ref{defgraph} zeigt die Aktion zur Erstellung des Graphen.
+\lstinputlisting[language=ruby, firstline=6, lastline=17, caption=Ausschnitt des RoR-Controller für die Vorgangsrelationen, style=Listing, label=defgraph]{/Users/Superuser/as-rcpsp/app/controllers/procedure_procedures_controller.rb}
+
 
 \section{Kritische Würdigung des Anwendungssystems} \label{krit}
 %Die kritische Betrachtung impliziert neben den Besonderheiten des Programms auch die zukünftigen Verbesserungsmöglichkeiten dieses Anwendungssystems.
@@ -538,6 +588,8 @@ Schließlich liefert die Arbeit eine umfangreiche Darstellung der Web-Applikatio
     \caption{Datenbankschema der Web-Applikation Projektplanung}  \label{schema}
   \end{center}
 \end{figure}
+
+P = Primary Key, N = Not Null, D = Default Value
 
 \subsection{GAMS-Implementierung des Beispiels}\label{Imp}
 %\lstinputlisting[language=ruby, firstline=37, lastline=45, caption=Name, style=Listing]{/Users/Superuser/as-rcpsp/RCPSP1.gms}
@@ -592,7 +644,7 @@ Schließlich liefert die Arbeit eine umfangreiche Darstellung der Web-Applikatio
 
 \lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangsrelationen - Erstellung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_procedures/new.html.erb}
 
-\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangsrelationen - Grafische Darstellung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_procedures/graph.html.erb}
+\lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangsrelationen - Grafische Darstellung, style=Listing, label=graphv]{/Users/Superuser/as-rcpsp/app/views/procedure_procedures/graph.html.erb}
 
 %%%VIEWS prores
 \lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangs-Ressourcen-Kombinationen - Formular, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_resources/_form.html.erb}

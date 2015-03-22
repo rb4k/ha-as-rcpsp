@@ -12,10 +12,10 @@
 \contentsline {subsection}{\numberline {3.2}Darstellung der Funktionsweise der Anwendung anhand eines Guides f\IeC {\"u}r User}{8}
 \contentsline {subsection}{\numberline {3.3}Darstellung der Funktionsweise der Anwendung anhand eines Guides f\IeC {\"u}r Administratoren}{13}
 \contentsline {subsection}{\numberline {3.4}Integration des Unterprogramms \textit {\glqq rgl\grqq } und des Programms \textit {GraphViz} in die Web-Applikation}{19}
-\contentsline {section}{\numberline {4}Kritische W\IeC {\"u}rdigung des Anwendungssystems}{19}
-\contentsline {section}{\numberline {5}Fazit}{21}
-\contentsline {section}{Literatur}{23}
-\contentsline {section}{\numberline {A}Anhang}{25}
-\contentsline {subsection}{\numberline {A.1}Datenbankschema}{25}
-\contentsline {subsection}{\numberline {A.2}GAMS-Implementierung des Beispiels}{25}
-\contentsline {subsection}{\numberline {A.3}Ruby on Rails Programmcodes}{32}
+\contentsline {section}{\numberline {4}Kritische W\IeC {\"u}rdigung des Anwendungssystems}{22}
+\contentsline {section}{\numberline {5}Fazit}{24}
+\contentsline {section}{Literatur}{26}
+\contentsline {section}{\numberline {A}Anhang}{28}
+\contentsline {subsection}{\numberline {A.1}Datenbankschema}{28}
+\contentsline {subsection}{\numberline {A.2}GAMS-Implementierung des Beispiels}{28}
+\contentsline {subsection}{\numberline {A.3}Ruby on Rails Programmcodes}{35}
