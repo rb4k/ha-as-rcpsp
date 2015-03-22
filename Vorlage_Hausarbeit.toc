@@ -3,19 +3,19 @@
 \contentsline {section}{Abk\IeC {\"u}rzungsverzeichnis}{iii}
 \contentsline {section}{Symbolverzeichnis}{vi}
 \contentsline {section}{\numberline {1}Einleitung}{1}
-\contentsline {section}{\numberline {2}Grundlagen zur ressourcen-beschr\IeC {\"a}nkten Projektplanung und zu dem Framework Ruby on Rails}{2}
+\contentsline {section}{\numberline {2}Grundlagen zum ressourcenbeschr\IeC {\"a}nkten Projektplanungsproblem und zum Framework Ruby on Rails}{2}
 \contentsline {subsection}{\numberline {2.1}Kapazit\IeC {\"a}tsplanung}{2}
 \contentsline {subsection}{\numberline {2.2}Kostenplanung}{4}
 \contentsline {subsection}{\numberline {2.3}Ruby on Rails}{6}
-\contentsline {section}{\numberline {3}Implementierung des RCPSP mittels Ruby on Rails}{7}
+\contentsline {section}{\numberline {3}Implementierung des ressourcenbeschr\IeC {\"a}nkten Projektplanungsproblems mittels des Frameworks Ruby on Rails}{7}
 \contentsline {subsection}{\numberline {3.1}Installation der Web-Applikation und der notwendigen Programme}{7}
-\contentsline {subsection}{\numberline {3.2}Darstellung der Funktionsweise der Anwendung anhand eines Guides f\IeC {\"u}r User}{8}
-\contentsline {subsection}{\numberline {3.3}Darstellung der Funktionsweise der Anwendung anhand eines Guides f\IeC {\"u}r Administratoren}{13}
-\contentsline {subsection}{\numberline {3.4}Integration des Unterprogramms \textit {\glqq rgl\grqq } und des Programms \textit {GraphViz} in die Web-Applikation}{19}
-\contentsline {section}{\numberline {4}Kritische W\IeC {\"u}rdigung des Anwendungssystems}{22}
-\contentsline {section}{\numberline {5}Fazit}{24}
-\contentsline {section}{Literatur}{26}
-\contentsline {section}{\numberline {A}Anhang}{28}
-\contentsline {subsection}{\numberline {A.1}Datenbankschema}{28}
-\contentsline {subsection}{\numberline {A.2}GAMS-Implementierung des Beispiels}{28}
-\contentsline {subsection}{\numberline {A.3}Ruby on Rails Programmcodes}{35}
+\contentsline {subsection}{\numberline {3.2}Darstellung der Funktionsweise der Web-Applikation anhand eines Guides f\IeC {\"u}r User}{7}
+\contentsline {subsection}{\numberline {3.3}Darstellung der Funktionsweise der Web-Applikation anhand eines Guides f\IeC {\"u}r Administratoren}{13}
+\contentsline {subsection}{\numberline {3.4}Integration des Unterprogramms \textit {\glqq rgl\grqq } und des Programms \textit {GraphViz} in die Web-Applikation}{21}
+\contentsline {section}{\numberline {4}Kritische W\IeC {\"u}rdigung der Web-Applikation}{25}
+\contentsline {section}{\numberline {5}Fazit}{27}
+\contentsline {section}{Literatur}{28}
+\contentsline {section}{\numberline {A}Anhang}{30}
+\contentsline {subsection}{\numberline {A.1}Datenbankschema}{30}
+\contentsline {subsection}{\numberline {A.2}GAMS-Implementierung des Beispiels}{30}
+\contentsline {subsection}{\numberline {A.3}Ruby on Rails Programmcodes}{37}
