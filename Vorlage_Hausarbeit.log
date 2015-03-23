@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.15)  23 MAR 2015 15:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.15)  23 MAR 2015 18:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1141,14 +1141,14 @@ Overfull \hbox (26.44452pt too wide) in paragraph at lines 485--492
 
 [18 <./Bilder/Projektplanung_Datum.png>] [19 <./Bilder/Kapazitaetsplanung.png>]
 (/Users/Superuser/as-rcpsp/app/controllers/rcpsps_controller.rb
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 107.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 107.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 497--498
 
@@ -1278,68 +1278,67 @@ File: Bilder/DB.pdf Graphic file (type pdf)
 Package pdftex.def Info: Bilder/DB.pdf used on input line 610.
 (pdftex.def)             Requested size: 426.79134pt x 314.54703pt.
  (/Users/Superuser/as-rcpsp/RCPSP1.gms [30 <./Bilder/DB.pdf>] [31] [32]) (/User
-s/Superuser/as-rcpsp/RCPSP2.gms [33] [34] [35] [36])
+s/Superuser/as-rcpsp/RCPSP2.gms [33] [34] [35]) [36]
 (/Users/Superuser/as-rcpsp/Gemfile [37])
-(/Users/Superuser/as-rcpsp/config/routes.rb [38])
+(/Users/Superuser/as-rcpsp/config/routes.rb) [38]
 (/Users/Superuser/as-rcpsp/app/controllers/procedure_procedures_controller.rb
-[39] [40])
+[39]) [40]
 (/Users/Superuser/as-rcpsp/app/controllers/procedure_resources_controller.rb
 [41] [42]) (/Users/Superuser/as-rcpsp/app/controllers/procedures_controller.rb
-[43] [44] [45])
-(/Users/Superuser/as-rcpsp/app/controllers/projects_controller.rb [46] [47])
-(/Users/Superuser/as-rcpsp/app/controllers/rcpsps_controller.rb [48] [49]
-[50] [51] [52] [53] [54])
-(/Users/Superuser/as-rcpsp/app/controllers/resources_controller.rb [55]
-[56] [57])
+[43] [44]) (/Users/Superuser/as-rcpsp/app/controllers/projects_controller.rb
+[45] [46]) (/Users/Superuser/as-rcpsp/app/controllers/rcpsps_controller.rb
+[47] [48] [49] [50] [51] [52] [53])
+(/Users/Superuser/as-rcpsp/app/controllers/resources_controller.rb [54]
+[55] [56])
 (/Users/Superuser/as-rcpsp/app/controllers/static_pages_controller.rb)
-(/Users/Superuser/as-rcpsp/app/controllers/users_controller.rb [58] [59])
+(/Users/Superuser/as-rcpsp/app/controllers/users_controller.rb [57]) [58]
 (/Users/Superuser/as-rcpsp/app/models/procedure_procedure.rb)
 (/Users/Superuser/as-rcpsp/app/models/procedure_resource.rb)
 (/Users/Superuser/as-rcpsp/app/models/procedure.rb)
-(/Users/Superuser/as-rcpsp/app/models/project.rb) [60]
+(/Users/Superuser/as-rcpsp/app/models/project.rb) [59]
 (/Users/Superuser/as-rcpsp/app/models/resource.rb)
-(/Users/Superuser/as-rcpsp/app/models/user.rb [61])
-(/Users/Superuser/as-rcpsp/app/views/procedure_procedures/_form.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/procedure_procedures/index.html.erb
-[62]) (/Users/Superuser/as-rcpsp/app/views/procedure_procedures/new.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/procedure_procedures/graph.html.erb
-[63]) (/Users/Superuser/as-rcpsp/app/views/procedure_resources/_form.html.erb
-[64]) (/Users/Superuser/as-rcpsp/app/views/procedure_resources/edit.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/procedure_resources/index.html.erb
-[65]) (/Users/Superuser/as-rcpsp/app/views/procedure_resources/new.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/procedure_resources/show.html.erb [66])
-(/Users/Superuser/as-rcpsp/app/views/procedures/_form.html.erb)
+(/Users/Superuser/as-rcpsp/app/models/user.rb)
+(/Users/Superuser/as-rcpsp/app/views/procedure_procedures/_form.html.erb
+[60]) (/Users/Superuser/as-rcpsp/app/views/procedure_procedures/index.html.erb
+[61]) (/Users/Superuser/as-rcpsp/app/views/procedure_procedures/new.html.erb)
+(/Users/Superuser/as-rcpsp/app/views/procedure_procedures/graph.html.erb)
+(/Users/Superuser/as-rcpsp/app/views/procedure_resources/_form.html.erb
+[62]) (/Users/Superuser/as-rcpsp/app/views/procedure_resources/edit.html.erb)
+[63] (/Users/Superuser/as-rcpsp/app/views/procedure_resources/index.html.erb)
+(/Users/Superuser/as-rcpsp/app/views/procedure_resources/new.html.erb) [64]
+(/Users/Superuser/as-rcpsp/app/views/procedure_resources/show.html.erb)
+(/Users/Superuser/as-rcpsp/app/views/procedures/_form.html.erb [65])
 (/Users/Superuser/as-rcpsp/app/views/procedures/edit.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/procedures/index.html.erb [67] [68])
+(/Users/Superuser/as-rcpsp/app/views/procedures/index.html.erb [66] [67])
 (/Users/Superuser/as-rcpsp/app/views/procedures/new.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/procedures/show.html.erb [69] [70])
-(/Users/Superuser/as-rcpsp/app/views/resources/_form.html.erb [71])
+(/Users/Superuser/as-rcpsp/app/views/procedures/show.html.erb [68])
+(/Users/Superuser/as-rcpsp/app/views/resources/_form.html.erb [69])
 (/Users/Superuser/as-rcpsp/app/views/resources/_free.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/resources/_signed_in.html.erb [72]
-[73]) (/Users/Superuser/as-rcpsp/app/views/resources/edit.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/resources/index.html.erb)
+(/Users/Superuser/as-rcpsp/app/views/resources/_signed_in.html.erb [70]
+[71]) (/Users/Superuser/as-rcpsp/app/views/resources/edit.html.erb)
+(/Users/Superuser/as-rcpsp/app/views/resources/index.html.erb) [72]
 (/Users/Superuser/as-rcpsp/app/views/resources/new.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/resources/show.html.erb [74])
-(/Users/Superuser/as-rcpsp/app/views/static_pages/rcpsp.html.erb [75] [76])
-(/Users/Superuser/as-rcpsp/app/views/static_pages/home.html.erb [77])
-(/Users/Superuser/as-rcpsp/app/views/layouts/_header.html.erb [78])
+(/Users/Superuser/as-rcpsp/app/views/resources/show.html.erb)
+(/Users/Superuser/as-rcpsp/app/views/static_pages/rcpsp.html.erb [73] [74])
+[75] (/Users/Superuser/as-rcpsp/app/views/static_pages/home.html.erb)
+(/Users/Superuser/as-rcpsp/app/views/layouts/_header.html.erb [76])
 (/Users/Superuser/as-rcpsp/app/views/users/_user.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/users/edit.html.erb [79])
+(/Users/Superuser/as-rcpsp/app/views/users/edit.html.erb [77])
 (/Users/Superuser/as-rcpsp/app/views/users/index.html.erb)
-(/Users/Superuser/as-rcpsp/app/views/users/new.html.erb [80])
-(/Users/Superuser/as-rcpsp/app/views/users/show.html.erb [81])
-(/Users/Superuser/as-rcpsp/db/schema.rb [82] [83])
-(/Users/Superuser/as-rcpsp/lib/tasks/sample_data.rake [84] [85] [86]) [87]
+(/Users/Superuser/as-rcpsp/app/views/users/new.html.erb [78])
+(/Users/Superuser/as-rcpsp/app/views/users/show.html.erb [79])
+(/Users/Superuser/as-rcpsp/db/schema.rb [80] [81])
+(/Users/Superuser/as-rcpsp/lib/tasks/sample_data.rake [82] [83] [84]) [85]
 (./Vorlage_Hausarbeit.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9058 strings out of 493117
- 130332 string characters out of 6135432
- 423202 words of memory out of 5000000
- 12166 multiletter control sequences out of 15000+600000
+ 9054 strings out of 493117
+ 130299 string characters out of 6135432
+ 409202 words of memory out of 5000000
+ 12162 multiletter control sequences out of 15000+600000
  13811 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,49p,2128b,1778s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1365,10 +1364,10 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2014/tex
 mf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2014/texmf
 -dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Vorlage_Hausarbeit.pdf (93 pages, 944295 bytes).
+Output written on Vorlage_Hausarbeit.pdf (91 pages, 938220 bytes).
 PDF statistics:
- 447 PDF objects out of 1000 (max. 8388607)
- 301 compressed objects within 4 object streams
+ 440 PDF objects out of 1000 (max. 8388607)
+ 297 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

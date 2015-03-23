@@ -492,7 +492,7 @@ Nachdem das \textit{GAMS}-Verzeichnis und der Starttermin eingestellt sind, kann
 
 Die Besonderheit der Aktion \texttt{optimize} ist, dass \textit{RoR} die durch die \textit{GAMS}-Optimierung (Quellcode \ref{rcpsp2} aus Anhang \ref{Imp}) erstellte Textdatei zum Parameter $X_{it}$ trotz der zwei Indizes auslesen kann. Dies erfolgt durch einen \textit{If}-Befehl, siehe Quellcode \ref{rcpsp_a}. %Die Kapazitätsplanung ist mit dem Einlesen der Ergebnisse abgeschlossen.\\
 
-\lstinputlisting[language=ruby, firstline=104, lastline=116, caption=Ausschnitt aus dem RoR-Controller für das RCPSP, style=Listing, label= rcpsp_a]{/Users/Superuser/as-rcpsp/app/controllers/rcpsps_controller.rb}
+\lstinputlisting[language=ruby, firstline=102, lastline=114, caption=Ausschnitt aus dem RoR-Controller für das RCPSP, style=Listing, label= rcpsp_a]{/Users/Superuser/as-rcpsp/app/controllers/rcpsps_controller.rb}
 
 Über den Button \textit{Zurück zur Projektplanung} gelangt ein Admin zurück zur Verwaltungsseite. Sofern die Kostenplanung gewünscht ist, kann diese über die Verwaltungsseite gestartet werden. Bevor der optimale Kostenplan für das vorhandene Projekt berechnet werden kann, muss zunächst äquivalent zur Einstellung des Starttermins eine Deadline eingerichtet werden. Dies funktioniert erneut über ein Kalendermenü des \glqq Bootstrap-Datepicker-Rails\grqq. Es sollte bei der Bestimmung der Deadline darauf geachtet werden, dass die Deadline in einem sinnvollen Verhältnis zum Starttermin steht. Eine zu kurze oder lange Zeitspanne zwischen den beiden Terminen kann zu unbrauchbaren Ergebnissen führen. Ist eine geeignete Deadline ausgewählt und die Optimierung des Kostenplans gestartet, öffnet sich nach einer kurzen Rechenzeit die Übersicht der Ressourcen (siehe Abbildung \ref{ResKo}). Dieses erfolgt mit der Aktion \texttt{optimize2} und \texttt{solution2} des \texttt{rcpsps\_controller}.\\
 
@@ -551,7 +551,7 @@ Nachdem dieser Graph generiert ist, wird er durch die Methode \texttt{\#acyclic?
 
 Weiter bietet das Unterprogramm \texttt{rgl} die Möglichkeit, eine \texttt{dot}-Datei zu erstellen, damit der Graph mittels des Programms \textit{GraphViz} visualisiert wird.
 \newpage
-\lstinputlisting[language=ruby, firstline=38, lastline=59, caption=Ausschnitt aus dem RoR-Controller für die Vorgangsbeziehungen, style=Listing, label=vorgangsbez]{/Users/Superuser/as-rcpsp/app/controllers/procedure_procedures_controller.rb}
+\lstinputlisting[language=ruby, firstline=37, lastline=59, caption=Ausschnitt aus dem RoR-Controller für die Vorgangsbeziehungen, style=Listing, label=vorgangsbez]{/Users/Superuser/as-rcpsp/app/controllers/procedure_procedures_controller.rb}
 
 \begin{lstlisting}[caption=Prüfung auf Zyklen mittels des Unterprogramms \glqq rgl\grqq, style=Listing, label=rgl-vonseite]
 >> require 'rgl/adjacency'
@@ -612,14 +612,14 @@ Schließlich liefert die Arbeit eine umfangreiche Darstellung der Web-Applikatio
   \end{center}
 \end{figure}
 
-P = Primary Key, N = Not Null, D = Default Value
+P = Primary Key, N = Not Null, D = Default Value, F = Foreign Key
 
 \subsection{GAMS-Implementierung des Beispiels}\label{Imp}
 %\lstinputlisting[language=ruby, firstline=37, lastline=45, caption=Name, style=Listing]{/Users/Superuser/as-rcpsp/RCPSP1.gms}
 \lstinputlisting[language=ruby, caption=GAMS-Code zur Kapazitätsplanung, style=Listing, label=rcpsp1]{/Users/Superuser/as-rcpsp/RCPSP1.gms}
 
 \lstinputlisting[language=ruby, caption=GAMS-Code zur Kostenplanung, style=Listing, label=rcpsp2]{/Users/Superuser/as-rcpsp/RCPSP2.gms}
-
+\newpage
 
 %%%%%%%%%RoR Codes%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Ruby on Rails Programmcodes}\label{rcodes}
@@ -655,7 +655,7 @@ P = Primary Key, N = Not Null, D = Default Value
 \lstinputlisting[language=ruby, caption=RoR-Modell für die Vorgänge, style=Listing]{/Users/Superuser/as-rcpsp/app/models/procedure.rb}
 
 \lstinputlisting[language=ruby, caption=RoR-Modell für das Projekt, style=Listing]{/Users/Superuser/as-rcpsp/app/models/project.rb}
-
+\newpage
 \lstinputlisting[language=ruby, caption=RoR-Modell für die Ressourcen, style=Listing]{/Users/Superuser/as-rcpsp/app/models/resource.rb}
 
 \lstinputlisting[language=ruby, caption=RoR-Modell für die User, style=Listing, label=fehler_code]{/Users/Superuser/as-rcpsp/app/models/user.rb}
@@ -673,7 +673,7 @@ P = Primary Key, N = Not Null, D = Default Value
 \lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangs-Ressourcen-Kombinationen - Formular, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_resources/_form.html.erb}
 
 \lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangs-Ressourcen-Kombinationen - Bearbeitung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_resources/edit.html.erb}
-
+\newpage
 \lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangs-Ressourcen-Kombinationen - Übersicht, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_resources/index.html.erb}
 
 \lstinputlisting[language=ruby, caption=RoR-Seite für die Vorgangs-Ressourcen-Kombinationen - Erstellung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/procedure_resources/new.html.erb}
@@ -701,7 +701,7 @@ P = Primary Key, N = Not Null, D = Default Value
 \lstinputlisting[language=ruby, caption=RoR-Seite für die Ressourcen - Bearbeitung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/resources/edit.html.erb}
 
 \lstinputlisting[language=ruby, caption=RoR-Seite für die Ressourcen - Übersicht, style=Listing, label=index_res]{/Users/Superuser/as-rcpsp/app/views/resources/index.html.erb}
-
+\newpage
 \lstinputlisting[language=ruby, caption=RoR-Seite für die Ressourcen - Erstellung, style=Listing]{/Users/Superuser/as-rcpsp/app/views/resources/new.html.erb}
 
 \lstinputlisting[language=ruby, caption=RoR-Seite für die Ressourcen - Anzeige, style=Listing]{/Users/Superuser/as-rcpsp/app/views/resources/show.html.erb}
