@@ -1,6 +1,6 @@
 \contentsline {lstlisting}{\numberline {1}Ausschnitt aus dem RoR-Controller f\IeC {\"u}r das RCPSP}{19}
 \contentsline {lstlisting}{\numberline {2}Ausschnitt der Gemfile der Web-Applikation Projektplanung}{22}
-\contentsline {lstlisting}{\numberline {3}Pr\IeC {\"u}fung auf Zyklen mittels des Unterprogramms \glqq rgl\grqq }{22}
+\contentsline {lstlisting}{\numberline {3}Pr\IeC {\"u}fung auf Zyklen mittels des Unterprogramms \glqq rgl\grqq }{23}
 \contentsline {lstlisting}{\numberline {4}Erstellung eines Graphen mittels des Unterprogramms \glqq rgl\grqq }{23}
 \contentsline {lstlisting}{\numberline {5}Ausschnitt aus dem RoR-Controller f\IeC {\"u}r die Vorgangsbeziehungen}{23}
 \contentsline {lstlisting}{\numberline {6}Pr\IeC {\"u}fung auf Zyklen mittels des Unterprogramms \glqq rgl\grqq }{24}
@@ -16,7 +16,7 @@
 \contentsline {lstlisting}{\numberline {16}RoR-Controller f\IeC {\"u}r das RCPSP}{48}
 \contentsline {lstlisting}{\numberline {17}RoR-Controller f\IeC {\"u}r die Ressourcen}{55}
 \contentsline {lstlisting}{\numberline {18}RoR-Controller f\IeC {\"u}r die statischen Seiten}{58}
-\contentsline {lstlisting}{\numberline {19}RoR-Controller f\IeC {\"u}r die Users}{58}
+\contentsline {lstlisting}{\numberline {19}RoR-Controller f\IeC {\"u}r die User}{58}
 \contentsline {lstlisting}{\numberline {20}RoR-Modell f\IeC {\"u}r die Vorgangsrelationen}{60}
 \contentsline {lstlisting}{\numberline {21}RoR-Modell f\IeC {\"u}r die Vorgangs-Ressourcen-Kombinationen}{60}
 \contentsline {lstlisting}{\numberline {22}RoR-Modell f\IeC {\"u}r die Vorg\IeC {\"a}nge}{60}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.15)  22 MAR 2015 18:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.15)  23 MAR 2015 13:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -677,9 +677,6 @@ LaTeX Warning: Unused global option(s):
 
 LaTeX Warning: Label `rgl-vonseite' multiply defined.
 
-
-LaTeX Warning: Label `rgl-vonseite' multiply defined.
-
 )
 \openout1 = `Vorlage_Hausarbeit.aux'.
 
@@ -973,6 +970,13 @@ Package pdftex.def Info: Bilder/Anmeldung_Fehleranzeige.png used on input line
 385.
 (pdftex.def)             Requested size: 426.79134pt x 273.33585pt.
 
+Overfull \hbox (7.68605pt too wide) in paragraph at lines 390--391
+\OT1/cmr/m/n/12 terst[]utzt durch die Da-tei-en []\OT1/cmtt/m/n/12 footer.html.
+erb \OT1/cmr/m/n/12 und []\OT1/cmtt/m/n/12 header.html.erb\OT1/cmr/m/n/12 . Im 
+[]\OT1/cmtt/m/n/12 header.html.erb
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 390--391
 
  []
@@ -1141,14 +1145,14 @@ File: Bilder/Kapazitaetsplanung.png Graphic file (type png)
 Package pdftex.def Info: Bilder/Kapazitaetsplanung.png used on input line 489.
 (pdftex.def)             Requested size: 426.79134pt x 309.68953pt.
 
-Overfull \hbox (3.51698pt too wide) in paragraph at lines 486--493
-\OT1/cmr/m/n/12 Optimierung voll-zo-gen ist, liest der RoR \OT1/cmtt/m/n/12 rcp
-sps[]controller \OT1/cmr/m/n/12 die von der \OT1/cmr/m/it/12 GAMS\OT1/cmr/m/n/1
-2 -Optimierung
+Overfull \hbox (26.44452pt too wide) in paragraph at lines 486--493
+[]\OT1/cmr/m/n/12 Nachdem das \OT1/cmr/m/it/12 GAMS\OT1/cmr/m/n/12 -Verzeichnis
+ und der Start-ter-min ein-ge-stellt sind, kann die Ka-pa-zit[]atsplanung
  []
 
 [18 <./Bilder/Projektplanung_Datum.png>]
-(/Users/Superuser/as-rcpsp/app/controllers/rcpsps_controller.rb
+(/Users/Superuser/as-rcpsp/app/controllers/rcpsps_controller.rb [19 <./Bilder/K
+apazitaetsplanung.png>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 107.
 
 
@@ -1157,12 +1161,12 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 107.
- [19 <./Bilder/Kapazitaetsplanung.png>])
+)
 Underfull \hbox (badness 10000) in paragraph at lines 498--499
 
  []
 
-<Bilder/Ressourcen_Kostenpl.png, id=124, 785.18344pt x 560.8453pt>
+<Bilder/Ressourcen_Kostenpl.png, id=122, 785.18344pt x 560.8453pt>
 File: Bilder/Ressourcen_Kostenpl.png Graphic file (type png)
 
 <use Bilder/Ressourcen_Kostenpl.png>
@@ -1170,23 +1174,36 @@ Package pdftex.def Info: Bilder/Ressourcen_Kostenpl.png used on input line 502.
 
 (pdftex.def)             Requested size: 426.79134pt x 304.85448pt.
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 508--509
 
  []
 
-[20 <./Bilder/Ressourcen_Kostenpl.png>]
-<Bilder/Vorgaenge_Kostenpl.png, id=128, 785.18344pt x 554.82281pt>
+<Bilder/Vorgaenge_Kostenpl.png, id=123, 785.18344pt x 554.82281pt>
 File: Bilder/Vorgaenge_Kostenpl.png Graphic file (type png)
 
 <use Bilder/Vorgaenge_Kostenpl.png>
 Package pdftex.def Info: Bilder/Vorgaenge_Kostenpl.png used on input line 512.
 (pdftex.def)             Requested size: 426.79134pt x 301.58087pt.
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.35442pt too wide) in paragraph at lines 517--517
+[]\OT1/cmr/bx/n/14.4 Integration des Un-ter-pro-gramms \OT1/cmr/bx/it/14.4 rgl 
+\OT1/cmr/bx/n/14.4 und des Pro-gramms \OT1/cmr/bx/it/14.4 Gra-
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 518--519
 
  []
 
-[21 <./Bilder/Vorgaenge_Kostenpl.png>]
+[20] [21 <./Bilder/Ressourcen_Kostenpl.png>]
 
 Package xcolor Warning: Incompatible color definition on input line 521.
 
@@ -1199,20 +1216,16 @@ Package xcolor Warning: Incompatible color definition on input line 521.
 (/Users/Superuser/as-rcpsp/Gemfile
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 12.
-) [22]
+) [22 <./Bilder/Vorgaenge_Kostenpl.png>]
 (/Users/Superuser/as-rcpsp/app/controllers/procedure_procedures_controller.rb
 [23])
-Overfull \hbox (7.28731pt too wide) in paragraph at lines 562--563
-[]\OT1/cmr/m/n/12 Zur Vi-sua-li-sie-rung der \OT1/cmtt/m/n/12 dot\OT1/cmr/m/n/1
-2 -Datei be-darf es je-doch der In-te-gra-ti-on des Open-Source-Programms
- []
-
-(/Users/Superuser/as-rcpsp/app/controllers/procedure_procedures_controller.rb)
+(/Users/Superuser/as-rcpsp/app/controllers/procedure_procedures_controller.rb
+[24])
 Underfull \hbox (badness 10000) in paragraph at lines 568--569
 
  []
 
-[24]
+
 Underfull \hbox (badness 10000) in paragraph at lines 570--571
 
  []
@@ -1222,12 +1235,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 572--573
 
  []
 
-
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 574--575
 
  []
 
-[25] [26]
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 577--578
 
  []
@@ -1331,10 +1344,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9051 strings out of 493117
- 130189 string characters out of 6135432
- 423105 words of memory out of 5000000
- 12159 multiletter control sequences out of 15000+600000
+ 9058 strings out of 493117
+ 130332 string characters out of 6135432
+ 423202 words of memory out of 5000000
+ 12166 multiletter control sequences out of 15000+600000
  13811 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,49p,2128b,1778s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1360,7 +1373,7 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2014/tex
 mf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2014/texmf
 -dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Vorlage_Hausarbeit.pdf (93 pages, 943390 bytes).
+Output written on Vorlage_Hausarbeit.pdf (93 pages, 943991 bytes).
 PDF statistics:
  447 PDF objects out of 1000 (max. 8388607)
  301 compressed objects within 4 object streams

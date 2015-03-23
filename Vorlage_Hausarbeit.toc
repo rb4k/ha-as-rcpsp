@@ -11,7 +11,7 @@
 \contentsline {subsection}{\numberline {3.1}Installation der Web-Applikation und der notwendigen Programme}{7}
 \contentsline {subsection}{\numberline {3.2}Darstellung der Funktionsweise der Web-Applikation anhand eines Guides f\IeC {\"u}r User}{7}
 \contentsline {subsection}{\numberline {3.3}Darstellung der Funktionsweise der Web-Applikation anhand eines Guides f\IeC {\"u}r Administratoren}{13}
-\contentsline {subsection}{\numberline {3.4}Integration des Unterprogramms \textit {\glqq rgl\grqq } und des Programms \textit {GraphViz} in die Web-Applikation}{21}
+\contentsline {subsection}{\numberline {3.4}Integration des Unterprogramms \textit {rgl} und des Programms \textit {GraphViz} in die Web-Applikation}{21}
 \contentsline {section}{\numberline {4}Kritische W\IeC {\"u}rdigung der Web-Applikation}{25}
 \contentsline {section}{\numberline {5}Fazit}{27}
 \contentsline {section}{Literatur}{28}
