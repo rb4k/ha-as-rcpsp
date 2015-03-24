@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.15)  23 MAR 2015 18:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.15)  24 MAR 2015 09:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -981,12 +981,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
  []
 
-
+[10 <./Bilder/Anmeldung_Fehleranzeige.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 391--392
 
  []
 
-[10 <./Bilder/Anmeldung_Fehleranzeige.png>]
 <Bilder/Ressourcen_unsigned.png, id=83, 758.08218pt x 345.54094pt>
 File: Bilder/Ressourcen_unsigned.png Graphic file (type png)
 
@@ -1020,23 +1019,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 410--411
 
  []
 
-
+[11 <./Bilder/Ressourcen_unsigned.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
-[11 <./Bilder/Ressourcen_unsigned.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 414--415
 
  []
 
-<Bilder/Ressourcen_User.png, id=88, 777.65532pt x 392.21532pt>
+[12 <./Bilder/Profilseite.png>]
+<Bilder/Ressourcen_User.png, id=91, 777.65532pt x 392.21532pt>
 File: Bilder/Ressourcen_User.png Graphic file (type png)
 
 <use Bilder/Ressourcen_User.png>
 Package pdftex.def Info: Bilder/Ressourcen_User.png used on input line 418.
 (pdftex.def)             Requested size: 426.79134pt x 215.25826pt.
- [12 <./Bilder/Profilseite.png>] [13 <./Bilder/Ressourcen_User.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 427--428
+
+ []
+
+[13 <./Bilder/Ressourcen_User.png>]
 <Bilder/Profilseite_Admin.png, id=96, 768.62157pt x 485.56406pt>
 File: Bilder/Profilseite_Admin.png Graphic file (type png)
 
@@ -1054,16 +1059,11 @@ File: Bilder/Ressourcen_Admin.png Graphic file (type png)
 <use Bilder/Ressourcen_Admin.png>
 Package pdftex.def Info: Bilder/Ressourcen_Admin.png used on input line 440.
 (pdftex.def)             Requested size: 426.79134pt x 200.77435pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
+ [14 <./Bilder/Profilseite_Admin.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 445--446
 
  []
 
-[14 <./Bilder/Profilseite_Admin.png>]
 <Bilder/Projektplanung.png, id=101, 741.52031pt x 493.0922pt>
 File: Bilder/Projektplanung.png Graphic file (type png)
 
@@ -1085,6 +1085,7 @@ File: Bilder/Graph.png Graphic file (type png)
 Package pdftex.def Info: Bilder/Graph.png used on input line 460.
 (pdftex.def)             Requested size: 426.79134pt x 316.62209pt.
 
+[15 <./Bilder/Ressourcen_Admin.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1093,7 +1094,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 465--466
 
  []
 
-[15 <./Bilder/Ressourcen_Admin.png>]
 <Bilder/Vorgangsrel_Fehler.png, id=106, 765.6103pt x 453.94594pt>
 File: Bilder/Vorgangsrel_Fehler.png Graphic file (type png)
 
@@ -1127,19 +1127,21 @@ Package pdftex.def Info: Bilder/Projektplanung_Datum.png used on input line 480
 .
 (pdftex.def)             Requested size: 426.79134pt x 273.54646pt.
 
-<Bilder/Kapazitaetsplanung.png, id=114, 795.72281pt x 577.40718pt>
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
+
+ []
+
+[18 <./Bilder/Projektplanung_Datum.png>]
+<Bilder/Kapazitaetsplanung.png, id=117, 795.72281pt x 577.40718pt>
 File: Bilder/Kapazitaetsplanung.png Graphic file (type png)
 
 <use Bilder/Kapazitaetsplanung.png>
-Package pdftex.def Info: Bilder/Kapazitaetsplanung.png used on input line 488.
+Package pdftex.def Info: Bilder/Kapazitaetsplanung.png used on input line 491.
 (pdftex.def)             Requested size: 426.79134pt x 309.68953pt.
 
-Overfull \hbox (26.44452pt too wide) in paragraph at lines 485--492
-[]\OT1/cmr/m/n/12 Nachdem das \OT1/cmr/m/it/12 GAMS\OT1/cmr/m/n/12 -Verzeichnis
- und der Start-ter-min ein-ge-stellt sind, kann die Ka-pa-zit[]atsplanung
- []
 
-[18 <./Bilder/Projektplanung_Datum.png>] [19 <./Bilder/Kapazitaetsplanung.png>]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 (/Users/Superuser/as-rcpsp/app/controllers/rcpsps_controller.rb
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
 
@@ -1150,15 +1152,15 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 497--498
+Underfull \hbox (badness 10000) in paragraph at lines 498--499
 
  []
 
-<Bilder/Ressourcen_Kostenpl.png, id=122, 785.18344pt x 560.8453pt>
+[19] <Bilder/Ressourcen_Kostenpl.png, id=123, 785.18344pt x 560.8453pt>
 File: Bilder/Ressourcen_Kostenpl.png Graphic file (type png)
 
 <use Bilder/Ressourcen_Kostenpl.png>
-Package pdftex.def Info: Bilder/Ressourcen_Kostenpl.png used on input line 501.
+Package pdftex.def Info: Bilder/Ressourcen_Kostenpl.png used on input line 502.
 
 (pdftex.def)             Requested size: 426.79134pt x 304.85448pt.
 
@@ -1166,46 +1168,46 @@ Package pdftex.def Info: Bilder/Ressourcen_Kostenpl.png used on input line 501.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--508
+Underfull \hbox (badness 10000) in paragraph at lines 508--509
 
  []
 
-<Bilder/Vorgaenge_Kostenpl.png, id=123, 785.18344pt x 554.82281pt>
+<Bilder/Vorgaenge_Kostenpl.png, id=124, 785.18344pt x 554.82281pt>
 File: Bilder/Vorgaenge_Kostenpl.png Graphic file (type png)
 
 <use Bilder/Vorgaenge_Kostenpl.png>
-Package pdftex.def Info: Bilder/Vorgaenge_Kostenpl.png used on input line 511.
+Package pdftex.def Info: Bilder/Vorgaenge_Kostenpl.png used on input line 512.
 (pdftex.def)             Requested size: 426.79134pt x 301.58087pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (0.35442pt too wide) in paragraph at lines 516--516
+Overfull \hbox (0.35442pt too wide) in paragraph at lines 517--517
 []\OT1/cmr/bx/n/14.4 Integration des Un-ter-pro-gramms \OT1/cmr/bx/it/14.4 rgl 
 \OT1/cmr/bx/n/14.4 und des Pro-gramms \OT1/cmr/bx/it/14.4 Gra-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--518
+Underfull \hbox (badness 10000) in paragraph at lines 518--519
 
  []
 
-[20] [21 <./Bilder/Ressourcen_Kostenpl.png>]
+[20 <./Bilder/Kapazitaetsplanung.png>] [21 <./Bilder/Ressourcen_Kostenpl.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 520.
-
-
-Package xcolor Warning: Incompatible color definition on input line 520.
+Package xcolor Warning: Incompatible color definition on input line 521.
 
 
-Package xcolor Warning: Incompatible color definition on input line 520.
+Package xcolor Warning: Incompatible color definition on input line 521.
+
+
+Package xcolor Warning: Incompatible color definition on input line 521.
 
 (/Users/Superuser/as-rcpsp/Gemfile
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 12.
 ) [22 <./Bilder/Vorgaenge_Kostenpl.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 550--551
+Underfull \hbox (badness 10000) in paragraph at lines 551--552
 
  []
 
@@ -1213,49 +1215,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 550--551
 (/Users/Superuser/as-rcpsp/app/controllers/procedure_procedures_controller.rb)
 [24]
 (/Users/Superuser/as-rcpsp/app/controllers/procedure_procedures_controller.rb)
-Underfull \hbox (badness 10000) in paragraph at lines 571--572
+Underfull \hbox (badness 10000) in paragraph at lines 572--573
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 573--574
+Underfull \hbox (badness 10000) in paragraph at lines 574--575
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 575--576
+Underfull \hbox (badness 10000) in paragraph at lines 576--577
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 577--578
+Underfull \hbox (badness 10000) in paragraph at lines 578--579
 
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 580--581
+Underfull \hbox (badness 10000) in paragraph at lines 581--582
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
+Underfull \hbox (badness 10000) in paragraph at lines 583--584
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--586
+Underfull \hbox (badness 10000) in paragraph at lines 585--587
 
  []
 
 
-Overfull \hbox (1.02925pt too wide) in paragraph at lines 587--588
+Overfull \hbox (1.02925pt too wide) in paragraph at lines 588--589
 \OT1/cmr/m/n/12 Kos-ten-pla-nung hin-ter-legt. Die Ak-ti-on \OT1/cmtt/m/n/12 op
 timize \OT1/cmr/m/n/12 bein-hal-tet al-le Schrit-te, die \OT1/cmr/m/it/12 RoR \
 OT1/cmr/m/n/12 durchf[]uhren
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 587--588
+Underfull \hbox (badness 10000) in paragraph at lines 588--589
 
  []
 
@@ -1275,7 +1277,7 @@ kt-pla-nung mit mul-ti-plen
 File: Bilder/DB.pdf Graphic file (type pdf)
 
 <use Bilder/DB.pdf>
-Package pdftex.def Info: Bilder/DB.pdf used on input line 610.
+Package pdftex.def Info: Bilder/DB.pdf used on input line 611.
 (pdftex.def)             Requested size: 426.79134pt x 314.54703pt.
  (/Users/Superuser/as-rcpsp/RCPSP1.gms [30 <./Bilder/DB.pdf>] [31] [32]) (/User
 s/Superuser/as-rcpsp/RCPSP2.gms [33] [34] [35]) [36]
@@ -1364,7 +1366,7 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2014/tex
 mf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2014/texmf
 -dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Vorlage_Hausarbeit.pdf (91 pages, 938220 bytes).
+Output written on Vorlage_Hausarbeit.pdf (91 pages, 938227 bytes).
 PDF statistics:
  440 PDF objects out of 1000 (max. 8388607)
  297 compressed objects within 3 object streams

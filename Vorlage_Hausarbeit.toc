@@ -9,8 +9,8 @@
 \contentsline {subsection}{\numberline {2.3}Ruby on Rails}{6}
 \contentsline {section}{\numberline {3}Implementierung des ressourcenbeschr\IeC {\"a}nkten Projektplanungsproblems mittels des Frameworks Ruby on Rails}{7}
 \contentsline {subsection}{\numberline {3.1}Installation der Web-Applikation und der notwendigen Programme}{7}
-\contentsline {subsection}{\numberline {3.2}Darstellung der Funktionsweise der Web-Applikation anhand eines Guides f\IeC {\"u}r User}{7}
-\contentsline {subsection}{\numberline {3.3}Darstellung der Funktionsweise der Web-Applikation anhand eines Guides f\IeC {\"u}r Administratoren}{13}
+\contentsline {subsection}{\numberline {3.2}Darstellung der Funktionsweise der Web-Applikation anhand eines Guides f\IeC {\"u}r User}{8}
+\contentsline {subsection}{\numberline {3.3}Darstellung der Funktionsweise der Web-Applikation anhand eines Guides f\IeC {\"u}r Administratoren}{14}
 \contentsline {subsection}{\numberline {3.4}Integration des Unterprogramms \textit {rgl} und des Programms \textit {GraphViz} in die Web-Applikation}{21}
 \contentsline {section}{\numberline {4}Kritische W\IeC {\"u}rdigung der Web-Applikation}{25}
 \contentsline {section}{\numberline {5}Fazit}{27}
